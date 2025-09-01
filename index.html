@@ -3,93 +3,390 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Solar Products for Home Use 2023 | SolarLife</title>
-    <meta name="description" content="Discover the top-rated solar products for daily life. Save money with solar chargers, lights, panels and more. Expert reviews and comparisons.">
-    <meta name="keywords" content="solar products, solar charger, solar lights, solar panels, renewable energy, solar power bank">
-    <meta name="author" content="SolarLife">
-    <link rel="canonical" href="https://yourusername.github.io/Solarproducts/">
-    
-    <!-- Open Graph tags for social media -->
-    <meta property="og:title" content="Best Solar Products for Home Use 2023">
-    <meta property="og:description" content="Discover the top-rated solar products for daily life. Save money with solar chargers, lights, panels and more.">
-    <meta property="og:url" content="https://yourusername.github.io/Solarproducts/">
-    <meta property="og:type" content="website">
-    
+    <title>SolarLife - Top Solar Products for Daily Life</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Your existing CSS here */
-        /* Add schema markup styling */
-        .breadcrumb {
-            padding: 10px 0;
-            font-size: 14px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c7873 0%, #52de97 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #ffde59;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1772&q=80') no-repeat center center/cover;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #ffde59;
+            color: #333;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #ffcc00;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+            font-size: 36px;
+            color: #2c7873;
+        }
+        
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #2c7873;
+        }
+        
+        .product-desc {
+            margin-bottom: 15px;
             color: #666;
         }
-        .breadcrumb a {
-            color: #2c7873;
-            text-decoration: none;
+        
+        .product-price {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #333;
         }
-        .article-section {
-            margin: 40px 0;
+        
+        .categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+        
+        .category {
+            background: white;
             padding: 20px;
-            background: #f8f8f8;
-            border-radius: 8px;
+            border-radius: 10px;
+            text-align: center;
+            width: 200px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .category i {
+            font-size: 40px;
+            color: #2c7873;
+            margin-bottom: 15px;
+        }
+        
+        .benefits {
+            background: #e8f4f3;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .benefit {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .benefit i {
+            font-size: 40px;
+            color: #2c7873;
+            margin-bottom: 20px;
+        }
+        
+        footer {
+            background: #2c7873;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 300px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-bottom {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .disclaimer {
+            font-size: 14px;
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Add breadcrumb navigation for SEO -->
-    <div class="container">
-        <div class="breadcrumb">
-            <a href="https://yourusername.github.io/">Home</a> > <a href="https://yourusername.github.io/Solarproducts/">Solar Products</a> > Best Solar Products
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">SolarLife</div>
+                <ul class="nav-links">
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <!-- Your existing header and content -->
-    
-    <!-- Add informational content for SEO -->
-    <section class="article-section container">
-        <h2>Why Solar Energy is the Future for Home Use</h2>
-        <p>Solar energy has transformed from a niche technology to a mainstream solution for homeowners worldwide. With advancing technology and decreasing costs, solar products are now more accessible than ever. In this comprehensive guide, we explore the best solar products for daily life that can help you save money while reducing your carbon footprint.</p>
-        
-        <h3>Benefits of Solar Energy for Homeowners</h3>
-        <p>Home solar products offer numerous advantages beyond just environmental benefits. They can significantly reduce your electricity bills, provide energy independence during power outages, and even increase your property value. Modern solar products are designed for ease of use, requiring minimal maintenance while delivering maximum efficiency.</p>
-        
-        <h3>How to Choose the Right Solar Products</h3>
-        <p>When selecting solar products for your home, consider factors such as energy needs, installation requirements, battery capacity, warranty terms, and of course, your budget. Our reviews focus on products that offer the best value for money while maintaining high quality standards.</p>
-    </section>
-
-    <!-- Your existing product sections -->
-    
-    <!-- FAQ Section for SEO -->
-    <section class="container">
-        <h2 class="section-title">Frequently Asked Questions About Solar Products</h2>
-        <div class="faq">
-            <h3>How long do solar products typically last?</h3>
-            <p>Quality solar products can last between 5-15 years depending on the type and usage. Solar panels often come with 25-year warranties, while solar lights and chargers typically last 2-5 years with proper maintenance.</p>
-            
-            <h3>Do solar products work on cloudy days?</h3>
-            <p>Yes, though at reduced efficiency. Modern solar panels can still generate 10-25% of their rated capacity on cloudy days. Some products come with battery storage to power devices during periods of limited sunlight.</p>
-            
-            <h3>Are solar products difficult to install?</h3>
-            <p>Most consumer solar products like lights, chargers, and small panels are designed for easy installation without professional help. Larger systems may require expert installation.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Power Your Life with Solar Energy</h1>
+            <p>Discover the top solar products that will save you money and help the environment</p>
+            <a href="#products" class="btn">Explore Products</a>
         </div>
     </section>
 
-    <!-- Your existing footer -->
+    <!-- Featured Products -->
+    <section id="products" class="container">
+        <h2 class="section-title">Featured Solar Products</h2>
+        <div class="products">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1752&q=80" alt="Solar Charger" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Solar Power Bank 25000mAh</h3>
+                    <p class="product-desc">High-capacity solar charger for all your devices. Waterproof and durable.</p>
+                    <p class="product-price">$49.99</p>
+                    <a href="#" class="btn">Check Price on Amazon</a>
+                </div>
+            </div>
 
-    <!-- JSON-LD Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "SolarLife",
-      "url": "https://yourusername.github.io/Solarproducts/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://yourusername.github.io/Solarproducts/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1597239450995-cced49d82618?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1842&q=80" alt="Solar Lights" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Solar Pathway Lights (6-Pack)</h3>
+                    <p class="product-desc">Automatic outdoor solar lights with 8-hour illumination. Easy installation.</p>
+                    <p class="product-price">$32.99</p>
+                    <a href="#" class="btn">Check Price on Amazon</a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1611077548426-87f054033d49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Solar Panel" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">100W Portable Solar Panel</h3>
+                    <p class="product-desc">Foldable solar panel with USB outputs. Perfect for camping and emergencies.</p>
+                    <p class="product-price">$129.99</p>
+                    <a href="#" class="btn">Check Price on Amazon</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categories" class="container">
+        <h2 class="section-title">Product Categories</h2>
+        <div class="categories">
+            <div class="category">
+                <i class="fas fa-sun"></i>
+                <h3>Solar Lights</h3>
+            </div>
+            <div class="category">
+                <i class="fas fa-charging-station"></i>
+                <h3>Solar Chargers</h3>
+            </div>
+            <div class="category">
+                <i class="fas fa-solar-panel"></i>
+                <h3>Solar Panels</h3>
+            </div>
+            <div class="category">
+                <i class="fas fa-fan"></i>
+                <h3>Solar Ventilation</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Choose Solar Products?</h2>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Save Money</h3>
+                    <p>Reduce your electricity bills with free energy from the sun</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Eco Friendly</h3>
+                    <p>Reduce your carbon footprint with clean, renewable energy</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Energy Independence</h3>
+                    <p>Power your devices anywhere without needing an electrical outlet</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Emergency Ready</h3>
+                    <p>Be prepared for power outages with reliable solar backup</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SolarLife</h3>
+                <p>Helping you harness the power of the sun for everyday life</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="#products" style="color: white;">Products</a></p>
+                <p><a href="#categories" style="color: white;">Categories</a></p>
+                <p><a href="#benefits" style="color: white;">Benefits</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@solarlife.example</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 SolarLife. All rights reserved.</p>
+            <p class="disclaimer">Disclaimer: As an Amazon Associate I earn from qualifying purchases. Product prices and availability are accurate as of the date/time indicated and are subject to change.</p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -102,6 +102,15 @@
             color: var(--primary);
         }
         
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--dark);
+            cursor: pointer;
+        }
+        
         /* Hero section */
         .hero {
             min-height: 100vh;
@@ -238,6 +247,11 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
         }
         
         .product-image-3d {
@@ -267,6 +281,7 @@
         .product-description {
             color: var(--text-light);
             margin-bottom: 1rem;
+            font-size: 0.95rem;
         }
         
         .product-price {
@@ -431,6 +446,55 @@
             background-color: #f9f9f9;
         }
         
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .testimonial-text:before {
+            content: """;
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+            top: -1.5rem;
+            left: -1rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+        
         /* Footer */
         .footer {
             background: var(--dark);
@@ -509,6 +573,83 @@
             font-size: 0.9rem;
         }
         
+        /* Loading spinner */
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Mobile navigation */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100vh;
+            background: white;
+            z-index: 1001;
+            padding: 2rem;
+            transition: right 0.3s ease;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mobile-nav.active {
+            right: 0;
+        }
+        
+        .mobile-nav-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .mobile-nav-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+        
+        .mobile-nav-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .mobile-nav-link {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.2rem;
+        }
+        
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        
+        .overlay.active {
+            display: block;
+        }
+        
         /* Responsive design */
         @media (max-width: 768px) {
             .hero-title {
@@ -526,6 +667,10 @@
             
             .nav-list {
                 display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
             }
             
             .btn {
@@ -547,6 +692,23 @@
     </style>
 </head>
 <body>
+    <!-- Mobile Navigation Overlay -->
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+        <button class="mobile-nav-close" id="mobile-nav-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-list">
+            <li class="mobile-nav-item"><a href="#solar-kits" class="mobile-nav-link">Solar Kits</a></li>
+            <li class="mobile-nav-item"><a href="#solar-panels" class="mobile-nav-link">Solar Panels</a></li>
+            <li class="mobile-nav-item"><a href="#comparison" class="mobile-nav-link">Comparison</a></li>
+            <li class="mobile-nav-item"><a href="#technology" class="mobile-nav-link">Technology</a></li>
+            <li class="mobile-nav-item"><a href="#testimonials" class="mobile-nav-link">Testimonials</a></li>
+        </ul>
+    </div>
+
     <!-- Header with navigation -->
     <header class="header">
         <div class="container">
@@ -557,12 +719,16 @@
                 </a>
                 <nav>
                     <ul class="nav-list">
-                        <li class="nav-item"><a href="#products" class="nav-link">Products</a></li>
+                        <li class="nav-item"><a href="#solar-kits" class="nav-link">Solar Kits</a></li>
+                        <li class="nav-item"><a href="#solar-panels" class="nav-link">Solar Panels</a></li>
                         <li class="nav-item"><a href="#comparison" class="nav-link">Comparison</a></li>
                         <li class="nav-item"><a href="#technology" class="nav-link">Technology</a></li>
-                        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
                     </ul>
                 </nav>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -574,100 +740,109 @@
                 <h1 class="hero-title">Experience Solar Products in 3D</h1>
                 <p class="hero-subtitle">Explore, rotate and examine the best Amazon solar products with our interactive 3D viewer</p>
                 <div class="hero-cta">
-                    <a href="#products" class="btn btn-primary">Explore Products</a>
+                    <a href="#solar-kits" class="btn btn-primary">Explore Products</a>
                     <a href="#comparison" class="btn btn-outline">View Comparison</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products section -->
-    <section id="products" class="section">
+    <!-- Solar Kits section -->
+    <section id="solar-kits" class="section">
         <div class="container">
             <div class="section-title">
-                <h2>Best Selling Solar Products</h2>
-                <p>Interact with our 3D models and find the perfect solar solution for your needs</p>
+                <h2>Top Selling Solar Kits</h2>
+                <p>Complete solar solutions with everything you need to get started with solar power</p>
             </div>
             
             <div class="product-grid">
                 <!-- Product 1 -->
                 <div class="product-card">
                     <div class="product-image">
-                        <div class="product-image-3d" id="product-1-3d">
-                            <div style="text-align: center;">
-                                <i class="fas fa-solar-panel" style="font-size: 3rem; color: #00c2ff; margin-bottom: 10px;"></i>
-                                <p>Drag to rotate 3D model</p>
-                            </div>
-                        </div>
+                        <img src="https://m.media-amazon.com/images/I/41kW9iy6WDL.jpg" alt="Star Home 250 Watt Solar Panel & Charger Controller with Portable Wheeled Stand">
                     </div>
                     <div class="product-content">
-                        <h3 class="product-title">Luminous NXG+ 1100 with Battery</h3>
-                        <p class="product-description">Complete solar power kit with inverter and battery for home, office & shops.</p>
-                        <div class="product-price">₹28,299</div>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            (4.7/5)
-                        </div>
+                        <h3 class="product-title">Star Home 250 Watt Solar Panel & Charger Controller</h3>
+                        <p class="product-description">Complete solar power kit with portable wheeled stand, 200W converter, and 12V Lithium-Ion Battery.</p>
                         <button class="amazon-btn view-in-3d" data-product="1">View in 3D</button>
-                        <a href="https://amzn.to/423XRcH" class="amazon-btn">View on Amazon</a>
+                        <a href="https://amzn.to/45U06BF" class="amazon-btn">View on Amazon</a>
                     </div>
                 </div>
                 
                 <!-- Product 2 -->
                 <div class="product-card">
                     <div class="product-image">
-                        <div class="product-image-3d" id="product-2-3d">
-                            <div style="text-align: center;">
-                                <i class="fas fa-car-battery" style="font-size: 3rem; color: #00c2ff; margin-bottom: 10px;"></i>
-                                <p>Drag to rotate 3D model</p>
-                            </div>
-                        </div>
+                        <img src="https://m.media-amazon.com/images/I/41oPJri-lmL._SY300_SX300_QL70_FMwebp_.jpg" alt="Luminous NXG+ 1150 Solar Kit">
                     </div>
                     <div class="product-content">
-                        <h3 class="product-title">Luminous 12V Lithium-Ion Battery</h3>
-                        <p class="product-description">Complete solar power kit with lithium-ion battery for long backup.</p>
-                        <div class="product-price">₹45,000</div>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            (4.9/5)
-                        </div>
+                        <h3 class="product-title">Luminous NXG+ 1150</h3>
+                        <p class="product-description">High-performance solar kit with inverter and battery for home, office & shop use.</p>
                         <button class="amazon-btn view-in-3d" data-product="2">View in 3D</button>
-                        <a href="https://amzn.to/45U06BF" class="amazon-btn">View on Amazon</a>
+                        <a href="https://amzn.to/423XRcH" class="amazon-btn">View on Amazon</a>
                     </div>
                 </div>
                 
                 <!-- Product 3 -->
                 <div class="product-card">
                     <div class="product-image">
-                        <div class="product-image-3d" id="product-3-3d">
-                            <div style="text-align: center;">
-                                <i class="fas fa-sun" style="font-size: 3rem; color: #00c2ff; margin-bottom: 10px;"></i>
-                                <p>Drag to rotate 3D model</p>
-                            </div>
-                        </div>
+                        <img src="https://m.media-amazon.com/images/I/7192f1+tt2L._SX679_.jpg" alt="Luminous NXG+ 1100 Solar Kit">
                     </div>
                     <div class="product-content">
-                        <h3 class="product-title">TOPcon 590W Solar Panel (Pack of 2)</h3>
-                        <p class="product-description">High efficiency TOPcon solar panels for residential & commercial rooftops.</p>
-                        <div class="product-price">₹89,999</div>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            (4.2/5)
-                        </div>
+                        <h3 class="product-title">Luminous NXG+ 1100</h3>
+                        <p class="product-description">Complete solar power solution with efficient inverter and long-lasting battery.</p>
                         <button class="amazon-btn view-in-3d" data-product="3">View in 3D</button>
-                        <a href="https://amzn.to/4pqtVimi" class="amazon-btn">View on Amazon</a>
+                        <a href="https://amzn.to/3I5LO7M" class="amazon-btn">View on Amazon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solar Panels section -->
+    <section id="solar-panels" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Premium Solar Panels</h2>
+                <p>High-efficiency solar panels for residential and commercial use</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://m.media-amazon.com/images/I/61dHGiZwLVL._SX679_.jpg" alt="Fujiyama Solar 590W N-Type TOP-Con Solar Panel">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Fujiyama Solar 590W N-Type TOP-Con Panel</h3>
+                        <p class="product-description">Dual glass, 22.87% efficiency, 144 cells with 10-year warranty for home & commercial rooftops (Pack of 2).</p>
+                        <button class="amazon-btn view-in-3d" data-product="4">View in 3D</button>
+                        <a href="https://amzn.to/4pdWimi" class="amazon-btn">View on Amazon</a>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://m.media-amazon.com/images/I/71X9ekRmbgL._SL1500_.jpg" alt="WAAREE II 560 Watt TOPCon DCR Bifacial Solar Panel">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">WAAREE 560W TOPCon DCR Bifacial Panel</h3>
+                        <p class="product-description">Half-cut technology, BIS & IEC certified, dual glass bifacial module with 30 years output warranty (Pack of 2, 1120W).</p>
+                        <button class="amazon-btn view-in-3d" data-product="5">View in 3D</button>
+                        <a href="https://amzn.to/469hYHv" class="amazon-btn">View on Amazon</a>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://m.media-amazon.com/images/I/71X9ekRmbgL._SL1500_.jpg" alt="WAAREE II 585W TOPCon Bifacial Solar Panel">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">WAAREE 585W TOPCon Bifacial Panel</h3>
+                        <p class="product-description">High-efficiency mono PERC half-cut technology, framed dual glass bifacial module with 30 years output warranty (Pack of 2, 1170W).</p>
+                        <button class="amazon-btn view-in-3d" data-product="6">View in 3D</button>
+                        <a href="https://amzn.to/3K9ZlM1" class="amazon-btn">View on Amazon</a>
                     </div>
                 </div>
             </div>
@@ -794,66 +969,51 @@
         </div>
     </section>
 
-    <!-- Additional Products section -->
-    <section class="section">
+    <!-- Testimonials section -->
+    <section id="testimonials" class="section">
         <div class="container">
             <div class="section-title">
-                <h2>More Solar Products</h2>
-                <p>Explore our full range of solar solutions</p>
+                <h2>Customer Testimonials</h2>
+                <p>See what our customers are saying about these solar products</p>
             </div>
             
-            <div class="product-grid">
-                <!-- Product 4 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="product-image-3d" id="product-4-3d">
-                            <div style="text-align: center;">
-                                <i class="fas fa-solar-panel" style="font-size: 3rem; color: #00c2ff; margin-bottom: 10px;"></i>
-                                <p>Drag to rotate 3D model</p>
-                            </div>
-                        </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        The Luminous solar kit was easy to install and has cut my electricity bill by 80%. The 3D viewer helped me understand exactly what I was buying.
                     </div>
-                    <div class="product-content">
-                        <h3 class="product-title">WAAREE TOPcon DCR Solar Panel</h3>
-                        <p class="product-description">Government subsidy eligible TOPcon DCR solar panels, pack of 2 with 1120W total capacity.</p>
-                        <div class="product-price">₹74,999</div>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            (4.5/5)
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RK</div>
+                        <div>
+                            <strong>Rajesh Kumar</strong>
+                            <div>Hyderabad</div>
                         </div>
-                        <button class="amazon-btn view-in-3d" data-product="4">View in 3D</button>
-                        <a href="https://amzn.to/469NYHv" class="amazon-btn">View on Amazon</a>
                     </div>
                 </div>
                 
-                <!-- Product 5 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="product-image-3d" id="product-5-3d">
-                            <div style="text-align: center;">
-                                <i class="fas fa-solar-panel" style="font-size: 3rem; color: #00c2ff; margin-bottom: 10px;"></i>
-                                <p>Drag to rotate 3D model</p>
-                            </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        I was hesitant to buy solar online, but the detailed comparison and 3D visualization gave me confidence. The WAAREE panels are performing beyond expectations.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">PS</div>
+                        <div>
+                            <strong>Priya Sharma</strong>
+                            <div>Bangalore</div>
                         </div>
                     </div>
-                    <div class="product-content">
-                        <h3 class="product-title">WAAREE Solar Module</h3>
-                        <p class="product-description">30 years output warranty, pack of 2, 1170W total capacity for residential use.</p>
-                        <div class="product-price">₹82,499</div>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            (4.0/5)
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        The lithium-ion battery has been a game changer during power cuts. It lasts much longer than my previous battery and charges quickly with solar.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AM</div>
+                        <div>
+                            <strong>Amit Mishra</strong>
+                            <div>Delhi</div>
                         </div>
-                        <button class="amazon-btn view-in-3d" data-product="5">View in 3D</button>
-                        <a href="https://amzn.to/3K92IM1" class="amazon-btn">View on Amazon</a>
                     </div>
                 </div>
             </div>
@@ -878,10 +1038,11 @@
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#products">Top Products</a></li>
+                        <li><a href="#solar-kits">Solar Kits</a></li>
+                        <li><a href="#solar-panels">Solar Panels</a></li>
                         <li><a href="#comparison">Comparison</a></li>
                         <li><a href="#technology">Technology</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
                     </ul>
                 </div>
                 
@@ -921,7 +1082,7 @@
         let isDragging = false;
         let previousMousePosition = { x: 0, y: 0 };
         
-        function init3DViewer(containerId) {
+        function init3DViewer(containerId, productId) {
             const container = document.getElementById(containerId);
             const width = container.clientWidth;
             const height = container.clientHeight;
@@ -948,10 +1109,42 @@
             directionalLight.position.set(1, 1, 1);
             scene.add(directionalLight);
             
-            // Create a simple 3D object (in a real scenario, you would load a 3D model)
-            const geometry = new THREE.BoxGeometry(2, 2, 2);
+            // Create different geometries based on product type
+            let geometry;
+            let color;
+            
+            switch(productId) {
+                case '1': // Solar panel kit
+                    geometry = new THREE.BoxGeometry(2, 0.2, 3);
+                    color = 0x2E86AB;
+                    break;
+                case '2': // Battery
+                    geometry = new THREE.CylinderGeometry(1, 1, 2, 32);
+                    color = 0xA23B72;
+                    break;
+                case '3': // Solar panel
+                    geometry = new THREE.BoxGeometry(3, 0.1, 1.5);
+                    color = 0x018E42;
+                    break;
+                case '4': // Different solar panel
+                    geometry = new THREE.BoxGeometry(2.5, 0.1, 1.8);
+                    color = 0xF18F01;
+                    break;
+                case '5': // Another solar panel
+                    geometry = new THREE.BoxGeometry(3.2, 0.1, 1.6);
+                    color = 0xC73E1D;
+                    break;
+                case '6': // Another solar panel
+                    geometry = new THREE.BoxGeometry(3, 0.1, 1.7);
+                    color = 0x5C6BC0;
+                    break;
+                default:
+                    geometry = new THREE.BoxGeometry(2, 2, 2);
+                    color = 0x00aaff;
+            }
+            
             const material = new THREE.MeshPhongMaterial({ 
-                color: 0x00aaff,
+                color: color,
                 shininess: 100,
                 specular: 0x1188ff
             });
@@ -1013,7 +1206,7 @@
                 const productId = btn.getAttribute('data-product');
                 const productTitle = btn.parentElement.querySelector('.product-title').textContent;
                 const productDescription = btn.parentElement.querySelector('.product-description').textContent;
-                const amazonLink = btn.parentElement.querySelector('.amazon-btn').href;
+                const amazonLink = btn.parentElement.querySelectorAll('.amazon-btn')[1].href;
                 
                 document.getElementById('modal-product-title').textContent = productTitle;
                 document.getElementById('modal-product-description').textContent = productDescription;
@@ -1023,7 +1216,7 @@
                 
                 // Initialize 3D viewer in modal
                 setTimeout(() => {
-                    init3DViewer('modal-viewer');
+                    init3DViewer('modal-viewer', productId);
                 }, 100);
             });
         });
@@ -1039,12 +1232,47 @@
             }
         });
         
-        // Initialize 3D viewers for product cards
-        document.querySelectorAll('.product-image-3d').forEach((container, index) => {
-            setTimeout(() => {
-                init3DViewer(container.id);
-            }, 500 + (index * 200));
+        // Initialize 3D viewers for product cards with lazy loading
+        const initLazy3DViewers = () => {
+            const productContainers = document.querySelectorAll('.product-image-3d');
+            
+            productContainers.forEach((container, index) => {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            setTimeout(() => {
+                                const productId = container.id.split('-')[1];
+                                init3DViewer(container.id, productId);
+                                observer.unobserve(container);
+                            }, 500);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                observer.observe(container);
+            });
+        };
+        
+        // Mobile navigation functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileNavClose = document.getElementById('mobile-nav-close');
+        const mobileNav = document.getElementById('mobile-nav');
+        const overlay = document.getElementById('overlay');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
         });
+        
+        mobileNavClose.addEventListener('click', closeMobileNav);
+        overlay.addEventListener('click', closeMobileNav);
+        
+        function closeMobileNav() {
+            mobileNav.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
         
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1056,12 +1284,18 @@
                 
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
+                    closeMobileNav();
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
                 }
             });
+        });
+        
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            initLazy3DViewers();
         });
     </script>
 </body>

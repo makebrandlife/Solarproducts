@@ -3,44 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SolarIndia - Premium Solar Solutions</title>
-    <meta name="description" content="High-performance solar products and energy storage solutions - Buy directly from trusted suppliers">
+    <title>Solar3D India - Advanced Solar Solutions with 3D Visualization</title>
+    <meta name="description" content="Discover India's best solar products with interactive 3D visualization. Amazon affiliate store featuring solar panels, generators, and accessories with expert reviews.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
-        /* CSS Variables for theme */
         :root {
-            --primary: #f8b700;
-            --primary-dark: #e6a500;
-            --secondary: #0057a3;
-            --accent: #e5352d;
+            --primary: #00c2ff;
+            --secondary: #00ff87;
+            --accent: #ff2e87;
+            --amazon: #FF9900;
+            --dark: #0a1929;
             --light: #f5f5f5;
-            --dark: #333333;
-            --text: #212121;
-            --text-light: #757575;
-            --bg: #ffffff;
-            --bg-alt: #f8f8f8;
-            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            --radius: 4px;
-            --transition: all 0.3s ease;
-            
-            /* Indian color scheme */
-            --saffron: #FF9933;
-            --green: #138808;
-            --blue: #000080;
+            --text: #333333;
+            --text-light: #777777;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            --glass: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.15);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            --radius: 12px;
         }
         
-        /* Dark mode variables */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text: #f5f5f5;
-                --text-light: #bdbdbd;
-                --bg: #1a1a1a;
-                --bg-alt: #2a2a2a;
-                --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-            }
-        }
-        
-        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
@@ -49,73 +32,33 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.7;
+            background: var(--light);
             color: var(--text);
-            background-color: var(--bg);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            line-height: 1.7;
+            overflow-x: hidden;
+            background-image:  
+                radial-gradient(circle at 15% 50%, rgba(0, 194, 255, 0.08) 0%, transparent 20%),
+                radial-gradient(circle at 85% 30%, rgba(0, 255, 135, 0.08) 0%, transparent 20%);
         }
         
-        /* Typography scaling */
-        html {
-            font-size: 16px;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 1.5rem;
-        }
-        
-        h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 1.25rem;
-            border-left: 4px solid var(--primary);
-            padding-left: 1rem;
-        }
-        
-        h3 {
-            font-size: 1.5rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-        
-        p {
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-        
-        a {
-            color: var(--secondary);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        
-        a:hover {
-            color: var(--primary);
-            text-decoration: underline;
-        }
-        
-        /* Layout components */
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 20px;
         }
         
+        /* Header styles */
         .header {
-            background-color: var(--bg);
-            box-shadow: var(--shadow);
-            position: sticky;
+            position: fixed;
             top: 0;
+            width: 100%;
             z-index: 1000;
-            padding: 1rem 0;
+            padding: 1.2rem 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         .header-inner {
@@ -129,17 +72,14 @@
             align-items: center;
             font-weight: 700;
             font-size: 1.5rem;
-            color: var(--text);
+            color: var(--dark);
+            text-decoration: none;
         }
         
-        .logo-emoji {
+        .logo-icon {
             font-size: 2rem;
             margin-right: 0.5rem;
             color: var(--primary);
-        }
-        
-        .nav {
-            display: flex;
         }
         
         .nav-list {
@@ -148,93 +88,105 @@
         }
         
         .nav-item {
-            margin-left: 1.5rem;
+            margin-left: 2rem;
         }
         
         .nav-link {
             color: var(--text);
+            text-decoration: none;
             font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary);
+        }
+        
+        /* Hero section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 0 4rem;
             position: relative;
         }
         
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary);
-            transition: var(--transition);
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .mobile-nav-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--text);
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, var(--saffron) 0%, var(--green) 100%);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
+        .hero-content {
+            max-width: 800px;
         }
         
         .hero-title {
-            font-size: 3rem;
+            font-size: 3.5rem;
+            font-weight: 900;
             margin-bottom: 1.5rem;
-            color: white;
-            border: none;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .hero-subtitle {
             font-size: 1.5rem;
-            margin-bottom: 2rem;
-            font-weight: 400;
+            margin-bottom: 2.5rem;
+            color: var(--text-light);
         }
         
+        /* Button styles */
         .btn {
             display: inline-block;
-            padding: 0.75rem 1.5rem;
-            background-color: var(--primary);
-            color: var(--dark);
-            border: none;
-            border-radius: var(--radius);
-            font-weight: 500;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
             cursor: pointer;
-            transition: var(--transition);
+            transition: all 0.3s ease;
             text-decoration: none;
+            border: none;
         }
         
-        .btn:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            color: var(--dark);
-            text-decoration: none;
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            margin-right: 1rem;
         }
         
-        .btn-secondary {
-            background-color: transparent;
-            border: 2px solid white;
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
             color: white;
         }
         
-        .btn-secondary:hover {
-            background-color: white;
-            color: var(--secondary);
+        /* Amazon affiliate button */
+        .amazon-btn {
+            display: block;
+            background-color: var(--amazon);
+            color: black;
+            text-align: center;
+            padding: 12px 20px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
         }
         
+        .amazon-btn:hover {
+            background-color: #e58900;
+            transform: translateY(-2px);
+        }
+        
+        /* Section styles */
         .section {
-            padding: 4rem 0;
+            padding: 5rem 0;
         }
         
         .section-title {
@@ -243,438 +195,388 @@
         }
         
         .section-title h2 {
-            border: none;
-            padding: 0;
-            position: relative;
-            display: inline-block;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
         }
         
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background-color: var(--primary);
+        .section-title p {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
         }
         
         /* Product grid */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2rem;
-            margin-bottom: 3rem;
+            margin-top: 3rem;
         }
         
         .product-card {
-            background-color: var(--bg-alt);
+            background: white;
             border-radius: var(--radius);
             overflow: hidden;
             box-shadow: var(--shadow);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
+            transition: transform 0.3s ease;
         }
         
         .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            transform: translateY(-10px);
         }
         
         .product-image {
-            width: 100%;
             height: 200px;
-            object-fit: cover;
             background-color: #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .product-image-3d {
+            width: 100%;
+            height: 100%;
+            cursor: grab;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #999;
-            font-size: 0.9rem;
+            background: #f0f0f0;
+        }
+        
+        .product-image-3d:active {
+            cursor: grabbing;
         }
         
         .product-content {
             padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
         }
         
         .product-title {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             margin-bottom: 0.5rem;
+            color: var(--dark);
         }
         
         .product-description {
             color: var(--text-light);
             margin-bottom: 1rem;
-            flex-grow: 1;
         }
         
         .product-price {
             font-weight: 700;
-            font-size: 1.25rem;
-            color: var(--secondary);
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-rating {
+            color: var(--amazon);
             margin-bottom: 1rem;
         }
         
-        .product-cta {
-            margin-top: auto;
+        /* 3D viewer modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
         }
         
-        /* Features section */
-        .features {
-            background-color: var(--bg-alt);
+        .modal-content {
+            width: 90%;
+            max-width: 800px;
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            position: relative;
         }
         
-        .feature-grid {
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+        }
+        
+        .modal-body {
+            padding: 2rem;
+        }
+        
+        #modal-viewer {
+            width: 100%;
+            height: 400px;
+            background: #f0f0f0;
+        }
+        
+        /* Categories section */
+        .category-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 2rem;
         }
         
-        .feature-card {
-            text-align: center;
-            padding: 2rem;
-            background-color: var(--bg);
+        .category-card {
+            background: white;
             border-radius: var(--radius);
+            padding: 2rem;
+            text-align: center;
             box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
         }
         
-        .feature-icon {
-            font-size: 2.5rem;
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .category-icon {
+            font-size: 3rem;
+            color: var(--primary);
             margin-bottom: 1rem;
+        }
+        
+        /* Benefits section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .benefit-card {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        
+        .benefit-icon {
+            font-size: 2rem;
             color: var(--primary);
         }
         
-        /* Comparison table */
-        .comparison {
-            overflow-x: auto;
+        /* SEO Optimized Content Sections */
+        .seo-content {
+            background: white;
+            border-radius: var(--radius);
+            padding: 3rem;
+            margin: 3rem 0;
+            box-shadow: var(--shadow);
         }
         
+        .seo-content h2 {
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
+        }
+        
+        .seo-content h3 {
+            color: var(--dark);
+            margin: 1.5rem 0 1rem;
+        }
+        
+        .seo-content p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .seo-content ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .seo-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Comparison table */
         .comparison-table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 2rem;
+            margin: 2rem 0;
         }
         
-        .comparison-table th,
-        .comparison-table td {
+        .comparison-table th, .comparison-table td {
             padding: 1rem;
             text-align: left;
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid #eee;
         }
         
         .comparison-table th {
-            background-color: var(--bg-alt);
-            font-weight: 500;
+            background-color: var(--light);
+            font-weight: 600;
         }
         
-        .comparison-table tr:last-child td {
-            border-bottom: none;
-        }
-        
-        /* FAQ section */
-        .faq-grid {
-            display: grid;
-            gap: 1.5rem;
-        }
-        
-        .faq-item {
-            background-color: var(--bg-alt);
-            border-radius: var(--radius);
-            overflow: hidden;
-        }
-        
-        .faq-question {
-            padding: 1.5rem;
-            background-color: var(--bg);
-            font-weight: 500;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .faq-answer {
-            padding: 0 1.5rem;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-        
-        .faq-item.active .faq-answer {
-            max-height: 500px;
-            padding: 0 1.5rem 1.5rem;
-        }
-        
-        /* Steps guidance (Omotenashi pattern) */
-        .steps {
-            background: linear-gradient(135deg, var(--blue) 0%, var(--secondary) 100%);
-            color: white;
-        }
-        
-        .steps h2 {
-            color: white;
-            border: none;
-        }
-        
-        .steps h2::after {
-            background-color: white;
-        }
-        
-        .step-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .step-card {
-            text-align: center;
-            padding: 2rem;
-        }
-        
-        .step-number {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            border-radius: 50%;
-            background-color: white;
-            color: var(--secondary);
-            font-weight: 700;
-            margin-bottom: 1rem;
+        .comparison-table tr:hover {
+            background-color: #f9f9f9;
         }
         
         /* Footer */
         .footer {
-            background-color: var(--dark);
+            background: var(--dark);
             color: white;
-            padding: 3rem 0 1.5rem;
-            margin-top: auto;
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
         }
         
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
         
-        .footer-brand {
+        .footer-column h3 {
+            font-size: 1.2rem;
             margin-bottom: 1.5rem;
-        }
-        
-        .footer-logo {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: white;
-        }
-        
-        .footer-description {
-            color: #bdbdbd;
-        }
-        
-        .footer-heading {
-            font-size: 1.25rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-        
-        .footer-heading::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--primary);
+            color: var(--primary);
         }
         
         .footer-links {
             list-style: none;
         }
         
-        .footer-link {
-            margin-bottom: 0.5rem;
+        .footer-links li {
+            margin-bottom: 0.8rem;
         }
         
-        .footer-link a {
-            color: #bdbdbd;
-            transition: var(--transition);
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
         
-        .footer-link a:hover {
+        .footer-links a:hover {
             color: var(--primary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+        }
+        
+        .disclaimer {
+            background: rgba(255, 153, 0, 0.1);
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            color: #ccc;
         }
         
         .footer-bottom {
             text-align: center;
-            padding-top: 1.5rem;
-            border-top: 1px solid #424242;
-            color: #9e9e9e;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 0.9rem;
         }
         
-        /* Responsive styles */
+        /* Responsive design */
         @media (max-width: 768px) {
-            html {
-                font-size: 14px;
-            }
-            
             .hero-title {
                 font-size: 2.5rem;
             }
             
             .hero-subtitle {
-                font-size: 1.25rem;
-            }
-            
-            .mobile-nav-toggle {
-                display: block;
-            }
-            
-            .nav {
-                position: fixed;
-                top: 72px;
-                right: -100%;
-                width: 80%;
-                height: calc(100vh - 72px);
-                background-color: var(--bg);
-                flex-direction: column;
-                padding: 2rem;
-                transition: right 0.3s ease;
-                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-            }
-            
-            .nav.active {
-                right: 0;
-            }
-            
-            .nav-list {
-                flex-direction: column;
-            }
-            
-            .nav-item {
-                margin: 0 0 1.5rem 0;
+                font-size: 1.2rem;
             }
             
             .product-grid,
-            .feature-grid,
-            .step-grid,
-            .footer-grid {
+            .category-grid {
                 grid-template-columns: 1fr;
             }
-        }
-        
-        /* High information density adjustments */
-        .info-dense {
-            line-height: 1.6;
-        }
-        
-        .info-dense p {
-            margin-bottom: 0.75rem;
-        }
-        
-        /* Form styles */
-        .form-group {
-            margin-bottom: 1rem;
-        }
-        
-        .form-input {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #ddd;
-            border-radius: var(--radius);
-            font-family: inherit;
-        }
-        
-        textarea.form-input {
-            min-height: 120px;
-            resize: vertical;
-        }
-        
-        /* Trust badges */
-        .trust-badges {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-        
-        .badge {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            max-width: 120px;
-        }
-        
-        .badge-icon {
-            font-size: 2rem;
-            color: var(--green);
-            margin-bottom: 0.5rem;
+            
+            .nav-list {
+                display: none;
+            }
+            
+            .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+            
+            .btn-primary {
+                margin-right: 0;
+            }
+            
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Header with navigation -->
     <header class="header">
-        <div class="container header-inner">
-            <a href="#" class="logo">
-                <span class="logo-emoji">☀️</span>
-                <span>SolarIndia</span>
-            </a>
-            
-            <button class="mobile-nav-toggle">☰</button>
-            
-            <nav class="nav" id="main-nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#products" class="nav-link">Products</a></li>
-                    <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
-                    <li class="nav-item"><a href="#comparison" class="nav-link">Comparison</a></li>
-                    <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo">
+                    <span class="logo-icon">☀️</span>
+                    <span class="logo-text">Solar3D India</span>
+                </a>
+                <nav>
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#products" class="nav-link">Products</a></li>
+                        <li class="nav-item"><a href="#comparison" class="nav-link">Comparison</a></li>
+                        <li class="nav-item"><a href="#technology" class="nav-link">Technology</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
     <!-- Hero section -->
     <section class="hero">
         <div class="container">
-            <h1 class="hero-title">Bring Solar Power to Your Home</h1>
-            <p class="hero-subtitle">High-performance solar systems and energy storage solutions for energy independence</p>
-            <div class="hero-cta">
-                <a href="#products" class="btn">View Products</a>
-                <a href="#contact" class="btn btn-secondary">Free Consultation</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust badges -->
-    <section class="container">
-        <div class="trust-badges">
-            <div class="badge">
-                <div class="badge-icon"><i class="fas fa-shield-alt"></i></div>
-                <div>5-Year Warranty</div>
-            </div>
-            <div class="badge">
-                <div class="badge-icon"><i class="fas fa-truck"></i></div>
-                <div>Free Pan-India Shipping</div>
-            </div>
-            <div class="badge">
-                <div class="badge-icon"><i class="fas fa-support"></i></div>
-                <div>24/7 Support</div>
-            </div>
-            <div class="badge">
-                <div class="badge-icon"><i class="fas fa-installation"></i></div>
-                <div>Expert Installation</div>
+            <div class="hero-content">
+                <h1 class="hero-title">Experience Solar Products in 3D</h1>
+                <p class="hero-subtitle">Explore, rotate and examine the best Amazon solar products with our interactive 3D viewer</p>
+                <div class="hero-cta">
+                    <a href="#products" class="btn btn-primary">Explore Products</a>
+                    <a href="#comparison" class="btn btn-outline">View Comparison</a>
+                </div>
             </div>
         </div>
     </section>
@@ -683,313 +585,277 @@
     <section id="products" class="section">
         <div class="container">
             <div class="section-title">
-                <h2>Popular Solar Products</h2>
-                <p>Buy directly from trusted suppliers</p>
+                <h2>Best Selling Solar Products</h2>
+                <p>Interact with our 3D models and find the perfect solar solution for your needs</p>
             </div>
             
             <div class="product-grid">
                 <!-- Product 1 -->
                 <div class="product-card">
-                    <div class="product-image">High Efficiency Solar Panel</div>
-                    <div class="product-content">
-                        <h3 class="product-title">High Efficiency Solar Panel</h3>
-                        <p class="product-description">Advanced solar panels with 22% conversion efficiency. For residential and commercial use.</p>
-                        <div class="product-price">₹49,999 onwards</div>
-                        <div class="product-cta">
-                            <a href="#" class="btn">View Details</a>
+                    <div class="product-image">
+                        <div class="product-image-3d" id="product-1-3d">
+                            <div style="text-align: center;">
+                                <i class="fas fa-solar-panel" style="font-size: 3rem; color: #00c2ff; margin-bottom: 10px;"></i>
+                                <p>Drag to rotate 3D model</p>
+                            </div>
                         </div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Luminous NXG+ 1100 with Battery</h3>
+                        <p class="product-description">Complete solar power kit with inverter and battery for home, office & shops.</p>
+                        <div class="product-price">₹28,299</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            (4.7/5)
+                        </div>
+                        <button class="amazon-btn view-in-3d" data-product="1">View in 3D</button>
+                        <a href="https://amzn.to/423XRcH" class="amazon-btn">View on Amazon</a>
                     </div>
                 </div>
                 
                 <!-- Product 2 -->
                 <div class="product-card">
-                    <div class="product-image">Home Battery System</div>
-                    <div class="product-content">
-                        <h3 class="product-title">Home Battery System</h3>
-                        <p class="product-description">10kWh capacity lithium-ion battery. Power supply during nights and power cuts.</p>
-                        <div class="product-price">₹1,49,999 onwards</div>
-                        <div class="product-cta">
-                            <a href="#" class="btn">View Details</a>
+                    <div class="product-image">
+                        <div class="product-image-3d" id="product-2-3d">
+                            <div style="text-align: center;">
+                                <i class="fas fa-car-battery" style="font-size: 3rem; color: #00c2ff; margin-bottom: 10px;"></i>
+                                <p>Drag to rotate 3D model</p>
+                            </div>
                         </div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Luminous 12V Lithium-Ion Battery</h3>
+                        <p class="product-description">Complete solar power kit with lithium-ion battery for long backup.</p>
+                        <div class="product-price">₹45,000</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            (4.9/5)
+                        </div>
+                        <button class="amazon-btn view-in-3d" data-product="2">View in 3D</button>
+                        <a href="https://amzn.to/45U06BF" class="amazon-btn">View on Amazon</a>
                     </div>
                 </div>
                 
                 <!-- Product 3 -->
                 <div class="product-card">
-                    <div class="product-image">Hybrid Inverter</div>
-                    <div class="product-content">
-                        <h3 class="product-title">Hybrid Inverter</h3>
-                        <p class="product-description">Smart inverter system that optimizes solar power and battery storage.</p>
-                        <div class="product-price">₹64,999 onwards</div>
-                        <div class="product-cta">
-                            <a href="#" class="btn">View Details</a>
+                    <div class="product-image">
+                        <div class="product-image-3d" id="product-3-3d">
+                            <div style="text-align: center;">
+                                <i class="fas fa-sun" style="font-size: 3rem; color: #00c2ff; margin-bottom: 10px;"></i>
+                                <p>Drag to rotate 3D model</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Product 4 -->
-                <div class="product-card">
-                    <div class="product-image">Energy Monitoring</div>
                     <div class="product-content">
-                        <h3 class="product-title">Energy Monitoring System</h3>
-                        <p class="product-description">Smart system to monitor power generation and consumption in real-time.</p>
-                        <div class="product-price">₹22,499 onwards</div>
-                        <div class="product-cta">
-                            <a href="#" class="btn">View Details</a>
+                        <h3 class="product-title">TOPcon 590W Solar Panel (Pack of 2)</h3>
+                        <p class="product-description">High efficiency TOPcon solar panels for residential & commercial rooftops.</p>
+                        <div class="product-price">₹89,999</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            (4.2/5)
                         </div>
+                        <button class="amazon-btn view-in-3d" data-product="3">View in 3D</button>
+                        <a href="https://amzn.to/4pqtVimi" class="amazon-btn">View on Amazon</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features section -->
-    <section id="features" class="section features">
-        <div class="container">
-            <div class="section-title">
-                <h2>SolarIndia Features</h2>
-                <p>Why choose our products</p>
+    <!-- 3D Viewer Modal -->
+    <div class="modal" id="modal-3d">
+        <div class="modal-content">
+            <div class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
             </div>
-            
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
-                    <h3>High Energy Efficiency</h3>
-                    <p>Industry-leading conversion efficiency for maximum power generation</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-tools"></i></div>
-                    <h3>Easy Installation</h3>
-                    <p>Certified technicians perform quick and safe installation</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
-                    <h3>Eco-Friendly</h3>
-                    <p>Contribute to reducing CO2 emissions and renewable energy adoption</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-rupee-sign"></i></div>
-                    <h3>Subsidy Support</h3>
-                    <p>Complete support for government subsidy applications</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Long Warranty</h3>
-                    <p>15-year product warranty and 5-year installation warranty</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Smart Monitoring</h3>
-                    <p>Check power generation status anytime with smartphone app</p>
-                </div>
+            <div id="modal-viewer"></div>
+            <div class="modal-body">
+                <h3 id="modal-product-title">Product Title</h3>
+                <p id="modal-product-description">Product description will appear here.</p>
+                <a href="#" class="amazon-btn" id="modal-amazon-link">View on Amazon</a>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Comparison section -->
-    <section id="comparison" class="section comparison">
+    <section id="comparison" class="section">
         <div class="container">
             <div class="section-title">
-                <h2>Product Comparison</h2>
-                <p>Choose the best system for your home</p>
+                <h2>Solar Products Comparison</h2>
+                <p>Compare the best solar products to find the perfect solution for your needs</p>
             </div>
             
-            <div class="table-responsive">
+            <div class="seo-content">
+                <h2>Complete Solar Kits vs Advanced Solar Panels</h2>
+                <p>When choosing between complete solar kits and advanced solar panels, it's important to understand your specific needs and how each option can benefit your home or business.</p>
+                
+                <h3>Complete Solar Kits</h3>
+                <p>These all-in-one solutions are perfect for homeowners who want a simple, plug-and-play solar system. They include everything you need to start generating solar power right away.</p>
+                
+                <h3>Advanced Solar Panels</h3>
+                <p>For those who want the latest technology and maximum efficiency, advanced solar panels with TOPcon technology offer superior performance and longer lifespan.</p>
+                
                 <table class="comparison-table">
                     <thead>
                         <tr>
-                            <th>Product Features</th>
-                            <th>Basic Package</th>
-                            <th>Standard Package</th>
-                            <th>Premium Package</th>
+                            <th>Feature</th>
+                            <th>Complete Solar Kits</th>
+                            <th>Advanced Solar Panels</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Estimated Generation</td>
-                            <td>4.5kW/day</td>
-                            <td>6.2kW/day</td>
-                            <td>8.5kW/day</td>
+                            <td>What's Included</td>
+                            <td>Panels + inverter + battery + controller</td>
+                            <td>Panels only</td>
                         </tr>
                         <tr>
-                            <td>Panel Efficiency</td>
-                            <td>19.5%</td>
-                            <td>21.2%</td>
-                            <td>22.8%</td>
+                            <td>Ease of Setup</td>
+                            <td>Very easy - minimal extra parts needed</td>
+                            <td>Needs inverter, battery, wiring</td>
                         </tr>
                         <tr>
-                            <td>Battery Capacity</td>
-                            <td>5kWh</td>
-                            <td>10kWh</td>
-                            <td>15kWh</td>
+                            <td>Efficiency</td>
+                            <td>15-21%</td>
+                            <td>21-23%+</td>
                         </tr>
                         <tr>
-                            <td>Warranty Period</td>
-                            <td>12 years</td>
-                            <td>15 years</td>
-                            <td>20 years</td>
+                            <td>Best For</td>
+                            <td>Quick installs, beginners</td>
+                            <td>Custom builds, upgrades</td>
                         </tr>
                         <tr>
-                            <td>Required Area</td>
-                            <td>20㎡</td>
-                            <td>28㎡</td>
-                            <td>35㎡</td>
+                            <td>Subsidy Eligible</td>
+                            <td>Some kits (if DCR panels used)</td>
+                            <td>Yes, if DCR-compliant</td>
                         </tr>
                         <tr>
-                            <td>Initial Investment</td>
-                            <td>₹4,90,000</td>
-                            <td>₹7,40,000</td>
-                            <td>₹10,75,000</td>
-                        </tr>
-                        <tr>
-                            <td>10-Year Savings</td>
-                            <td>₹3,60,000</td>
-                            <td>₹5,40,000</td>
-                            <td>₹7,75,000</td>
+                            <td>Example Product</td>
+                            <td>Luminous NXG+ 1150 Combo</td>
+                            <td>Fujiyama 590W TOPCon Bifacial</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+        </div>
+    </section>
+
+    <!-- Technology section -->
+    <section id="technology" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Solar Technology Explained</h2>
+                <p>Learn about the latest advancements in solar technology</p>
+            </div>
             
-            <div class="text-center">
-                <a href="#" class="btn">Download Detailed Comparison (PDF)</a>
+            <div class="seo-content">
+                <h2>The Latest in Solar Technology – What's Changed in 2025</h2>
+                <p>If you've been following the solar market, you'll know that the last two years have been a leap forward. The buzzwords you'll hear most often now are N-Type TOPCon and bifacial dual-glass modules.</p>
+                
+                <h3>N-Type TOPCon (Tunnel Oxide Passivated Contact)</h3>
+                <p>This is the next step up from traditional PERC cells. N-Type cells resist light-induced degradation, perform better in high temperatures, and deliver higher efficiency — often above 22%. For homeowners, that means more power from the same roof space.</p>
+                
+                <h3>Bifacial Dual-Glass Panels</h3>
+                <p>These panels capture sunlight from both the front and the back. If your roof or terrace reflects light (white paint, tiles, concrete), you can see a 5–25% boost in output. The dual-glass build also makes them tougher and more weather-resistant, with lifespans of 30 years or more.</p>
+                
+                <h3>Half-Cut Cell Design</h3>
+                <p>By splitting cells in half, manufacturers reduce resistive losses and improve shade tolerance. This is now standard in most premium panels.</p>
+                
+                <p>In short: today's best panels are more efficient, last longer, and perform better in India's hot, humid conditions — especially in coastal states like Kerala.</p>
+                
+                <h2>Government Subsidy – How It Works in 2025</h2>
+                <p>The PM Surya Ghar: Muft Bijli Yojana and state-level rooftop solar schemes continue to offer attractive subsidies for residential installations.</p>
+                
+                <h3>Eligibility</h3>
+                <p>To qualify, your panels must be DCR-compliant (Domestic Content Requirement) — meaning both the cells and modules are made in India. Many WAAREE and Adani models meet this standard.</p>
+                
+                <h3>Subsidy Amounts (for residential rooftop systems)</h3>
+                <ul>
+                    <li>Up to 3 kW: ₹18,000 per kW</li>
+                    <li>3–10 kW: ₹18,000 per kW for first 3 kW, then ₹9,000 per kW for the rest</li>
+                    <li>Above 10 kW: Subsidy capped at 10 kW</li>
+                </ul>
+                
+                <h3>Why It Matters for Buyers</h3>
+                <p>A DCR-compliant bifacial TOPCon panel might cost a bit more upfront, but the subsidy can offset a large chunk of that cost — making premium tech more affordable.</p>
             </div>
         </div>
     </section>
 
-    <!-- Steps section (Omotenashi pattern) -->
-    <section class="section steps">
+    <!-- Additional Products section -->
+    <section class="section">
         <div class="container">
             <div class="section-title">
-                <h2>Easy 4-Step Installation Process</h2>
-                <p>Comprehensive support system for your peace of mind</p>
+                <h2>More Solar Products</h2>
+                <p>Explore our full range of solar solutions</p>
             </div>
             
-            <div class="step-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h3>Free Consultation</h3>
-                    <p>We listen to your requirements online or by phone</p>
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h3>Site Survey</h3>
-                    <p>Our expert staff visits your home for assessment</p>
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h3>Quotation</h3>
-                    <p>Detailed quotation considering available subsidies</p>
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <h3>Installation</h3>
-                    <p>Quick installation within 2 weeks, start generating power</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ section -->
-    <section id="faq" class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Frequently Asked Questions</h2>
-                <p>Common questions from our customers</p>
-            </div>
-            
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How long does the installation take?</span>
-                        <span>+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>A typical residential solar panel system installation takes 2-5 days after the site survey. The time required depends on the roof shape and system size. Systems with batteries require an additional 1-2 days.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Do you help with subsidy applications?</span>
-                        <span>+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes, we provide complete support for government subsidy applications. We prepare all necessary documents and handle the application process on your behalf. Our success rate is over 99%.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Is maintenance required?</span>
-                        <span>+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Solar panels are basically maintenance-free, but cleaning the surface 1-2 times a year helps maintain efficiency. We also offer paid periodic inspection plans.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Can it work during power cuts?</span>
-                        <span>+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>If you have a battery system, it automatically switches to standalone operation during power cuts, allowing you to use important appliances. Solar-only systems can also generate power when there's sunlight.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What is the payback period?</span>
-                        <span>+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Depending on installation conditions and electricity usage, the initial investment is typically recovered in 8-12 years. After that, you can significantly save on electricity bills. Panels have a lifespan of 20+ years.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact section -->
-    <section id="contact" class="section features">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-                <p>Free consultation and quotation</p>
-            </div>
-            
-            <div class="text-center">
-                <p>Please contact us using the form below. Our specialist will contact you within 48 hours.</p>
-                
-                <div style="max-width: 500px; margin: 2rem auto;">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" class="form-input">
+            <div class="product-grid">
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-image-3d" id="product-4-3d">
+                            <div style="text-align: center;">
+                                <i class="fas fa-solar-panel" style="font-size: 3rem; color: #00c2ff; margin-bottom: 10px;"></i>
+                                <p>Drag to rotate 3D model</p>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Email Address" class="form-input">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">WAAREE TOPcon DCR Solar Panel</h3>
+                        <p class="product-description">Government subsidy eligible TOPcon DCR solar panels, pack of 2 with 1120W total capacity.</p>
+                        <div class="product-price">₹74,999</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            (4.5/5)
                         </div>
-                        <div class="form-group">
-                            <input type="tel" placeholder="Phone Number" class="form-input">
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Your Message" class="form-input"></textarea>
-                        </div>
-                        <button type="submit" class="btn" style="width: 100%;">Send Message</button>
-                    </form>
+                        <button class="amazon-btn view-in-3d" data-product="4">View in 3D</button>
+                        <a href="https://amzn.to/469NYHv" class="amazon-btn">View on Amazon</a>
+                    </div>
                 </div>
                 
-                <p>Phone support: <a href="tel:1800-123-4567" style="color: var(--secondary);">1800-123-4567</a> (Weekdays 9:00-18:00)</p>
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-image-3d" id="product-5-3d">
+                            <div style="text-align: center;">
+                                <i class="fas fa-solar-panel" style="font-size: 3rem; color: #00c2ff; margin-bottom: 10px;"></i>
+                                <p>Drag to rotate 3D model</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">WAAREE Solar Module</h3>
+                        <p class="product-description">30 years output warranty, pack of 2, 1170W total capacity for residential use.</p>
+                        <div class="product-price">₹82,499</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            (4.0/5)
+                        </div>
+                        <button class="amazon-btn view-in-3d" data-product="5">View in 3D</button>
+                        <a href="https://amzn.to/3K92IM1" class="amazon-btn">View on Amazon</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -998,76 +864,191 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div>
-                    <div class="footer-brand">
-                        <div class="footer-logo">☀️ SolarIndia</div>
-                        <p class="footer-description">Providing energy independence and a sustainable future</p>
+                <div class="footer-column">
+                    <h3>Solar3D India</h3>
+                    <p>Your trusted source for Amazon solar product recommendations and 3D product visualization.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
                     </div>
                 </div>
                 
-                <div>
-                    <h4 class="footer-heading">Quick Links</h4>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li class="footer-link"><a href="#products">Products</a></li>
-                        <li class="footer-link"><a href="#features">Service Features</a></li>
-                        <li class="footer-link"><a href="#comparison">Price Comparison</a></li>
-                        <li class="footer-link"><a href="#faq">FAQ</a></li>
+                        <li><a href="#products">Top Products</a></li>
+                        <li><a href="#comparison">Comparison</a></li>
+                        <li><a href="#technology">Technology</a></li>
+                        <li><a href="#">Blog</a></li>
                     </ul>
                 </div>
                 
-                <div>
-                    <h4 class="footer-heading">Company</h4>
+                <div class="footer-column">
+                    <h3>Help</h3>
                     <ul class="footer-links">
-                        <li class="footer-link"><a href="#">About Us</a></li>
-                        <li class="footer-link"><a href="#">Case Studies</a></li>
-                        <li class="footer-link"><a href="#">Blog</a></li>
-                        <li class="footer-link"><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
                     </ul>
                 </div>
                 
-                <div>
-                    <h4 class="footer-heading">Contact</h4>
-                    <ul class="footer-links">
-                        <li class="footer-link"><a href="tel:1800-123-4567">1800-123-4567</a></li>
-                        <li class="footer-link"><a href="mailto:info@solarindia.example">info@solarindia.example</a></li>
-                        <li class="footer-link">123 Tech Park, Bangalore, India</li>
-                        <li class="footer-link">
-                            <a href="#" style="margin-right: 1rem;"><i class="fab fa-facebook"></i></a>
-                            <a href="#" style="margin-right: 1rem;"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </li>
-                    </ul>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get special offers, free giveaways, and solar energy tips.</p>
+                    <form>
+                        <input type="email" placeholder="Your email address" style="padding: 10px; width: 100%; margin-bottom: 10px; border-radius: var(--radius); border: 1px solid #ccc;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Subscribe</button>
+                    </form>
                 </div>
             </div>
             
+            <div class="disclaimer">
+                <p><strong>Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. This means if you click on an Amazon link and make a purchase, I may receive a small commission at no extra cost to you. This helps support the site and allows me to continue to provide valuable content. Thank you for your support!</p>
+            </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2023 SolarIndia. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+                <p>&copy; 2023 Solar3D India. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
-        // Mobile navigation toggle
-        document.querySelector('.mobile-nav-toggle').addEventListener('click', function() {
-            document.getElementById('main-nav').classList.toggle('active');
+        // 3D Viewer functionality
+        let renderer, scene, camera, object;
+        let isDragging = false;
+        let previousMousePosition = { x: 0, y: 0 };
+        
+        function init3DViewer(containerId) {
+            const container = document.getElementById(containerId);
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            
+            // Create scene
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0xf0f0f0);
+            
+            // Create camera
+            camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+            camera.position.z = 5;
+            
+            // Create renderer
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(width, height);
+            container.innerHTML = '';
+            container.appendChild(renderer.domElement);
+            
+            // Add lights
+            const ambientLight = new THREE.AmbientLight(0x404040);
+            scene.add(ambientLight);
+            
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+            directionalLight.position.set(1, 1, 1);
+            scene.add(directionalLight);
+            
+            // Create a simple 3D object (in a real scenario, you would load a 3D model)
+            const geometry = new THREE.BoxGeometry(2, 2, 2);
+            const material = new THREE.MeshPhongMaterial({ 
+                color: 0x00aaff,
+                shininess: 100,
+                specular: 0x1188ff
+            });
+            object = new THREE.Mesh(geometry, material);
+            scene.add(object);
+            
+            // Add event listeners for mouse interaction
+            container.addEventListener('mousedown', onMouseDown);
+            container.addEventListener('mouseup', onMouseUp);
+            container.addEventListener('mousemove', onMouseMove);
+            
+            // Start animation
+            animate();
+        }
+        
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            if (!isDragging) {
+                object.rotation.x += 0.005;
+                object.rotation.y += 0.01;
+            }
+            
+            renderer.render(scene, camera);
+        }
+        
+        function onMouseDown(event) {
+            isDragging = true;
+        }
+        
+        function onMouseUp() {
+            isDragging = false;
+        }
+        
+        function onMouseMove(event) {
+            if (!isDragging) return;
+            
+            const deltaMove = {
+                x: event.offsetX - previousMousePosition.x,
+                y: event.offsetY - previousMousePosition.y
+            };
+            
+            object.rotation.y += deltaMove.x * 0.01;
+            object.rotation.x += deltaMove.y * 0.01;
+            
+            previousMousePosition = {
+                x: event.offsetX,
+                y: event.offsetY
+            };
+        }
+        
+        // Modal functionality
+        const modal = document.getElementById('modal-3d');
+        const modalClose = document.getElementById('modal-close');
+        const viewIn3DBtns = document.querySelectorAll('.view-in-3d');
+        
+        viewIn3DBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const productId = btn.getAttribute('data-product');
+                const productTitle = btn.parentElement.querySelector('.product-title').textContent;
+                const productDescription = btn.parentElement.querySelector('.product-description').textContent;
+                const amazonLink = btn.parentElement.querySelector('.amazon-btn').href;
+                
+                document.getElementById('modal-product-title').textContent = productTitle;
+                document.getElementById('modal-product-description').textContent = productDescription;
+                document.getElementById('modal-amazon-link').href = amazonLink;
+                
+                modal.style.display = 'flex';
+                
+                // Initialize 3D viewer in modal
+                setTimeout(() => {
+                    init3DViewer('modal-viewer');
+                }, 100);
+            });
         });
         
-        // FAQ accordion functionality
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const item = question.parentElement;
-                item.classList.toggle('active');
-                
-                // Change the icon
-                const icon = question.querySelector('span:last-child');
-                icon.textContent = item.classList.contains('active') ? '−' : '+';
-            });
+        modalClose.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+        
+        // Initialize 3D viewers for product cards
+        document.querySelectorAll('.product-image-3d').forEach((container, index) => {
+            setTimeout(() => {
+                init3DViewer(container.id);
+            }, 500 + (index * 200));
         });
         
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 
                 const targetId = this.getAttribute('href');
@@ -1075,30 +1056,12 @@
                 
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    // Close mobile nav if open
-                    document.getElementById('main-nav').classList.remove('active');
-                    
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
                     });
                 }
             });
-        });
-        
-        // Simple form validation
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = this.querySelector('input[type="text"]').value;
-            const email = this.querySelector('input[type="email"]').value;
-            
-            if (!name || !email) {
-                alert('Please enter your name and email address');
-                return;
-            }
-            
-            alert('Thank you for your inquiry! We will contact you soon.');
-            this.reset();
         });
     </script>
 </body>

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar3D India - Advanced Solar Solutions with 3D Visualization</title>
     <meta name="description" content="Discover India's best solar products with interactive 3D visualization. Amazon affiliate store featuring solar panels, generators, and accessories with expert reviews.">
+    <meta name="keywords" content="solar panels India, solar kits, Amazon affiliate, 3D product visualization, renewable energy, solar power">
+    <meta name="author" content="Solar3D India">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
@@ -689,9 +691,63 @@
                 overflow-x: auto;
             }
         }
+        
+        /* 3D Loader */
+        .loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        
+        .loader-circle {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(0, 194, 255, 0.2);
+            border-top: 4px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        /* Schema markup visually hidden */
+        .schema-markup {
+            display: none;
+        }
     </style>
 </head>
 <body>
+    <!-- Schema.org markup for SEO -->
+    <div class="schema-markup">
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Solar3D India",
+          "url": "https://makebrandlife.github.io/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://makebrandlife.github.io/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+        </script>
+        
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Solar3D India",
+          "url": "https://makebrandlife.github.io/",
+          "logo": "https://makebrandlife.github.io/logo.png",
+          "sameAs": [
+            "https://www.facebook.com/solar3dindia",
+            "https://twitter.com/solar3dindia",
+            "https://www.instagram.com/solar3dindia"
+          ]
+        }
+        </script>
+    </div>
+
     <!-- Mobile Navigation Overlay -->
     <div class="overlay" id="overlay"></div>
     
@@ -759,12 +815,12 @@
                 <!-- Product 1 -->
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://m.media-amazon.com/images/I/41kW9iy6WDL.jpg" alt="Star Home 250 Watt Solar Panel & Charger Controller with Portable Wheeled Stand">
+                        <img src="https://m.media-amazon.com/images/I/41kW9iy6WDL.jpg" alt="Star Home 250 Watt Solar Panel & Charger Controller with Portable Wheeled Stand" loading="lazy">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">Star Home 250 Watt Solar Panel & Charger Controller</h3>
                         <p class="product-description">Complete solar power kit with portable wheeled stand, 200W converter, and 12V Lithium-Ion Battery.</p>
-                        <button class="amazon-btn view-in-3d" data-product="1">View in 3D</button>
+                        <button class="amazon-btn view-in-3d" data-product="1" data-image="https://m.media-amazon.com/images/I/41kW9iy6WDL.jpg">View in 3D</button>
                         <a href="https://amzn.to/45U06BF" class="amazon-btn">View on Amazon</a>
                     </div>
                 </div>
@@ -772,12 +828,12 @@
                 <!-- Product 2 -->
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://m.media-amazon.com/images/I/41oPJri-lmL._SY300_SX300_QL70_FMwebp_.jpg" alt="Luminous NXG+ 1150 Solar Kit">
+                        <img src="https://m.media-amazon.com/images/I/41oPJri-lmL._SY300_SX300_QL70_FMwebp_.jpg" alt="Luminous NXG+ 1150 Solar Kit" loading="lazy">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">Luminous NXG+ 1150</h3>
                         <p class="product-description">High-performance solar kit with inverter and battery for home, office & shop use.</p>
-                        <button class="amazon-btn view-in-3d" data-product="2">View in 3D</button>
+                        <button class="amazon-btn view-in-3d" data-product="2" data-image="https://m.media-amazon.com/images/I/41oPJri-lmL._SY300_SX300_QL70_FMwebp_.jpg">View in 3D</button>
                         <a href="https://amzn.to/423XRcH" class="amazon-btn">View on Amazon</a>
                     </div>
                 </div>
@@ -785,12 +841,12 @@
                 <!-- Product 3 -->
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://m.media-amazon.com/images/I/7192f1+tt2L._SX679_.jpg" alt="Luminous NXG+ 1100 Solar Kit">
+                        <img src="https://m.media-amazon.com/images/I/7192f1+tt2L._SX679_.jpg" alt="Luminous NXG+ 1100 Solar Kit" loading="lazy">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">Luminous NXG+ 1100</h3>
                         <p class="product-description">Complete solar power solution with efficient inverter and long-lasting battery.</p>
-                        <button class="amazon-btn view-in-3d" data-product="3">View in 3D</button>
+                        <button class="amazon-btn view-in-3d" data-product="3" data-image="https://m.media-amazon.com/images/I/7192f1+tt2L._SX679_.jpg">View in 3D</button>
                         <a href="https://amzn.to/3I5LO7M" class="amazon-btn">View on Amazon</a>
                     </div>
                 </div>
@@ -810,12 +866,12 @@
                 <!-- Product 4 -->
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://m.media-amazon.com/images/I/61dHGiZwLVL._SX679_.jpg" alt="Fujiyama Solar 590W N-Type TOP-Con Solar Panel">
+                        <img src="https://m.media-amazon.com/images/I/61dHGiZwLVL._SX679_.jpg" alt="Fujiyama Solar 590W N-Type TOP-Con Solar Panel" loading="lazy">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">Fujiyama Solar 590W N-Type TOP-Con Panel</h3>
                         <p class="product-description">Dual glass, 22.87% efficiency, 144 cells with 10-year warranty for home & commercial rooftops (Pack of 2).</p>
-                        <button class="amazon-btn view-in-3d" data-product="4">View in 3D</button>
+                        <button class="amazon-btn view-in-3d" data-product="4" data-image="https://m.media-amazon.com/images/I/61dHGiZwLVL._SX679_.jpg">View in 3D</button>
                         <a href="https://amzn.to/4pdWimi" class="amazon-btn">View on Amazon</a>
                     </div>
                 </div>
@@ -823,12 +879,12 @@
                 <!-- Product 5 -->
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://m.media-amazon.com/images/I/71X9ekRmbgL._SL1500_.jpg" alt="WAAREE II 560 Watt TOPCon DCR Bifacial Solar Panel">
+                        <img src="https://m.media-amazon.com/images/I/71X9ekRmbgL._SL1500_.jpg" alt="WAAREE II 560 Watt TOPCon DCR Bifacial Solar Panel" loading="lazy">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">WAAREE 560W TOPCon DCR Bifacial Panel</h3>
                         <p class="product-description">Half-cut technology, BIS & IEC certified, dual glass bifacial module with 30 years output warranty (Pack of 2, 1120W).</p>
-                        <button class="amazon-btn view-in-3d" data-product="5">View in 3D</button>
+                        <button class="amazon-btn view-in-3d" data-product="5" data-image="https://m.media-amazon.com/images/I/71X9ekRmbgL._SL1500_.jpg">View in 3D</button>
                         <a href="https://amzn.to/469hYHv" class="amazon-btn">View on Amazon</a>
                     </div>
                 </div>
@@ -836,12 +892,12 @@
                 <!-- Product 6 -->
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://m.media-amazon.com/images/I/71X9ekRmbgL._SL1500_.jpg" alt="WAAREE II 585W TOPCon Bifacial Solar Panel">
+                        <img src="https://m.media-amazon.com/images/I/71X9ekRmbgL._SL1500_.jpg" alt="WAAREE II 585W TOPCon Bifacial Solar Panel" loading="lazy">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">WAAREE 585W TOPCon Bifacial Panel</h3>
                         <p class="product-description">High-efficiency mono PERC half-cut technology, framed dual glass bifacial module with 30 years output warranty (Pack of 2, 1170W).</p>
-                        <button class="amazon-btn view-in-3d" data-product="6">View in 3D</button>
+                        <button class="amazon-btn view-in-3d" data-product="6" data-image="https://m.media-amazon.com/images/I/71X9ekRmbgL._SL1500_.jpg">View in 3D</button>
                         <a href="https://amzn.to/3K9ZlM1" class="amazon-btn">View on Amazon</a>
                     </div>
                 </div>
@@ -855,7 +911,11 @@
             <div class="modal-close" id="modal-close">
                 <i class="fas fa-times"></i>
             </div>
-            <div id="modal-viewer"></div>
+            <div id="modal-viewer">
+                <div class="loader">
+                    <div class="loader-circle"></div>
+                </div>
+            </div>
             <div class="modal-body">
                 <h3 id="modal-product-title">Product Title</h3>
                 <p id="modal-product-description">Product description will appear here.</p>
@@ -1087,6 +1147,9 @@
             const width = container.clientWidth;
             const height = container.clientHeight;
             
+            // Remove loader
+            container.innerHTML = '';
+            
             // Create scene
             scene = new THREE.Scene();
             scene.background = new THREE.Color(0xf0f0f0);
@@ -1098,7 +1161,6 @@
             // Create renderer
             renderer = new THREE.WebGLRenderer({ antialias: true });
             renderer.setSize(width, height);
-            container.innerHTML = '';
             container.appendChild(renderer.domElement);
             
             // Add lights
@@ -1111,45 +1173,76 @@
             
             // Create different geometries based on product type
             let geometry;
-            let color;
+            let material;
             
             switch(productId) {
                 case '1': // Solar panel kit
                     geometry = new THREE.BoxGeometry(2, 0.2, 3);
-                    color = 0x2E86AB;
+                    material = new THREE.MeshPhongMaterial({ 
+                        color: 0x2E86AB,
+                        shininess: 100,
+                        specular: 0x1188ff
+                    });
                     break;
                 case '2': // Battery
                     geometry = new THREE.CylinderGeometry(1, 1, 2, 32);
-                    color = 0xA23B72;
+                    material = new THREE.MeshPhongMaterial({ 
+                        color: 0xA23B72,
+                        shininess: 100,
+                        specular: 0x1188ff
+                    });
                     break;
                 case '3': // Solar panel
                     geometry = new THREE.BoxGeometry(3, 0.1, 1.5);
-                    color = 0x018E42;
+                    material = new THREE.MeshPhongMaterial({ 
+                        color: 0x018E42,
+                        shininess: 100,
+                        specular: 0x1188ff
+                    });
                     break;
                 case '4': // Different solar panel
                     geometry = new THREE.BoxGeometry(2.5, 0.1, 1.8);
-                    color = 0xF18F01;
+                    material = new THREE.MeshPhongMaterial({ 
+                        color: 0xF18F01,
+                        shininess: 100,
+                        specular: 0x1188ff
+                    });
                     break;
                 case '5': // Another solar panel
                     geometry = new THREE.BoxGeometry(3.2, 0.1, 1.6);
-                    color = 0xC73E1D;
+                    material = new THREE.MeshPhongMaterial({ 
+                        color: 0xC73E1D,
+                        shininess: 100,
+                        specular: 0x1188ff
+                    });
                     break;
                 case '6': // Another solar panel
                     geometry = new THREE.BoxGeometry(3, 0.1, 1.7);
-                    color = 0x5C6BC0;
+                    material = new THREE.MeshPhongMaterial({ 
+                        color: 0x5C6BC0,
+                        shininess: 100,
+                        specular: 0x1188ff
+                    });
                     break;
                 default:
                     geometry = new THREE.BoxGeometry(2, 2, 2);
-                    color = 0x00aaff;
+                    material = new THREE.MeshPhongMaterial({ 
+                        color: 0x00aaff,
+                        shininess: 100,
+                        specular: 0x1188ff
+                    });
             }
             
-            const material = new THREE.MeshPhongMaterial({ 
-                color: color,
-                shininess: 100,
-                specular: 0x1188ff
-            });
             object = new THREE.Mesh(geometry, material);
             scene.add(object);
+            
+            // Add wireframe for better visual effect
+            const wireframe = new THREE.WireframeGeometry(geometry);
+            const line = new THREE.LineSegments(wireframe);
+            line.material.color.setHex(0x000000);
+            line.material.opacity = 0.3;
+            line.material.transparent = true;
+            object.add(line);
             
             // Add event listeners for mouse interaction
             container.addEventListener('mousedown', onMouseDown);

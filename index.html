@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar India - Advanced Solar Solutions</title>
-    <meta name="description" content="Discover India's best solar products. Amazon affiliate store featuring solar panels, generators, and accessories with expert reviews.">
+    <title>Solar India - Advanced Solar Solutions for Homes and Businesses</title>
+    <meta name="description" content="Discover India's best solar products with expert reviews. Compare solar kits, panels and technology for homes and businesses.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -27,10 +27,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: var(--light);
             color: var(--text);
             line-height: 1.7;
@@ -117,10 +117,12 @@
             align-items: center;
             padding: 8rem 0 4rem;
             position: relative;
+            text-align: center;
         }
         
         .hero-content {
             max-width: 800px;
+            margin: 0 auto;
         }
         
         .hero-title {
@@ -195,10 +197,10 @@
         /* Section styles */
         .section {
             padding: 5rem 0;
+            text-align: center;
         }
         
         .section-title {
-            text-align: center;
             margin-bottom: 3rem;
         }
         
@@ -236,7 +238,7 @@
         }
         
         .product-image {
-            height: 200px;
+            height: 250px;
             background-color: #f0f0f0;
             position: relative;
             overflow: hidden;
@@ -245,8 +247,9 @@
         .product-image img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             transition: transform 0.5s ease;
+            padding: 10px;
         }
         
         .product-card:hover .product-image img {
@@ -281,82 +284,45 @@
             margin-bottom: 1rem;
         }
         
-        /* Categories section */
-        .category-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .category-card {
+        /* About Us Section */
+        .about-section {
             background: white;
             border-radius: var(--radius);
-            padding: 2rem;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease;
-        }
-        
-        .category-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .category-icon {
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        
-        /* Benefits section */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .benefit-card {
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-        }
-        
-        .benefit-icon {
-            font-size: 2rem;
-            color: var(--primary);
-        }
-        
-        /* SEO Optimized Content Sections */
-        .seo-content {
-            background: white;
-            border-radius: var(--radius);
-            padding: 3rem;
+            padding: 4rem;
             margin: 3rem 0;
             box-shadow: var(--shadow);
+            text-align: center;
         }
         
-        .seo-content h2 {
+        .about-section h2 {
             color: var(--dark);
             margin-bottom: 1.5rem;
             border-left: 4px solid var(--primary);
             padding-left: 1rem;
+            text-align: center;
+            display: inline-block;
         }
         
-        .seo-content h3 {
+        .about-section h3 {
             color: var(--dark);
             margin: 1.5rem 0 1rem;
+            text-align: center;
         }
         
-        .seo-content p {
+        .about-section p {
             margin-bottom: 1rem;
             line-height: 1.8;
+            text-align: center;
         }
         
-        .seo-content ul {
+        .about-section ul {
             margin-left: 2rem;
             margin-bottom: 1.5rem;
+            text-align: left;
+            display: inline-block;
         }
         
-        .seo-content li {
+        .about-section li {
             margin-bottom: 0.5rem;
         }
         
@@ -437,6 +403,7 @@
             color: white;
             padding: 4rem 0 2rem;
             margin-top: 4rem;
+            text-align: center;
         }
         
         .footer-grid {
@@ -444,6 +411,7 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-bottom: 3rem;
+            text-align: left;
         }
         
         .footer-column h3 {
@@ -474,6 +442,7 @@
             display: flex;
             gap: 1rem;
             margin-top: 1.5rem;
+            justify-content: center;
         }
         
         .social-links a {
@@ -507,23 +476,6 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #ccc;
             font-size: 0.9rem;
-        }
-        
-        /* Loading spinner */
-        .loading-spinner {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 3px solid rgba(255,255,255,.3);
-            border-radius: 50%;
-            border-top-color: #fff;
-            animation: spin 1s ease-in-out infinite;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
         }
         
         /* Mobile navigation */
@@ -596,8 +548,7 @@
                 font-size: 1.2rem;
             }
             
-            .product-grid,
-            .category-grid {
+            .product-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -624,6 +575,10 @@
                 display: block;
                 overflow-x: auto;
             }
+            
+            .about-section {
+                padding: 2rem;
+            }
         }
     </style>
 </head>
@@ -642,6 +597,7 @@
             <li class="mobile-nav-item"><a href="#comparison" class="mobile-nav-link">Comparison</a></li>
             <li class="mobile-nav-item"><a href="#technology" class="mobile-nav-link">Technology</a></li>
             <li class="mobile-nav-item"><a href="#testimonials" class="mobile-nav-link">Testimonials</a></li>
+            <li class="mobile-nav-item"><a href="#about" class="mobile-nav-link">About Us</a></li>
         </ul>
     </div>
 
@@ -660,6 +616,7 @@
                         <li class="nav-item"><a href="#comparison" class="nav-link">Comparison</a></li>
                         <li class="nav-item"><a href="#technology" class="nav-link">Technology</a></li>
                         <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
                     </ul>
                 </nav>
                 <button class="mobile-menu-btn" id="mobile-menu-btn">
@@ -673,8 +630,8 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">India's Premier Solar Products</h1>
-                <p class="hero-subtitle">Discover the best Amazon solar products with detailed expert reviews</p>
+                <h1 class="hero-title">India's Premier Solar Solutions</h1>
+                <p class="hero-subtitle">Discover the best solar products with detailed expert reviews</p>
                 <div class="hero-cta">
                     <a href="#solar-kits" class="btn btn-primary">Explore Products</a>
                     <a href="#comparison" class="btn btn-outline">View Comparison</a>
@@ -687,7 +644,7 @@
     <section id="solar-kits" class="section">
         <div class="container">
             <div class="section-title">
-                <h2>Top Selling Solar Kits</h2>
+                <h2>Solar Kits for Home and Business</h2>
                 <p>Complete solar solutions with everything you need to get started with solar power</p>
             </div>
             
@@ -735,7 +692,7 @@
     <section id="solar-panels" class="section">
         <div class="container">
             <div class="section-title">
-                <h2>Premium Solar Panels</h2>
+                <h2>Best Solar Panels in India</h2>
                 <p>High-efficiency solar panels for residential and commercial use</p>
             </div>
             
@@ -779,15 +736,42 @@
         </div>
     </section>
 
+    <!-- About Us Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Solar India</h2>
+                <p>Your Partner in Smarter Solar Energy Solutions</p>
+            </div>
+            
+            <div class="about-section">
+                <p>At Solar India, we believe the sun is more than just light — it's the most reliable, renewable source of power we have. Our mission is to help households and businesses across India find Solar Kits for Home and Business, choose the Best Solar Panels in India, and stay informed about the Latest Solar Technology shaping the future of clean energy.</p>
+                
+                <p>We know that going solar is a big decision. That's why we make it easy to compare solar products side-by-side, understand performance, and choose solutions that fit your budget, climate, and lifestyle.</p>
+                
+                <p>Our community is built on trust and real experiences. In our <a href="#testimonials" class="internal-link">Customer Testimonials</a> section, you'll hear from people who have transformed their homes and businesses with solar — cutting electricity bills, gaining energy independence, and making a positive environmental impact.</p>
+                
+                <h3>Why We're Different</h3>
+                <ul>
+                    <li><strong>Local Expertise</strong> – We focus on solar energy solutions designed for Indian climates and power needs.</li>
+                    <li><strong>Clear, Honest Guidance</strong> – We translate technical jargon into plain language so you can make informed choices.</li>
+                    <li><strong>Future-Focused</strong> – We track the latest innovations to keep you ahead of the curve.</li>
+                </ul>
+                
+                <p>Every sunrise is an opportunity to power your home, save money, and protect the planet. Let's harness that energy together — one smart solar choice at a time.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Comparison section -->
     <section id="comparison" class="section">
         <div class="container">
             <div class="section-title">
-                <h2>Solar Products Comparison</h2>
+                <h2>Solar Product Comparison</h2>
                 <p>Compare the best solar products to find the perfect solution for your needs</p>
             </div>
             
-            <div class="seo-content">
+            <div class="about-section">
                 <h2>Complete Solar Kits vs Advanced Solar Panels</h2>
                 <p>When choosing between complete solar kits and advanced solar panels, it's important to understand your specific needs and how each option can benefit your home or business.</p>
                 
@@ -846,11 +830,11 @@
     <section id="technology" class="section">
         <div class="container">
             <div class="section-title">
-                <h2>Solar Technology Explained</h2>
+                <h2>Latest Solar Technology</h2>
                 <p>Learn about the latest advancements in solar technology</p>
             </div>
             
-            <div class="seo-content">
+            <div class="about-section">
                 <h2>The Latest in Solar Technology – What's Changed in 2025</h2>
                 <p>If you've been following the solar market, you'll know that the last two years have been a leap forward. The buzzwords you'll hear most often now are N-Type TOPCon and bifacial dual-glass modules.</p>
                 
@@ -888,7 +872,7 @@
     <section id="testimonials" class="section">
         <div class="container">
             <div class="section-title">
-                <h2>Customer Testimonials</h2>
+                <h2>Solar Customer Testimonials</h2>
                 <p>See what our customers are saying about these solar products</p>
             </div>
             
@@ -941,23 +925,23 @@
             <div class="footer-grid">
                 <div class="footer-column">
                     <h3>Solar India</h3>
-                    <p>Your trusted source for Amazon solar product recommendations.</p>
+                    <p>Your trusted source for solar product recommendations.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://www.facebook.com/share/17Ec6gNTXQ/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/newgendeal"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/newgendeal?igsh=N3Jxc3hrbnp6MWRn"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pin.it/189inumYs"><i class="fab fa-pinterest"></i></a>
                     </div>
                 </div>
                 
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#solar-kits">Solar Kits</a></li>
-                        <li><a href="#solar-panels">Solar Panels</a></li>
-                        <li><a href="#comparison">Comparison</a></li>
-                        <li><a href="#technology">Technology</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#solar-kits">Solar Kits for Home and Business</a></li>
+                        <li><a href="#solar-panels">Best Solar Panels in India</a></li>
+                        <li><a href="#comparison">Solar Product Comparison</a></li>
+                        <li><a href="#technology">Latest Solar Technology</a></li>
+                        <li><a href="#testimonials">Customer Testimonials</a></li>
                     </ul>
                 </div>
                 

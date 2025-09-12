@@ -397,6 +397,48 @@
             margin-right: 1rem;
         }
         
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            border-radius: var(--radius);
+            padding: 4rem;
+            margin: 3rem 0;
+            box-shadow: var(--shadow);
+            text-align: left;
+        }
+        
+        .faq-item {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 2rem;
+        }
+        
+        .faq-question {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        .faq-answer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+        
         /* Footer */
         .footer {
             background: var(--dark);
@@ -576,7 +618,7 @@
                 overflow-x: auto;
             }
             
-            .about-section {
+            .about-section, .faq-section {
                 padding: 2rem;
             }
         }
@@ -598,6 +640,7 @@
             <li class="mobile-nav-item"><a href="#technology" class="mobile-nav-link">Technology</a></li>
             <li class="mobile-nav-item"><a href="#testimonials" class="mobile-nav-link">Testimonials</a></li>
             <li class="mobile-nav-item"><a href="#about" class="mobile-nav-link">About Us</a></li>
+            <li class="mobile-nav-item"><a href="#faq" class="mobile-nav-link">FAQ</a></li>
         </ul>
     </div>
 
@@ -617,6 +660,7 @@
                         <li class="nav-item"><a href="#technology" class="nav-link">Technology</a></li>
                         <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
                         <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+                        <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
                     </ul>
                 </nav>
                 <button class="mobile-menu-btn" id="mobile-menu-btn">
@@ -919,6 +963,158 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about solar products and technology</p>
+            </div>
+            
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question">What's the difference between a solar kit and a single solar panel?</div>
+                    <div class="faq-answer">
+                        A solar panel is just one component—it converts sunlight into electricity. A solar kit includes everything you need for a functioning system: panels, inverters, charge controllers, mounting hardware, and sometimes batteries. See our <a href="#solar-kits">Solar Kits</a> page for full details.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Which solar kit is best for a 2BHK home in India?</div>
+                    <div class="faq-answer">
+                        For a typical 2BHK home using 8–10 units per day, a 3–5 kW system is ideal. The <a href="https://amzn.to/423XRcH" target="_blank">Luminous NXG+ 1150</a> or similar kits offer good balance of power and value. Check our <a href="#comparison">Comparison</a> section for detailed analysis.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Do solar panels work during monsoon or cloudy days?</div>
+                    <div class="faq-answer">
+                        Yes, though at reduced efficiency (around 30–50% of full capacity). Modern panels like the <a href="https://amzn.to/4pdWimi" target="_blank">Fujiyama 590W TOPCon</a> perform better in low light than older models. Battery backup is recommended for continuous power.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What does "bifacial" mean in solar panels?</div>
+                    <div class="faq-answer">
+                        Bifacial panels capture sunlight from both sides, increasing total output by 5–25%. They work best when installed over reflective surfaces (white roofs, gravel, sand). See our <a href="#technology">Technology</a> section for more on this innovation.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How long do solar batteries last?</div>
+                    <div class="faq-answer">
+                        Lithium-ion batteries (like in the Star Home kit) last 7–10 years or 3000+ cycles. Lead-acid batteries typically last 3–5 years. Proper maintenance extends lifespan. Read real user experiences in our <a href="#testimonials">Testimonials</a>.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can I run an AC on solar power?</div>
+                    <div class="faq-answer">
+                        Yes, but you'll need sufficient capacity. A 1.5-ton AC requires about 2 kW of solar panels plus adequate battery storage. The <a href="https://amzn.to/3I5LO7M" target="_blank">Luminous NXG+ 1100</a> or larger systems can handle AC loads.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What maintenance do solar panels require?</div>
+                    <div class="faq-answer">
+                        Minimal maintenance: occasional cleaning (every 2–3 months) with water and soft cloth, checking for shade obstructions, and ensuring connections remain tight. Most systems include monitoring apps. Learn more in our <a href="#technology">Technology</a> guide.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How much can I save with solar power?</div>
+                    <div class="faq-answer">
+                        Most homes save 70–90% on electricity bills, with full payback in 4–7 years. Savings depend on your location, consumption, and local electricity rates. See real savings examples in our <a href="#testimonials">Testimonials</a> section.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What is the PM Surya Ghar Muft Bijli Yojana subsidy?</div>
+                    <div class="faq-answer">
+                        This central government scheme offers subsidies up to ₹78,000 for residential rooftop solar installations. Eligibility requires using approved components and installers. Learn more in our <a href="#technology">Technology</a> section's subsidy breakdown.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Are these products eligible for government subsidies?</div>
+                    <div class="faq-answer">
+                        Many are, particularly DCR-compliant panels (like certain WAAREE models). Complete kits may qualify if they use approved components. Check our <a href="#comparison">Comparison</a> table for subsidy eligibility notes on each product.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What if a panel gets damaged? Is there a warranty?</div>
+                    <div class="faq-answer">
+                        Most premium panels come with 25–30 year performance warranties and 10–12 year product warranties. The <a href="https://amzn.to/469hYHv" target="_blank">WAAREE 560W TOPCon</a>, for example, offers 30 years output warranty. Always register your warranty after purchase.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I know if my roof is suitable for solar?</div>
+                    <div class="faq-answer">
+                        Most roofs work if they: 1) receive 4–6 hours of direct sunlight, 2) have adequate structural strength, and 3) aren't heavily shaded. South-facing roofs are ideal in India. Our <a href="#solar-kits">Solar Kits</a> page has guidance for different roof types.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can I install solar panels myself?</div>
+                    <div class="faq-answer">
+                        Kits like the <a href="https://amzn.to/45U06BF" target="_blank">Star Home 250 Watt</a> are designed for DIY installation, but we recommend professional help for grid-tied systems or complex roof mounts. Proper installation ensures safety and maximizes efficiency.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What happens during a power cut with a solar system?</div>
+                    <div class="faq-answer">
+                        Systems with battery backup automatically switch to solar power during outages. Grid-tied systems without batteries will shut down for safety unless they have special islanding capability. Our <a href="#technology">Technology</a> section explains these configurations.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How does solar perform in India's extreme heat?</div>
+                    <div class="faq-answer">
+                        Solar panels actually become slightly less efficient as temperatures rise, but modern panels like <a href="https://amzn.to/3K9ZlM1" target="_blank">WAAREE's TOPCon models</a> handle heat better than older technologies. See our <a href="#technology">Technology</a> page for heat tolerance comparisons.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What is the lifespan of solar panels?</div>
+                    <div class="faq-answer">
+                        Most quality panels are warrantied for 25–30 years and can continue producing electricity at reduced capacity beyond that. The <a href="https://amzn.to/4pdWimi" target="_blank">Fujiyama 590W</a> panel maintains 87% output even after 30 years.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Are there any hidden costs after buying a solar kit?</div>
+                    <div class="faq-answer">
+                        The main upfront cost is the kit and installation. Minor ongoing costs may include replacement batteries (in 7–10 years), routine cleaning, and, if grid-tied, minor connection fees. We break down all cost elements in our Detailed Pricing Guide. See user cost breakdowns and tips in <a href="#testimonials">Testimonials</a>.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Is installing solar really worth it in 2025 and beyond?</div>
+                    <div class="faq-answer">
+                        Absolutely, for most Indian homes and small businesses. Falling panel prices, rising grid rates, generous subsidies, and improved technology make solar a smart investment for 2025. The average family saves thousands on electricity over 25 years, gains energy independence, and helps the environment. For real ROI data, see backups from our <a href="#testimonials">Testimonials</a>.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Where can I see real testimonials or reviews about solar kits and panels?</div>
+                    <div class="faq-answer">
+                        See authentic, verified customer reviews and before-after stories of savings, durability, and service on our <a href="#testimonials">Testimonials page</a>. Each testimonial is vetted for accuracy and relevance to help you make an informed choice.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How can I contact your team for a personalized solar quotation or consultation?</div>
+                    <div class="faq-answer">
+                        You can reach our solar experts via our Contact form or request a call back on our <a href="#solar-kits">Solar Kits page</a>. Consultation is free with no obligation, and you'll get an instant cost estimate plus a tailored system plan.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -942,6 +1138,7 @@
                         <li><a href="#comparison">Solar Product Comparison</a></li>
                         <li><a href="#technology">Latest Solar Technology</a></li>
                         <li><a href="#testimonials">Customer Testimonials</a></li>
+                        <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </div>
                 
@@ -949,7 +1146,7 @@
                     <h3>Help</h3>
                     <ul class="footer-links">
                         <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#faq">FAQ</a></li>
                         <li><a href="#">Shipping Info</a></li>
                         <li><a href="#">Returns</a></li>
                     </ul>
@@ -1015,6 +1212,125 @@
                 }
             });
         });
+
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isOpen = answer.style.display === 'block';
+                
+                // Close all answers
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.style.display = 'none';
+                });
+                
+                // Remove active class from all questions
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                });
+                
+                // Open clicked answer if it was closed
+                if (!isOpen) {
+                    answer.style.display = 'block';
+                    question.classList.add('active');
+                }
+            });
+        });
+
+        // Initially hide all FAQ answers
+        document.querySelectorAll('.faq-answer').forEach(answer => {
+            answer.style.display = 'none';
+        });
+    </script>
+
+    <!-- Schema.org FAQ markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What's the difference between a solar kit and a single solar panel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A solar panel is just one component—it converts sunlight into electricity. A solar kit includes everything you need for a functioning system: panels, inverters, charge controllers, mounting hardware, and sometimes batteries."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which solar kit is best for a 2BHK home in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a typical 2BHK home using 8–10 units per day, a 3–5 kW system is ideal. The Luminous NXG+ 1150 or similar kits offer good balance of power and value."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do solar panels work during monsoon or cloudy days?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, though at reduced efficiency (around 30–50% of full capacity). Modern panels perform better in low light than older models. Battery backup is recommended for continuous power."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does bifacial mean in solar panels?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bifacial panels capture sunlight from both sides, increasing total output by 5–25%. They work best when installed over reflective surfaces (white roofs, gravel, sand)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long do solar batteries last?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lithium-ion batteries last 7–10 years or 3000+ cycles. Lead-acid batteries typically last 3–5 years. Proper maintenance extends lifespan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I run an AC on solar power?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, but you'll need sufficient capacity. A 1.5-ton AC requires about 2 kW of solar panels plus adequate battery storage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What maintenance do solar panels require?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Minimal maintenance: occasional cleaning (every 2–3 months) with water and soft cloth, checking for shade obstructions, and ensuring connections remain tight."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I save with solar power?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most homes save 70–90% on electricity bills, with full payback in 4–7 years. Savings depend on your location, consumption, and local electricity rates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the PM Surya Ghar Muft Bijli Yojana subsidy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This central government scheme offers subsidies up to ₹78,000 for residential rooftop solar installations. Eligibility requires using approved components and installers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are these products eligible for government subsidies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many are, particularly DCR-compliant panels. Complete kits may qualify if they use approved components."
+          }
+        }
+      ]
+    }
     </script>
 </body>
 </html>

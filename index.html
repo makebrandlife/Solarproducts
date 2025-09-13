@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Solar Products in India 2025 | Expert Reviews & Comparisons</title>
-    <meta name="description" content="Expert reviews of the best solar panels, kits and technology for Indian homes. Compare prices, performance and get the right solar solution for your needs.">
+    <title>Solar India | Expert Solar Solutions & Product Reviews</title>
+    <meta name="description" content="Comprehensive guide to solar energy in India. Expert reviews of solar panels, kits, and technology. Find the perfect solar solution for your home or business.">
     <meta name="keywords" content="solar panels India, solar kits, solar energy, solar power, best solar panels, solar technology, solar reviews">
     <meta name="author" content="Solar India Experts">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://makebrandlife.github.io/Solarproducts/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #00c2ff;
-            --secondary: #00ff87;
-            --accent: #ff2e87;
+            --primary: #FFD700;
+            --secondary: #FF8C00;
+            --accent: #FF4500;
             --amazon: #FF9900;
-            --dark: #0a1929;
-            --light: #f5f5f5;
+            --dark: #1a1a2e;
+            --darker: #0d0d1a;
+            --light: #f8f9fa;
             --text: #333333;
-            --text-light: #777777;
+            --text-light: #666666;
             --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            --glass: rgba(255, 255, 255, 0.1);
-            --glass-border: rgba(255, 255, 255, 0.15);
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             --radius: 12px;
         }
         
@@ -31,7 +31,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
         
         body {
@@ -39,9 +39,12 @@
             color: var(--text);
             line-height: 1.7;
             overflow-x: hidden;
-            background-image:  
-                radial-gradient(circle at 15% 50%, rgba(0, 194, 255, 0.08) 0%, transparent 20%),
-                radial-gradient(circle at 85% 30%, rgba(0, 255, 135, 0.08) 0%, transparent 20%);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--dark);
         }
         
         .container {
@@ -60,8 +63,8 @@
             padding: 1.2rem 0;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--glass-border);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         
         .header-inner {
@@ -77,6 +80,7 @@
             font-size: 1.5rem;
             color: var(--dark);
             text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
         }
         
         .logo-icon {
@@ -99,10 +103,27 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
         }
         
         .nav-link:hover {
             color: var(--primary);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
         }
         
         .mobile-menu-btn {
@@ -122,11 +143,33 @@
             padding: 8rem 0 4rem;
             position: relative;
             text-align: center;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(255, 140, 0, 0.05) 100%);
+            overflow: hidden;
+        }
+        
+        .sun {
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #FFD700 0%, #FF8C00 70%, #FF4500 100%);
+            box-shadow: 0 0 50px #FFD700, 0 0 100px rgba(255, 215, 0, 0.5);
+            z-index: 1;
+            animation: pulse 4s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 50px #FFD700, 0 0 100px rgba(255, 215, 0, 0.5); }
+            100% { transform: scale(1.05); box-shadow: 0 0 70px #FFD700, 0 0 140px rgba(255, 215, 0, 0.7); }
         }
         
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
         
         .hero-title {
@@ -137,12 +180,16 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            line-height: 1.2;
         }
         
         .hero-subtitle {
             font-size: 1.5rem;
             margin-bottom: 2.5rem;
             color: var(--text-light);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         /* Button styles */
@@ -155,17 +202,40 @@
             transition: all 0.3s ease;
             text-decoration: none;
             border: none;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: all 0.6s ease;
+            z-index: -1;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
         }
         
         .btn-primary {
             background: var(--gradient);
             color: white;
             margin-right: 1rem;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
         }
         
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.6);
         }
         
         .btn-outline {
@@ -191,11 +261,32 @@
             font-weight: 600;
             transition: all 0.3s ease;
             margin-top: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .amazon-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: all 0.6s ease;
+        }
+        
+        .amazon-btn:hover::before {
+            left: 100%;
         }
         
         .amazon-btn:hover {
             background-color: #e58900;
             transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 153, 0, 0.4);
         }
         
         /* Section styles */
@@ -206,15 +297,21 @@
         
         .section-title {
             margin-bottom: 3rem;
+            position: relative;
         }
         
-        .section-title h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--dark);
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gradient);
         }
         
-        .section-title h2 {
+        .section-title h1, .section-title h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             color: var(--dark);
@@ -240,11 +337,13 @@
             border-radius: var(--radius);
             overflow: hidden;
             box-shadow: var(--shadow);
-            transition: transform 0.3s ease;
+            transition: all 0.4s ease;
+            position: relative;
         }
         
         .product-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.2);
         }
         
         .product-image {
@@ -252,6 +351,9 @@
             background-color: #f0f0f0;
             position: relative;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .product-image img {
@@ -282,18 +384,6 @@
             font-size: 0.95rem;
         }
         
-        .product-price {
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .product-rating {
-            color: var(--amazon);
-            margin-bottom: 1rem;
-        }
-        
         /* Featured product badge */
         .featured-badge {
             position: absolute;
@@ -306,6 +396,8 @@
             font-size: 0.8rem;
             font-weight: bold;
             z-index: 10;
+            font-family: 'Montserrat', sans-serif;
+            box-shadow: 0 3px 10px rgba(255, 69, 0, 0.4);
         }
         
         /* About Us Section */
@@ -315,7 +407,7 @@
             padding: 4rem;
             margin: 3rem 0;
             box-shadow: var(--shadow);
-            text-align: center;
+            text-align: left;
         }
         
         .about-section h2 {
@@ -323,27 +415,25 @@
             margin-bottom: 1.5rem;
             border-left: 4px solid var(--primary);
             padding-left: 1rem;
-            text-align: center;
+            text-align: left;
             display: inline-block;
         }
         
         .about-section h3 {
             color: var(--dark);
             margin: 1.5rem 0 1rem;
-            text-align: center;
+            text-align: left;
         }
         
         .about-section p {
             margin-bottom: 1rem;
             line-height: 1.8;
-            text-align: center;
         }
         
         .about-section ul {
             margin-left: 2rem;
             margin-bottom: 1.5rem;
             text-align: left;
-            display: inline-block;
         }
         
         .about-section li {
@@ -355,6 +445,10 @@
             width: 100%;
             border-collapse: collapse;
             margin: 2rem 0;
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
         }
         
         .comparison-table th, .comparison-table td {
@@ -369,7 +463,7 @@
         }
         
         .comparison-table tr:hover {
-            background-color: #f9f9f9;
+            background-color: #fff8e1;
         }
         
         /* Testimonials */
@@ -385,15 +479,17 @@
             border-radius: var(--radius);
             padding: 2rem;
             box-shadow: var(--shadow);
+            text-align: left;
         }
         
         .testimonial-text {
             font-style: italic;
             margin-bottom: 1.5rem;
             position: relative;
+            color: var(--text-light);
         }
         
-        .testimonial-text:before {
+        .testimonial-text::before {
             content: """;
             font-size: 4rem;
             color: var(--primary);
@@ -401,6 +497,7 @@
             position: absolute;
             top: -1.5rem;
             left: -1rem;
+            font-family: serif;
         }
         
         .testimonial-author {
@@ -412,13 +509,14 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background-color: var(--primary);
+            background: var(--gradient);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: var(--darker);
             font-weight: bold;
             margin-right: 1rem;
+            font-family: 'Montserrat', sans-serif;
         }
         
         /* FAQ Section */
@@ -446,6 +544,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            font-family: 'Montserrat', sans-serif;
         }
         
         .faq-answer {
@@ -525,6 +624,8 @@
         
         .social-links a:hover {
             background: var(--primary);
+            color: var(--darker);
+            transform: translateY(-3px);
         }
         
         .disclaimer {
@@ -571,6 +672,7 @@
             border: none;
             font-size: 1.5rem;
             cursor: pointer;
+            color: var(--dark);
         }
         
         .mobile-nav-list {
@@ -606,7 +708,7 @@
         
         /* Affiliate disclosure */
         .affiliate-disclosure {
-            background: #f8f9fa;
+            background: #fff8e1;
             border-left: 4px solid var(--amazon);
             padding: 1rem;
             margin: 2rem 0;
@@ -614,7 +716,89 @@
             font-size: 0.9rem;
         }
         
+        /* Tech section */
+        .tech-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .tech-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        /* Decision guide */
+        .decision-guide {
+            background: white;
+            border-radius: var(--radius);
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            margin: 3rem 0;
+            text-align: left;
+        }
+        
+        .decision-step {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .decision-step:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--gradient);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-right: 1rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
         /* Responsive design */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .section-title h1,
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .sun {
+                width: 120px;
+                height: 120px;
+                top: 15%;
+                right: 5%;
+            }
+        }
+        
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2.5rem;
@@ -652,13 +836,48 @@
                 overflow-x: auto;
             }
             
-            .about-section, .faq-section {
+            .about-section, .faq-section, .decision-guide {
                 padding: 2rem;
             }
             
             .section-title h1,
             .section-title h2 {
                 font-size: 2rem;
+            }
+            
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .sun {
+                width: 100px;
+                height: 100px;
+                top: 12%;
+                right: 3%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .section-title h1,
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .mobile-nav {
+                width: 100%;
+                max-width: none;
             }
         }
     </style>
@@ -675,14 +894,13 @@
         <ul class="mobile-nav-list">
             <li class="mobile-nav-item"><a href="#solar-kits" class="mobile-nav-link">Solar Kits</a></li>
             <li class="mobile-nav-item"><a href="#solar-panels" class="mobile-nav-link">Solar Panels</a></li>
-            <li class="mobile-nav-item"><a href="#comparison" class="mobile-nav-link">Comparison</a></li>
             <li class="mobile-nav-item"><a href="#technology" class="mobile-nav-link">Technology</a></li>
+            <li class="mobile-nav-item"><a href="#decision-guide" class="mobile-nav-link">Decision Guide</a></li>
             <li class="mobile-nav-item"><a href="#testimonials" class="mobile-nav-link">Testimonials</a></li>
-            <li class="mobile-nav-item"><a href="#about" class="mobile-nav-link">About Us</a></li>
             <li class="mobile-nav-item"><a href="#faq" class="mobile-nav-link">FAQ</a></li>
         </ul>
     </div>
-
+    
     <!-- Header with navigation -->
     <header class="header">
         <div class="container">
@@ -695,10 +913,9 @@
                     <ul class="nav-list">
                         <li class="nav-item"><a href="#solar-kits" class="nav-link">Solar Kits</a></li>
                         <li class="nav-item"><a href="#solar-panels" class="nav-link">Solar Panels</a></li>
-                        <li class="nav-item"><a href="#comparison" class="nav-link">Comparison</a></li>
                         <li class="nav-item"><a href="#technology" class="nav-link">Technology</a></li>
+                        <li class="nav-item"><a href="#decision-guide" class="nav-link">Decision Guide</a></li>
                         <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
-                        <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
                         <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
                     </ul>
                 </nav>
@@ -708,33 +925,121 @@
             </div>
         </div>
     </header>
-
+    
     <!-- Hero section -->
     <section class="hero">
+        <div class="sun"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">India's Premier Solar Solutions</h1>
-                <p class="hero-subtitle">Expert reviews and comparisons of the best solar products for Indian homes and businesses</p>
+                <h1 class="hero-title">India's Complete Solar Energy Guide</h1>
+                <p class="hero-subtitle">Expert reviews, technology insights, and personalized recommendations for solar solutions in India</p>
                 <div class="hero-cta">
-                    <a href="#solar-kits" class="btn btn-primary">Explore Products</a>
-                    <a href="#comparison" class="btn btn-outline">View Comparison</a>
+                    <a href="#decision-guide" class="btn btn-primary">Find Your Perfect Solar Solution</a>
+                    <a href="#technology" class="btn btn-outline">Learn Solar Technology</a>
                 </div>
             </div>
         </div>
     </section>
-
+    
+    <!-- Solar Technology Section -->
+    <section id="technology" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Solar Technology Explained</h2>
+                <p>Understanding the latest advancements in solar energy for Indian conditions</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <h3>N-Type TOPCon Panels</h3>
+                    <p>Next-generation technology with 22%+ efficiency, better heat performance, and longer lifespan. Ideal for India's climate.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Bifacial Modules</h3>
+                    <p>Capture sunlight from both sides, increasing output by 5-25%. Perfect for reflective surfaces like white roofs.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Half-Cut Cell Design</h3>
+                    <p>Reduced resistive losses and improved shade tolerance. Standard in premium panels for better performance.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                    <h3>Lithium-Ion Storage</h3>
+                    <p>Longer-lasting, faster-charging batteries for reliable power during outages. Essential for Indian power conditions.</p>
+                </div>
+            </div>
+            <div class="about-section" style="margin-top: 3rem;">
+                <h3>Why Technology Matters for Indian Homes</h3>
+                <p>India's unique climate and power conditions require specific solar technologies. High temperatures, monsoon humidity, and frequent power cuts demand robust, efficient solutions. Modern panels with N-Type TOPCon technology perform better in heat, while bifacial designs maximize output in varied conditions. Lithium-ion batteries provide reliable backup during outages.</p>
+                <p>Understanding these technologies helps you make informed decisions about which solar solution is right for your specific needs and conditions.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Decision Guide Section -->
+    <section id="decision-guide" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Your Solar Decision Guide</h2>
+                <p>A step-by-step approach to choosing the right solar solution for your needs</p>
+            </div>
+            <div class="decision-guide">
+                <div class="decision-step">
+                    <h3><span class="step-number">1</span> Assess Your Energy Needs</h3>
+                    <p>Calculate your average monthly electricity consumption (kWh). Check your electricity bill for this information. A typical Indian household uses 200-400 kWh per month.</p>
+                </div>
+                <div class="decision-step">
+                    <h3><span class="step-number">2</span> Evaluate Your Roof</h3>
+                    <p>Check for: 1) Adequate space (100 sq ft per kW), 2) Structural strength, 3) Orientation (south-facing is ideal), 4) Shading from trees or buildings. Most roofs work with proper mounting systems.</p>
+                </div>
+                <div class="decision-step">
+                    <h3><span class="step-number">3</span> Choose Your System Type</h3>
+                    <p><strong>Grid-Tied Systems:</strong> Connected to the grid, no battery backup. Best for reducing bills. <strong>Off-Grid Systems:</strong> Independent with battery backup. Best for power reliability. <strong>Hybrid Systems:</strong> Combination of both for maximum benefits.</p>
+                </div>
+                <div class="decision-step">
+                    <h3><span class="step-number">4</span> Decide on Technology</h3>
+                    <p>For maximum efficiency and longevity, choose panels with N-Type TOPCon technology. For budget-conscious solutions, monocrystalline PERC panels offer good value. Consider bifacial panels if you have reflective surfaces.</p>
+                </div>
+                <div class="decision-step">
+                    <h3><span class="step-number">5</span> Calculate System Size</h3>
+                    <p>Generally, 1 kW of solar panels produces 4-5 kWh per day in India. To offset 300 kWh monthly consumption, you need approximately 2-2.5 kW system. For complete independence, consider 5-10 kW depending on your needs.</p>
+                </div>
+                <div class="decision-step">
+                    <h3><span class="step-number">6</span> Explore Subsidies</h3>
+                    <p>Under PM Surya Ghar: Muft Bijli Yojana, residential systems up to 3 kW get ₹18,000/kW subsidy. Systems 3-10 kW get ₹18,000/kW for first 3 kW and ₹9,000/kW for the rest. Ensure panels are DCR-compliant to qualify.</p>
+                </div>
+                <div class="decision-step">
+                    <h3><span class="step-number">7</span> Select Quality Components</h3>
+                    <p>Choose BIS-certified panels from reputable manufacturers. Ensure inverters and charge controllers are compatible with your panels. For battery backup, lithium-ion offers longer life than lead-acid.</p>
+                </div>
+                <div class="decision-step">
+                    <h3><span class="step-number">8</span> Get Professional Installation</h3>
+                    <p>While DIY kits exist, professional installation ensures safety, optimal performance, and warranty validity. Look for installers with experience in your area's conditions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Solar Kits section -->
     <section id="solar-kits" class="section">
         <div class="container">
             <div class="section-title">
-                <h1>Solar Kits for Home and Business</h1>
-                <p>Complete solar solutions with everything you need to get started with solar power</p>
+                <h2>Solar Kits for Home and Business</h2>
+                <p>Complete solar solutions with everything you need to get started</p>
             </div>
-            
             <div class="affiliate-disclosure">
                 <strong>Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. This means if you click on an Amazon link and make a purchase, I may receive a small commission at no extra cost to you.
             </div>
-            
             <div class="product-grid">
                 <!-- Product 1 -->
                 <div class="product-card">
@@ -743,12 +1048,11 @@
                         <img src="https://m.media-amazon.com/images/I/41kW9iy6WDL.jpg" alt="Star Home 250 Watt Solar Panel & Charger Controller with Portable Wheeled Stand" loading="lazy">
                     </div>
                     <div class="product-content">
-                        <h3 class="product-title">Star Home 250 Watt Solar Panel & Charger Controller</h3>
-                        <p class="product-description">Complete solar power kit with portable wheeled stand, 200W converter, and 12V Lithium-Ion Battery.</p>
-                        <a href="https://amzn.to/45U06BF" class="amazon-btn">View on Amazon</a>
+                        <h3 class="product-title">Star Home 250 Watt Solar Kit</h3>
+                        <p class="product-description">Complete solar power kit with portable wheeled stand, 200W converter, and 12V Lithium-Ion Battery. Perfect for beginners and portable applications.</p>
+                        <a href="https://amzn.to/45U06BF" class="amazon-btn">Buy Now on Amazon</a>
                     </div>
                 </div>
-                
                 <!-- Product 2 -->
                 <div class="product-card">
                     <div class="product-image">
@@ -756,11 +1060,10 @@
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">Luminous NXG+ 1150</h3>
-                        <p class="product-description">High-performance solar kit with inverter and battery for home, office & shop use.</p>
-                        <a href="https://amzn.to/423XRcH" class="amazon-btn">View on Amazon</a>
+                        <p class="product-description">High-performance solar kit with inverter and battery for home, office & shop use. Reliable brand with good service network.</p>
+                        <a href="https://amzn.to/423XRcH" class="amazon-btn">Buy Now on Amazon</a>
                     </div>
                 </div>
-                
                 <!-- Product 3 -->
                 <div class="product-card">
                     <div class="product-image">
@@ -768,20 +1071,26 @@
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">Luminous NXG+ 1100</h3>
-                        <p class="product-description">Complete solar power solution with efficient inverter and long-lasting battery.</p>
-                        <a href="https://amzn.to/3I5LO7M" class="amazon-btn">View on Amazon</a>
+                        <p class="product-description">Complete solar power solution with efficient inverter and long-lasting battery. Good balance of features and price.</p>
+                        <a href="https://amzn.to/3I5LO7M" class="amazon-btn">Buy Now on Amazon</a>
                     </div>
                 </div>
             </div>
-            
             <div class="about-section" style="margin-top: 3rem;">
-                <h3>Why Choose a Complete Solar Kit?</h3>
-                <p>Solar kits provide everything you need in one package, making it easier to get started with solar energy. They're perfect for beginners who want a hassle-free solution with compatible components that work together seamlessly.</p>
-                <p>For more detailed information, check out our <a href="#technology">solar technology guide</a> or read <a href="#testimonials">customer experiences</a> with these products.</p>
+                <h3>Who Should Choose Solar Kits?</h3>
+                <p>Solar kits are ideal for beginners, renters, or those who want a simple plug-and-play solution. They include all necessary components pre-matched for compatibility. These systems are perfect for:</p>
+                <ul>
+                    <li>First-time solar adopters who want a hassle-free experience</li>
+                    <li>Renters or those who may relocate in the near future</li>
+                    <li>Small homes or apartments with limited roof space</li>
+                    <li>Those who want to start small and expand later</li>
+                    <li>Users who need portable solar power for outdoor activities</li>
+                </ul>
+                <p>For more detailed information about specific technologies, check out our <a href="#technology">solar technology guide</a> or read <a href="#testimonials">customer experiences</a> with these products.</p>
             </div>
         </div>
     </section>
-
+    
     <!-- Solar Panels section -->
     <section id="solar-panels" class="section">
         <div class="container">
@@ -789,11 +1098,9 @@
                 <h2>Best Solar Panels in India</h2>
                 <p>High-efficiency solar panels for residential and commercial use</p>
             </div>
-            
             <div class="affiliate-disclosure">
                 <strong>Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. This means if you click on an Amazon link and make a purchase, I may receive a small commission at no extra cost to you.
             </div>
-            
             <div class="product-grid">
                 <!-- Product 4 -->
                 <div class="product-card">
@@ -803,10 +1110,9 @@
                     <div class="product-content">
                         <h3 class="product-title">Fujiyama Solar 590W N-Type TOP-Con Panel</h3>
                         <p class="product-description">Dual glass, 22.87% efficiency, 144 cells with 10-year warranty for home & commercial rooftops (Pack of 2).</p>
-                        <a href="https://amzn.to/4pdWimi" class="amazon-btn">View on Amazon</a>
+                        <a href="https://amzn.to/4pdWimi" class="amazon-btn">Buy Now on Amazon</a>
                     </div>
                 </div>
-                
                 <!-- Product 5 -->
                 <div class="product-card">
                     <div class="product-image">
@@ -815,10 +1121,9 @@
                     <div class="product-content">
                         <h3 class="product-title">WAAREE 560W TOPCon DCR Bifacial Panel</h3>
                         <p class="product-description">Half-cut technology, BIS & IEC certified, dual glass bifacial module with 30 years output warranty (Pack of 2, 1120W).</p>
-                        <a href="https://amzn.to/469hYHv" class="amazon-btn">View on Amazon</a>
+                        <a href="https://amzn.to/469hYHv" class="amazon-btn">Buy Now on Amazon</a>
                     </div>
                 </div>
-                
                 <!-- Product 6 -->
                 <div class="product-card">
                     <div class="product-image">
@@ -827,64 +1132,39 @@
                     <div class="product-content">
                         <h3 class="product-title">WAAREE 585W TOPCon Bifacial Panel</h3>
                         <p class="product-description">High-efficiency mono PERC half-cut technology, framed dual glass bifacial module with 30 years output warranty (Pack of 2, 1170W).</p>
-                        <a href="https://amzn.to/3K9ZlM1" class="amazon-btn">View on Amazon</a>
+                        <a href="https://amzn.to/3K9ZlM1" class="amazon-btn">Buy Now on Amazon</a>
                     </div>
                 </div>
             </div>
-            
             <div class="about-section" style="margin-top: 3rem;">
-                <h3>Understanding Solar Panel Technology</h3>
-                <p>Modern solar panels like these use advanced technologies like TOPCon and bifacial designs to maximize energy production. These innovations allow panels to capture more sunlight and convert it to electricity more efficiently, even in challenging conditions.</p>
-                <p>Learn more about how these technologies work in our <a href="#technology">solar technology section</a> or <a href="#comparison">compare different panel types</a> to find the best solution for your needs.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Us Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Solar India</h2>
-                <p>Your Partner in Smarter Solar Energy Solutions</p>
-            </div>
-            
-            <div class="about-section">
-                <p>At Solar India, we believe the sun is more than just light — it's the most reliable, renewable source of power we have. Our mission is to help households and businesses across India find Solar Kits for Home and Business, choose the Best Solar Panels in India, and stay informed about the Latest Solar Technology shaping the future of clean energy.</p>
-                
-                <p>We know that going solar is a big decision. That's why we make it easy to compare solar products side-by-side, understand performance, and choose solutions that fit your budget, climate, and lifestyle.</p>
-                
-                <p>Our community is built on trust and real experiences. In our <a href="#testimonials">Customer Testimonials</a> section, you'll hear from people who have transformed their homes and businesses with solar — cutting electricity bills, gaining energy independence, and making a positive environmental impact.</p>
-                
-                <h3>Why We're Different</h3>
+                <h3>When to Choose Individual Panels</h3>
+                <p>Individual high-efficiency panels are the best choice for:</p>
                 <ul>
-                    <li><strong>Local Expertise</strong> – We focus on solar energy solutions designed for Indian climates and power needs.</li>
-                    <li><strong>Clear, Honest Guidance</strong> – We translate technical jargon into plain language so you can make informed choices.</li>
-                    <li><strong>Future-Focused</strong> – We track the latest innovations to keep you ahead of the curve.</li>
+                    <li>Homeowners planning custom installations with professional installers</li>
+                    <li>Those seeking maximum efficiency and long-term performance</li>
+                    <li>Commercial or industrial applications requiring large systems</li>
+                    <li>Users who want to take advantage of government subsidies (DCR-compliant panels)</li>
+                    <li>Those who already have inverters and batteries and need panel upgrades</li>
                 </ul>
-                
-                <p>Every sunrise is an opportunity to power your home, save money, and protect the planet. Let's harness that energy together — one smart solar choice at a time.</p>
+                <p>These panels offer superior performance and longevity compared to kit components. Learn more about how these technologies work in our <a href="#technology">solar technology section</a> or <a href="#decision-guide">use our decision guide</a> to find the best solution for your needs.</p>
             </div>
         </div>
     </section>
-
-    <!-- Comparison section -->
+    
+    <!-- Comparison Section -->
     <section id="comparison" class="section">
         <div class="container">
             <div class="section-title">
                 <h2>Solar Product Comparison</h2>
                 <p>Compare the best solar products to find the perfect solution for your needs</p>
             </div>
-            
             <div class="about-section">
                 <h2>Complete Solar Kits vs Advanced Solar Panels</h2>
                 <p>When choosing between complete solar kits and advanced solar panels, it's important to understand your specific needs and how each option can benefit your home or business.</p>
-                
                 <h3>Complete Solar Kits</h3>
                 <p>These all-in-one solutions are perfect for homeowners who want a simple, plug-and-play solar system. They include everything you need to start generating solar power right away.</p>
-                
                 <h3>Advanced Solar Panels</h3>
                 <p>For those who want the latest technology and maximum efficiency, advanced solar panels with TOPcon technology offer superior performance and longer lifespan.</p>
-                
                 <table class="comparison-table">
                     <thead>
                         <tr>
@@ -926,68 +1206,22 @@
                         </tr>
                     </tbody>
                 </table>
-                
                 <p>For more detailed information about specific products, check out our <a href="#solar-kits">solar kits section</a> or <a href="#solar-panels">solar panels section</a>.</p>
             </div>
         </div>
     </section>
-
-    <!-- Technology section -->
-    <section id="technology" class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Latest Solar Technology</h2>
-                <p>Learn about the latest advancements in solar technology</p>
-            </div>
-            
-            <div class="about-section">
-                <h2>The Latest in Solar Technology – What's Changed in 2025</h2>
-                <p>If you've been following the solar market, you'll know that the last two years have been a leap forward. The buzzwords you'll hear most often now are N-Type TOPCon and bifacial dual-glass modules.</p>
-                
-                <h3>N-Type TOPCon (Tunnel Oxide Passivated Contact)</h3>
-                <p>This is the next step up from traditional PERC cells. N-Type cells resist light-induced degradation, perform better in high temperatures, and deliver higher efficiency — often above 22%. For homeowners, that means more power from the same roof space.</p>
-                
-                <h3>Bifacial Dual-Glass Panels</h3>
-                <p>These panels capture sunlight from both the front and the back. If your roof or terrace reflects light (white paint, tiles, concrete), you can see a 5–25% boost in output. The dual-glass build also makes them tougher and more weather-resistant, with lifespans of 30 years or more.</p>
-                
-                <h3>Half-Cut Cell Design</h3>
-                <p>By splitting cells in half, manufacturers reduce resistive losses and improve shade tolerance. This is now standard in most premium panels.</p>
-                
-                <p>In short: today's best panels are more efficient, last longer, and perform better in India's hot, humid conditions — especially in coastal states like Kerala.</p>
-                
-                <h2>Government Subsidy – How It Works in 2025</h2>
-                <p>The PM Surya Ghar: Muft Bijli Yojana and state-level rooftop solar schemes continue to offer attractive subsidies for residential installations.</p>
-                
-                <h3>Eligibility</h3>
-                <p>To qualify, your panels must be DCR-compliant (Domestic Content Requirement) — meaning both the cells and modules are made in India. Many WAAREE and Adani models meet this standard.</p>
-                
-                <h3>Subsidy Amounts (for residential rooftop systems)</h3>
-                <ul>
-                    <li>Up to 3 kW: ₹18,000 per kW</li>
-                    <li>3–10 kW: ₹18,000 per kW for first 3 kW, then ₹9,000 per kW for the rest</li>
-                    <li>Above 10 kW: Subsidy capped at 10 kW</li>
-                </ul>
-                
-                <h3>Why It Matters for Buyers</h3>
-                <p>A DCR-compliant bifacial TOPCon panel might cost a bit more upfront, but the subsidy can offset a large chunk of that cost — making premium tech more affordable.</p>
-                
-                <p>For more information about specific products that qualify for subsidies, check our <a href="#solar-panels">solar panels section</a> or read <a href="#faq">frequently asked questions</a> about solar subsidies.</p>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- Testimonials section -->
     <section id="testimonials" class="section">
         <div class="container">
             <div class="section-title">
                 <h2>Solar Customer Testimonials</h2>
-                <p>See what our customers are saying about these solar products</p>
+                <p>Real experiences from Indian homeowners and businesses</p>
             </div>
-            
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        The Star Home solar kit was easy to install and has cut my electricity bill by 80%. The detailed product information helped me understand exactly what I was buying.
+                        The Star Home solar kit was easy to install and has cut my electricity bill by 80%. The detailed product information helped me understand exactly what I was buying. Perfect for a beginner like me!
                     </div>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">RK</div>
@@ -997,10 +1231,9 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        I was hesitant to buy solar online, but the detailed comparison gave me confidence. The WAAREE panels are performing beyond expectations.
+                        I was hesitant to buy solar online, but the detailed comparison gave me confidence. The WAAREE panels are performing beyond expectations, even during monsoon. My installer was impressed with the quality.
                     </div>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">PS</div>
@@ -1010,10 +1243,9 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        The lithium-ion battery in the Star Home kit has been a game changer during power cuts. It lasts much longer than my previous battery and charges quickly with solar.
+                        The lithium-ion battery in the Star Home kit has been a game changer during power cuts. It lasts much longer than my previous battery and charges quickly with solar. Highly recommend for Indian conditions.
                     </div>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">AM</div>
@@ -1024,7 +1256,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="about-section" style="margin-top: 3rem;">
                 <h3>Share Your Experience</h3>
                 <p>Have you purchased a solar product based on our recommendations? We'd love to hear about your experience! Your feedback helps us improve our reviews and helps other customers make informed decisions.</p>
@@ -1032,7 +1263,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-- FAQ Section -->
     <section id="faq" class="section">
         <div class="container">
@@ -1040,7 +1271,6 @@
                 <h2>Frequently Asked Questions</h2>
                 <p>Everything you need to know about solar products and technology</p>
             </div>
-            
             <div class="faq-section">
                 <div class="faq-item">
                     <div class="faq-question">What's the difference between a solar kit and a single solar panel?</div>
@@ -1048,133 +1278,114 @@
                         A solar panel is just one component—it converts sunlight into electricity. A solar kit includes everything you need for a functioning system: panels, inverters, charge controllers, mounting hardware, and sometimes batteries. See our <a href="#solar-kits">Solar Kits</a> page for full details.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">Which solar kit is best for a 2BHK home in India?</div>
                     <div class="faq-answer">
-                        For a typical 2BHK home using 8–10 units per day, a 3–5 kW system is ideal. The <a href="https://amzn.to/45U06BF" target="_blank">Star Home 250 Watt Solar Panel & Charger Controller</a> or similar kits offer good balance of power and value. Check our <a href="#comparison">Comparison</a> section for detailed analysis.
+                        For a typical 2BHK home using 8–10 units per day, a 3–5 kW system is ideal. The <a href="https://amzn.to/45U06BF" target="_blank">Star Home 250 Watt Solar Panel & Charger Controller</a> or similar kits offer good balance of power and value. Check our <a href="#decision-guide">Decision Guide</a> for detailed analysis.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">Do solar panels work during monsoon or cloudy days?</div>
                     <div class="faq-answer">
                         Yes, though at reduced efficiency (around 30–50% of full capacity). Modern panels like the <a href="https://amzn.to/469hYHv" target="_blank">WAAREE 560W TOPCon</a> perform better in low light than older models. Battery backup is recommended for continuous power.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">What does "bifacial" mean in solar panels?</div>
                     <div class="faq-answer">
                         Bifacial panels capture sunlight from both sides, increasing total output by 5–25%. They work best when installed over reflective surfaces (white roofs, gravel, sand). See our <a href="#technology">Technology</a> section for more on this innovation.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">How long do solar batteries last?</div>
                     <div class="faq-answer">
                         Lithium-ion batteries (like in the Star Home kit) last 7–10 years or 3000+ cycles. Lead-acid batteries typically last 3–5 years. Proper maintenance extends lifespan. Read real user experiences in our <a href="#testimonials">Testimonials</a>.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">Can I run an AC on solar power?</div>
                     <div class="faq-answer">
                         Yes, but you'll need sufficient capacity. A 1.5-ton AC requires about 2 kW of solar panels plus adequate battery storage. The <a href="https://amzn.to/45U06BF" target="_blank">Star Home 250W Solar Kit</a> or larger systems can handle AC loads.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">What maintenance do solar panels require?</div>
                     <div class="faq-answer">
                         Minimal maintenance: occasional cleaning (every 2–3 months) with water and soft cloth, checking for shade obstructions, and ensuring connections remain tight. Most systems include monitoring apps. Learn more in our <a href="#technology">Technology</a> guide.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">How much can I save with solar power?</div>
                     <div class="faq-answer">
                         Most homes save 70–90% on electricity bills, with full payback in 4–7 years. Savings depend on your location, consumption, and local electricity rates. See real savings examples in our <a href="#testimonials">Testimonials</a> section.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">What is the PM Surya Ghar Muft Bijli Yojana subsidy?</div>
                     <div class="faq-answer">
                         This central government scheme offers subsidies up to ₹78,000 for residential rooftop solar installations. Eligibility requires using approved components and installers. Learn more in our <a href="#technology">Technology</a> section's subsidy breakdown.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">Are these products eligible for government subsidies?</div>
                     <div class="faq-answer">
-                        Many are, particularly DCR-compliant panels (like certain WAAREE models). Complete kits may qualify if they use approved components. Check our <a href="#comparison">Comparison</a> table for subsidy eligibility notes on each product.
+                        Many are, particularly DCR-compliant panels (like certain WAAREE models). Complete kits may qualify if they use approved components. Check our <a href="#decision-guide">Decision Guide</a> for subsidy eligibility notes on each product.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">What if a panel gets damaged? Is there a warranty?</div>
                     <div class="faq-answer">
                         Most premium panels come with 25–30 year performance warranties and 10–12 year product warranties. The <a href="https://amzn.to/469hYHv" target="_blank">WAAREE 560W TOPCon</a>, for example, offers 30 years output warranty. Always register your warranty after purchase.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">How do I know if my roof is suitable for solar?</div>
                     <div class="faq-answer">
-                        Most roofs work if they: 1) receive 4–6 hours of direct sunlight, 2) have adequate structural strength, and 3) aren't heavily shaded. South-facing roofs are ideal in India. Our <a href="#solar-kits">Solar Kits</a> page has guidance for different roof types.
+                        Most roofs work if they: 1) receive 4–6 hours of direct sunlight, 2) have adequate structural strength, and 3) aren't heavily shaded. South-facing roofs are ideal in India. Our <a href="#decision-guide">Decision Guide</a> has detailed roof assessment tips.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">Can I install solar panels myself?</div>
                     <div class="faq-answer">
                         Kits like the <a href="https://amzn.to/45U06BF" target="_blank">Star Home 250 Watt</a> are designed for DIY installation, but we recommend professional help for grid-tied systems or complex roof mounts. Proper installation ensures safety and maximizes efficiency.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">What happens during a power cut with a solar system?</div>
                     <div class="faq-answer">
                         Systems with battery backup automatically switch to solar power during outages. Grid-tied systems without batteries will shut down for safety unless they have special islanding capability. Our <a href="#technology">Technology</a> section explains these configurations.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">How does solar perform in India's extreme heat?</div>
                     <div class="faq-answer">
                         Solar panels actually become slightly less efficient as temperatures rise, but modern panels like <a href="https://amzn.to/3K9ZlM1" target="_blank">WAAREE's TOPCon models</a> handle heat better than older technologies. See our <a href="#technology">Technology</a> page for heat tolerance comparisons.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">What is the lifespan of solar panels?</div>
                     <div class="faq-answer">
                         Most quality panels are warrantied for 25–30 years and can continue producing electricity at reduced capacity beyond that. The <a href="https://amzn.to/469hYHv" target="_blank">WAAREE 560W</a> panel maintains 87% output even after 30 years.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">Are there any hidden costs after buying a solar kit?</div>
                     <div class="faq-answer">
                         The main upfront cost is the kit and installation. Minor ongoing costs may include replacement batteries (in 7–10 years), routine cleaning, and, if grid-tied, minor connection fees. We break down all cost elements in our Detailed Pricing Guide. See user cost breakdowns and tips in <a href="#testimonials">Testimonials</a>.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">Is installing solar really worth it in 2025 and beyond?</div>
                     <div class="faq-answer">
                         Absolutely, for most Indian homes and small businesses. Falling panel prices, rising grid rates, generous subsidies, and improved technology make solar a smart investment for 2025. The average family saves thousands on electricity over 25 years, gains energy independence, and helps the environment. For real ROI data, see backups from our <a href="#testimonials">Testimonials</a>.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">Where can I see real testimonials or reviews about solar kits and panels?</div>
                     <div class="faq-answer">
                         See authentic, verified customer reviews and before-after stories of savings, durability, and service on our <a href="#testimonials">Testimonials page</a>. Each testimonial is vetted for accuracy and relevance to help you make an informed choice.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">How can I contact your team for a personalized solar quotation or consultation?</div>
                     <div class="faq-answer">
@@ -1184,14 +1395,14 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-column">
                     <h3>Solar India</h3>
-                    <p>Your trusted source for solar product recommendations.</p>
+                    <p>Your trusted source for solar product recommendations and technology insights.</p>
                     <div class="social-links">
                         <a href="https://www.facebook.com/share/17Ec6gNTXQ/"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://x.com/newgendeal"><i class="fab fa-twitter"></i></a>
@@ -1199,19 +1410,17 @@
                         <a href="https://pin.it/189inumYs"><i class="fab fa-pinterest"></i></a>
                     </div>
                 </div>
-                
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#solar-kits">Solar Kits for Home and Business</a></li>
                         <li><a href="#solar-panels">Best Solar Panels in India</a></li>
-                        <li><a href="#comparison">Solar Product Comparison</a></li>
                         <li><a href="#technology">Latest Solar Technology</a></li>
+                        <li><a href="#decision-guide">Decision Guide</a></li>
                         <li><a href="#testimonials">Customer Testimonials</a></li>
                         <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-column">
                     <h3>Help</h3>
                     <ul class="footer-links">
@@ -1219,7 +1428,6 @@
                         <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-column">
                     <h3>Newsletter</h3>
                     <p>Subscribe to get special offers, free giveaways, and solar energy tips.</p>
@@ -1229,17 +1437,15 @@
                     </form>
                 </div>
             </div>
-            
             <div class="disclaimer">
                 <p><strong>Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. This means if you click on an Amazon link and make a purchase, I may receive a small commission at no extra cost to you. This helps support the site and allows me to continue to provide valuable content. Thank you for your support!</p>
             </div>
-            
             <div class="footer-bottom">
                 <p>&copy; 2025 Solar India. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
+    
     <script>
         // Mobile navigation functionality
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -1266,10 +1472,8 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     closeMobileNav();
@@ -1280,7 +1484,7 @@
                 }
             });
         });
-
+        
         // FAQ accordion functionality
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
@@ -1304,13 +1508,13 @@
                 }
             });
         });
-
+        
         // Initially hide all FAQ answers
         document.querySelectorAll('.faq-answer').forEach(answer => {
             answer.style.display = 'none';
         });
     </script>
-
+    
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -1325,7 +1529,6 @@
       }
     }
     </script>
-    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -1340,7 +1543,6 @@
       }
     }
     </script>
-    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

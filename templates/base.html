@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dynamic Meta Tags -->
+    <title>{% block title %}Solar Products Guide - Expert Reviews & Buying Guides{% endblock %}</title>
+    <meta name="description" content="{% block description %}Expert solar product reviews, buying guides, and installation tips for homeowners and DIY enthusiasts.{% endblock %}">
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" as="style">
+    
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --green-primary: #2E7D32;
+            --yellow-accent: #FBC02D;
+            --white: #FFFFFF;
+            --text-dark: #212121;
+            --text-light: #666666;
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        /* Critical Layout Components */
+        .header {
+            background: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Accessibility */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            z-index: 999;
+            padding: 1em;
+            background-color: var(--green-primary);
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+
+    <!-- Non-critical CSS -->
+    <link rel="stylesheet" href="/css/main.css" media="print" onload="this.media='all'">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    <meta property="og:title" content="{% block og_title %}Solar Products Guide{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Expert solar product reviews and buying guides{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}/images/og-default.jpg{% endblock %}">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="header">
+        <div class="container">
+            <nav class="main-nav">
+                <!-- Navigation will be injected by JavaScript -->
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <!-- Footer content will be injected by JavaScript -->
+        </div>
+    </footer>
+
+    <!-- Defer non-critical JavaScript -->
+    <script src="/js/main.js" defer></script>
+    
+    <!-- Structured Data -->
+    {% block structured_data %}{% endblock %}
+</body>
+</html>

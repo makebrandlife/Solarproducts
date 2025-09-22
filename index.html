@@ -1,851 +1,968 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-  <!-- Basic SEO -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Solar Guide</title>
-  <meta name="description" content="Unbiased picks for solar generators, panels, and kits. Compare specs, prices, and real-world pros/cons. Updated 2025." />
-  <link rel="canonical" href="https://example.com/" />
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Best Solar Products 2025 | SolarGuide India</title>
+  <meta name="description" content="Expert reviews of solar panels, generators, and batteries. Compare top solar gear and buy with confidence.">
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Best Solar Generators, Panels, and Kits 2025" />
-  <meta property="og:description" content="Compare top solar gear by price, performance, and reliability. Practical guides and honest picks." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://example.com/" />
-  <meta property="og:image" content="https://example.com/og.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="theme-color" content="#0f1320" />
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
 
-  <!-- Performance hints -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-  <style>
-    /* Minimal, fast, accessible, mobile-first */
-    :root {
-      --bg: #0f1320; --bg2:#151a2b; --card:#1a2035; --text:#e9edf7; --muted:#b3bdd7;
-      --acc:#ffce45; --acc2:#68e1fd; --ok:#2ecb70; --warn:#ef476f; --bd:rgba(255,255,255,.08);
-      --shadow: 0 10px 30px rgba(0,0,0,.25);
-    }
-    *{box-sizing:border-box}html,body{margin:0;padding:0}body{
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      color:var(--text); background:linear-gradient(180deg,var(--bg),var(--bg2)); line-height:1.6;
-    }
-    .container{width:min(1120px,92%);margin:0 auto}
-    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);background:rgba(10,12,20,.6);border-bottom:1px solid var(--bd)}
-    header .row{display:flex;align-items:center;gap:.75rem;padding:.7rem 0}
-    .logo{color:var(--text);text-decoration:none;font-weight:800;font-size:1.1rem}
-    nav a{color:var(--muted);text-decoration:none;margin:0 .5rem}
-    nav a:hover{color:var(--text)}
-    button,select,input{font:inherit}
-    .toggle{margin-left:auto;border:1px solid rgba(255,255,255,.15);color:var(--text);background:transparent;border-radius:10px;padding:.4rem .6rem;cursor:pointer}
-
-    .hero{padding:2.6rem 0 1rem;text-align:center}
-    .hero h1{margin:0 0 .4rem;font-size:clamp(1.5rem,3.6vw,2.2rem)}
-    .hero p{margin:.25rem 0;color:var(--muted)}
-    .disclaimer{font-size:.85rem;color:var(--muted)}
-    .search{display:flex;gap:.5rem;justify-content:center;margin:1rem auto}
-    .search input{width:min(520px,80%);padding:.7rem .9rem;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:var(--card);color:var(--text)}
-    .search button{padding:.7rem 1rem;border-radius:10px;border:none;background:linear-gradient(135deg,var(--acc),#ffb703);color:#111;font-weight:800;cursor:pointer}
-
-    .toc{margin:1rem auto 0;display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center}
-    .toc a{color:var(--text);text-decoration:none;border:1px solid var(--bd);padding:.35rem .6rem;border-radius:999px;font-size:.9rem}
-    .toc a:hover{background:rgba(255,255,255,.06)}
-
-    .filters{padding:.8rem 0}
-    .filter-row{display:flex;flex-wrap:wrap;gap:.6rem;align-items:end}
-    label span{display:block;color:var(--muted);font-size:.85rem;margin-bottom:.2rem}
-    select{padding:.55rem .7rem;border-radius:10px;background:var(--card);border:1px solid rgba(255,255,255,.12);color:var(--text)}
-    .btn-secondary{padding:.55rem .8rem;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:transparent;color:var(--text);cursor:pointer}
-    .btn-secondary:disabled{opacity:.6;cursor:not-allowed}
-
-    h2{font-size:1.3rem;margin:1.2rem 0 .6rem}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin:1rem 0 1.8rem}
-    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
-    .media{aspect-ratio:4/3;background:#0b0f1a;position:relative}
-    .media img{width:100%;height:100%;object-fit:cover;display:block}
-    .badges{position:absolute;margin:.5rem;display:flex;gap:.4rem;z-index:1}
-    .badge{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#111;font-weight:800;padding:.25rem .5rem;border-radius:999px;font-size:.75rem}
-    .content{padding:.9rem;display:grid;gap:.45rem}
-    .muted{color:var(--muted);font-size:.9rem}
-    .price{font-weight:800}
-    .rating{color:#ffd166}
-    .features{display:grid;grid-template-columns:1fr 1fr;gap:.25rem .75rem;font-size:.92rem}
-    .features span{color:var(--muted)}
-    .kicker{font-size:.86rem;color:var(--ok)}
-    .actions{display:flex;gap:.5rem;margin-top:.6rem}
-    .btn-primary{flex:1;padding:.6rem .8rem;border-radius:10px;border:none;cursor:pointer;background:linear-gradient(135deg,var(--acc),#ffb703);color:#111;font-weight:900;text-align:center;text-decoration:none}
-    .btn-outline{flex:1;padding:.6rem .8rem;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:transparent;color:var(--text);cursor:pointer}
-
-    .compareDialog{width:min(1000px,96%);border:none;border-radius:16px;background:var(--card);color:var(--text)}
-    .compareDialog header{display:flex;align-items:center;justify-content:space-between;padding: .6rem .8rem;border-bottom:1px solid var(--bd)}
-    table{width:100%;border-collapse:collapse}
-    th,td{border-bottom:1px solid rgba(255,255,255,.08);padding:.6rem;text-align:left;font-size:.95rem}
-    th:first-child,td:first-child{white-space:nowrap}
-    .empty{text-align:center;color:var(--muted);margin:1rem 0}
-
-    .guides{margin:2.2rem 0}
-    .guides-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
-    .guide-card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:1rem}
-    .tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin:1.5rem 0}
-    .tech-card{background:rgba(255,255,255,.05);border-radius:12px;padding:1rem}
-    .tech-card h4{margin-top:0;color:var(--acc)}
-    .step-list{list-style:none;padding-left:0;counter-reset:step-counter}
-    .step-list li{margin-bottom:1rem;padding-left:2rem;position:relative}
-    .step-list li:before{content:counter(step-counter);counter-increment:step-counter;position:absolute;left:0;top:0;background:var(--acc);color:#111;width:1.5rem;height:1.5rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:.9rem}
-
-    /* FAQ Styles */
-    .faq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem}
-    details{margin-bottom:.8rem;background:var(--card);border-radius:10px;overflow:hidden}
-    summary{display:block;padding:.8rem 1rem;cursor:pointer;font-weight:600;position:relative;padding-right:2.5rem}
-    summary::-webkit-details-marker{display:none}
-    summary:after{content:"+";position:absolute;right:1rem;top:50%;transform:translateY(-50%);font-size:1.2rem;transition:transform .3s}
-    details[open] summary:after{content:"−";transform:translateY(-50%)}
-    details p{padding:0 1rem 1rem;margin:0;color:var(--muted)}
-    .contact-note{background:rgba(255,206,69,.1);border-left:4px solid var(--acc);padding:1rem;margin-top:1.5rem;border-radius:8px}
-
-    /* About Us Section */
-    .about-section{margin:3rem 0;padding:2rem 0;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
-    .about-content{max-width:800px;margin:0 auto}
-    .about-content h2{text-align:center;margin-bottom:1.5rem}
-    .about-points{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:2rem 0}
-    .about-point{background:rgba(255,255,255,.05);padding:1.5rem;border-radius:12px;text-align:center}
-    .about-point h4{color:var(--acc);margin-top:0}
-
-    /* Social Media Styles */
-    .social-section{margin:2rem 0;text-align:center}
-    .social-grid{display:flex;justify-content:center;gap:1rem;margin:1.5rem 0;flex-wrap:wrap}
-    .social-link{display:flex;align-items:center;justify-content:center;width:50px;height:50px;border-radius:50%;background:var(--card);color:var(--text);text-decoration:none;font-size:1.2rem;transition:all 0.3s ease}
-    .social-link:hover{transform:translateY(-3px);box-shadow:0 5px 15px rgba(0,0,0,0.2);background:var(--acc);color:#111}
-
-    footer{border-top:1px solid var(--bd);padding:1.4rem 0;color:var(--muted);text-align:center}
-    .footer-content{display:flex;flex-direction:column;gap:1rem}
-    .footer-nav{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin:.5rem 0}
-
-    @media(prefers-color-scheme:light){
-      :root{--bg:#f7fafc;--bg2:#eef2f7;--text:#1b2333;--muted:#5a6a86;--card:#ffffff}
-      body{background:linear-gradient(180deg,var(--bg),var(--bg2))}
-      .tech-card{background:rgba(0,0,0,.05)}
-      .contact-note{background:rgba(255,206,69,.15)}
-      .about-point{background:rgba(0,0,0,.05)}
-      .social-link{background:var(--bg2)}
-    }
-    /* Light mode toggle */
-    .light{--bg:#f7fafc;--bg2:#eef2f7;--text:#1b2333;--muted:#5a6a86;--card:#ffffff}
-  </style>
-
-  <!-- Structured data (static + JS-updated) -->
-  <script type="application/ld+json" id="org">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Solar Guide",
-    "url": "https://example.com/",
-    "logo": "https://example.com/logo.png",
-    "sameAs": [
-      "https://www.facebook.com/share/17Ec6gNTXQ/",
-      "https://x.com/newgendeal",
-      "https://www.instagram.com/newgendeal",
-      "https://pin.it/189inumYs"
-    ]
-  }
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: { 50:'#ecfdf5', 100:'#d1fae5', 500:'#10b981', 600:'#059669', 700:'#047857' }
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(2,6,23,0.08)',
+            glass: 'inset 0 1px 0 rgba(255,255,255,.1), 0 8px 24px rgba(2,6,23,.15)'
+          }
+        }
+      },
+      darkMode: 'class'
+    };
   </script>
-  <script type="application/ld+json" id="site">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Solar Guide",
-    "url": "https://example.com/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://example.com/#q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2745%27 fill=%27%2310b981%27/%3E%3C/svg%3E">
+
+  <!-- Social cards -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Best Solar Products 2025 | SolarGuide India">
+  <meta property="og:description" content="Compare top-rated solar panels, generators, and batteries. Honest reviews and clear picks.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=SolarGuide+India">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX', { anonymize_ip: true });
   </script>
-  <script type="application/ld+json" id="breadcrumbs">
+
+  <!-- JSON-LD: WebSite, Organization, Products -->
+  <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://example.com/"},
-      {"@type":"ListItem","position":2,"name":"Top Picks","item":"https://example.com/#top-picks"}
-    ]
+    "@type":"WebSite",
+    "name":"SolarGuide India",
+    "url":"https://yourdomain.com",
+    "potentialAction":{"@type":"SearchAction","target":"https://yourdomain.com/?q={search_term_string}","query-input":"required name=search_term_string"}
   }
   </script>
-  <script type="application/ld+json" id="itemlist">
-  {"@context":"https://schema.org","@type":"ItemList","itemListElement":[]}
-  </script>
-  <script type="application/ld+json" id="faq">
+  <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"How big of a solar generator do I need?",
-       "acceptedAnswer":{"@type":"Answer","text":"Add up the watts of devices you’ll run simultaneously and multiply by the desired hours of runtime to estimate required watt-hours. Add 20–30% buffer for inverter and conversion losses."}},
-      {"@type":"Question","name":"Mono vs poly panels — which is better?",
-       "acceptedAnswer":{"@type":"Answer","text":"Monocrystalline panels are typically more efficient and compact but can cost more. For tight spaces or portable setups, mono is usually worth it."}},
-      {"@type":"Question","name":"How many watts of panels to recharge a power station?",
-       "acceptedAnswer":{"@type":"Answer","text":"Divide battery watt-hours by sun hours to estimate array size. For a 500 Wh unit and 4 sun hours, about 150–200 W of panels is practical considering real-world losses."}}
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"SolarGuide India",
+    "url":"https://yourdomain.com",
+    "logo":"https://yourdomain.com/logo.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "itemListElement":[
+      {
+        "@type":"Product",
+        "name":"WAAREE 590 Watt TOPCon Bifacial Solar Panel",
+        "image":"https://m.media-amazon.com/images/I/71X9ekRmbgL._SL1500_.jpg",
+        "brand":{"@type":"Brand","name":"WAAREE"},
+        "description":"590W panel with 22.8% efficiency and 30-year warranty",
+        "offers":{"@type":"Offer","priceCurrency":"INR","price":"20299","availability":"https://schema.org/InStock","url":"https://amzn.to/3VpkKn4"}
+      },
+      {
+        "@type":"Product",
+        "name":"Loom Solar Panel Shark 575W",
+        "image":"https://m.media-amazon.com/images/I/81FIjXPuJ0L._SL1500_.jpg",
+        "brand":{"@type":"Brand","name":"Loom Solar"},
+        "description":"575W TOPCon Bifacial panel with 22.3% efficiency",
+        "offers":{"@type":"Offer","priceCurrency":"INR","price":"18354","availability":"https://schema.org/InStock","url":"https://amzn.to/46vvS6Z"}
+      }
     ]
   }
   </script>
+
+  <style>
+    /* Premium touches */
+    .glass { backdrop-filter: saturate(180%) blur(12px); background: rgba(15,23,42,0.6); }
+    .skeleton { position: relative; overflow: hidden; background: #e5e7eb; }
+    .skeleton::after { content:""; position:absolute; inset:0; transform:translateX(-100%); background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent); animation: shimmer 1.2s infinite; }
+    @keyframes shimmer { 100% { transform: translateX(100%); } }
+    
+    /* Premium enhancements */
+    .parallax-bg {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(120deg, #a8ff78, #78ffd6, #007991);
+      background-size: 200% 200%;
+      animation: gradientMove 15s ease infinite;
+    }
+    
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(2,6,23,0.15);
+    }
+    
+    .btn-micro {
+      transition: all 0.2s ease;
+    }
+    
+    .btn-micro:hover {
+      transform: scale(1.05);
+    }
+    
+    .btn-micro:active {
+      transform: scale(0.95);
+    }
+    
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .progress-bar {
+      height: 4px;
+      width: 100%;
+      background: #e5e7eb;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+    }
+    
+    .progress-bar .progress {
+      height: 100%;
+      background: #10b981;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+    
+    /* Solar panel animation */
+    .solar-panel {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .solar-panel::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
+      animation: solarReflection 3s infinite;
+    }
+    
+    @keyframes solarReflection {
+      0% { left: -100%; }
+      100% { left: 200%; }
+    }
+  </style>
 </head>
-<body>
-  <header>
-    <div class="container row">
-      <a class="logo" href="#top">☀️ Solar Guide</a>
-      <nav>
-        <a href="#top-picks">Top picks</a>
-        <a href="#compare">Compare</a>
-        <a href="#guides">Guides</a>
-        <a href="#faq">FAQ</a>
-        <a href="#about">About Us</a>
-      </nav>
-      <button class="toggle" id="themeToggle" aria-label="Toggle light mode">🌓</button>
+<body class="bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100 font-sans">
+
+  <!-- Reading progress bar -->
+  <div class="progress-bar">
+    <div class="progress"></div>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="fixed top-0 inset-x-0 z-40">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="mt-4 rounded-2xl glass shadow-glass border border-white/10">
+        <div class="flex items-center justify-between px-4 py-3">
+          <a href="#" class="flex items-center gap-2 font-semibold tracking-tight">
+            <span class="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-brand-600 text-white">☀️</span>
+            SolarGuide India
+          </a>
+          <nav class="hidden md:flex items-center gap-6 text-sm">
+            <a href="#featured" class="hover:text-brand-500 transition-colors">Featured</a>
+            <a href="#guide" class="hover:text-brand-500 transition-colors">Solar Guide</a>
+            <a href="#calculator" class="hover:text-brand-500 transition-colors">Calculator</a>
+            <a href="#benefits" class="hover:text-brand-500 transition-colors">Why solar</a>
+            <a href="#faq" class="hover:text-brand-500 transition-colors">FAQ</a>
+          </nav>
+          <div class="flex items-center gap-2">
+            <button id="wishlistToggle" aria-label="View wishlist" class="rounded-lg border border-white/10 p-2 hover:border-brand-500 transition-colors relative">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+              <span id="wishlistCount" class="absolute -top-2 -right-2 bg-brand-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center hidden">0</span>
+            </button>
+            <button id="themeToggle" aria-label="Toggle dark mode" class="rounded-lg border border-white/10 px-3 py-1.5 text-sm hover:border-brand-500 transition-colors">
+              Dark
+            </button>
+            <a href="#featured" class="hidden sm:inline-flex items-center rounded-lg bg-brand-600 px-4 py-2 text-white hover:bg-brand-700 shadow-soft btn-micro">Shop top picks</a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero container">
-      <h1>Find the right solar gear without the hype</h1>
-      <p>Real-world picks for solar generators, panels, and kits. Updated for 2025.</p>
-
-      <form id="searchForm" role="search" class="search">
-        <input id="searchInput" type="search" placeholder="Search products, e.g., 100W panel or 500Wh" aria-label="Search products" />
-        <button type="submit">Search</button>
-      </form>
-
-      <div class="toc" aria-label="On-page navigation">
-        <a href="#top-picks">Top picks</a>
-        <a href="#filters">Filters</a>
-        <a href="#compare">Compare</a>
-        <a href="#guides">Buying guides</a>
-        <a href="#faq">FAQ</a>
-        <a href="#about">About Us</a>
+  <!-- Hero -->
+  <section class="relative pt-32">
+    <div aria-hidden="true" class="absolute inset-0 -z-10">
+      <div class="absolute -top-40 left-1/2 -translate-x-1/2 h-[480px] w-[980px] bg-gradient-to-tr from-brand-100 via-white to-transparent opacity-70 blur-3xl dark:from-emerald-900/30 dark:via-transparent"></div>
+    </div>
+    <div class="mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-10 items-center">
+      <div class="fade-in">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
+          Go solar with confidence
+        </h1>
+        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
+          We test panels, generators, and batteries—so you buy once and buy right.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#featured" class="inline-flex items-center rounded-lg bg-brand-600 px-5 py-3 text-white hover:bg-brand-700 shadow-soft btn-micro">See top picks</a>
+          <a href="#calculator" class="inline-flex items-center rounded-lg border px-5 py-3 hover:border-brand-500 btn-micro">Calculate savings</a>
+        </div>
+        <div class="mt-6 flex items-center gap-4 text-xs text-slate-500 dark:text-slate-400">
+          <span class="inline-flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-600"></span> Lab‑tested</span>
+          <span class="inline-flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-600"></span> Transparent reviews</span>
+          <span class="inline-flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-600"></span> Updated monthly</span>
+        </div>
       </div>
-
-      <p class="disclaimer">We may earn commissions from qualifying purchases. This helps keep our recommendations free.</p>
-    </section>
-
-    <section id="filters" class="filters container" aria-label="Filters">
-      <div class="filter-row">
-        <label>
-          <span>Category</span>
-          <select id="categoryFilter">
-            <option value="all">All</option>
-            <option value="solar-generator">Solar generators</option>
-            <option value="solar-panel">Solar panels</option>
-            <option value="solar-kit">Solar kits</option>
-            <option value="accessory">Accessories</option>
-          </select>
-        </label>
-        <label>
-          <span>Price</span>
-          <select id="priceFilter">
-            <option value="all">All</option>
-            <option value="under-200">Under $200</option>
-            <option value="200-600">$200–$600</option>
-            <option value="600-1200">$600–$1,200</option>
-            <option value="1200-plus">$1,200+</option>
-          </select>
-        </label>
-        <label>
-          <span>Min rating</span>
-          <select id="ratingFilter">
-            <option value="0">Any</option>
-            <option value="3">3+</option>
-            <option value="4">4+</option>
-            <option value="4.5">4.5+</option>
-          </select>
-        </label>
-        <button id="compareBtn" class="btn-secondary" disabled>Compare (0)</button>
+      <div class="relative fade-in">
+        <div class="aspect-video rounded-2xl border shadow-soft overflow-hidden skeleton solar-panel" id="heroImageWrap">
+          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Solar panels" loading="eager" class="h-full w-full object-cover opacity-0" id="heroImage"/>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="container" id="top-picks" aria-label="Top picks">
-      <h2>Top picks</h2>
-      <div id="productGrid" class="grid"></div>
-      <div id="emptyState" class="empty" hidden>
-        <p>No results. Try adjusting filters or search terms.</p>
+  <!-- Solar Savings Calculator -->
+  <section id="calculator" class="py-16 bg-gradient-to-br from-brand-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
+    <div class="mx-auto max-w-4xl px-4">
+      <div class="text-center mb-10 fade-in">
+        <h2 class="text-2xl font-bold">Solar Savings Calculator</h2>
+        <p class="text-slate-600 dark:text-slate-300 mt-2">See how much you could save with solar energy</p>
       </div>
-    </section>
-
-    <section class="container" id="compare" aria-label="Compare">
-      <h2>Quick comparison</h2>
-      <div id="comparePreview"></div>
-    </section>
-
-    <section class="guides container" id="guides" aria-label="Buying guides">
-      <h2>Buying guides</h2>
       
-      <article class="guide-card" id="guide-technology">
-        <h3>Solar Technology Explained</h3>
-        <p>Understanding the latest advancements in solar energy for Indian conditions</p>
-        
-        <div class="tech-grid">
-          <div class="tech-card">
-            <h4>N-Type TOPCon Panels</h4>
-            <p>Next-generation technology with 22%+ efficiency, better heat performance, and longer lifespan. Ideal for India's climate.</p>
-          </div>
-          <div class="tech-card">
-            <h4>Bifacial Modules</h4>
-            <p>Capture sunlight from both sides, increasing output by 5-25%. Perfect for reflective surfaces like white roofs.</p>
-          </div>
-          <div class="tech-card">
-            <h4>Half-Cut Cell Design</h4>
-            <p>Reduced resistive losses and improved shade tolerance. Standard in premium panels for better performance.</p>
-          </div>
-          <div class="tech-card">
-            <h4>Lithium-Ion Storage</h4>
-            <p>Longer-lasting, faster-charging batteries for reliable power during outages. Essential for Indian power conditions.</p>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-soft fade-in">
+          <h3 class="font-semibold mb-4">Your Energy Usage</h3>
+          
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Monthly electricity bill (₹)</label>
+              <input type="number" id="monthlyBill" value="3000" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-transparent dark:bg-slate-800 dark:border-slate-700">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Roof space (sq ft)</label>
+              <input type="number" id="roofSpace" value="600" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-transparent dark:bg-slate-800 dark:border-slate-700">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Sunlight hours per day</label>
+              <input type="number" id="sunlightHours" value="5" min="1" max="12" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-transparent dark:bg-slate-800 dark:border-slate-700">
+            </div>
+            
+            <button id="calculateSavings" class="w-full bg-brand-600 text-white py-2.5 rounded-lg hover:bg-brand-700 transition-colors btn-micro">
+              Calculate Savings
+            </button>
           </div>
         </div>
         
-        <h4>Why Technology Matters for Indian Homes</h4>
-        <p>India's unique climate and power conditions require specific solar technologies. High temperatures, monsoon humidity, and frequent power cuts demand robust, efficient solutions. Modern panels with N-Type TOPCon technology perform better in heat, while bifacial designs maximize output in varied conditions. Lithium-ion batteries provide reliable backup during outages. Understanding these technologies helps you make informed decisions about which solar solution is right for your specific needs and conditions.</p>
-      </article>
-      
-      <article class="guide-card" id="guide-decision">
-        <h3>Your Solar Decision Guide</h3>
-        <p>A step-by-step approach to choosing the right solar solution for your needs</p>
-        
-        <ol class="step-list">
-          <li>
-            <strong>Assess Your Energy Needs</strong>
-            <p>Calculate your average monthly electricity consumption (kWh). Check your electricity bill for this information. A typical Indian household uses 200-400 kWh per month.</p>
-          </li>
-          <li>
-            <strong>Evaluate Your Roof</strong>
-            <p>Check for: 1) Adequate space (100 sq ft per kW), 2) Structural strength, 3) Orientation (south-facing is ideal), 4) Shading from trees or buildings. Most roofs work with proper mounting systems.</p>
-          </li>
-          <li>
-            <strong>Choose Your System Type</strong>
-            <p><strong>Grid-Tied Systems:</strong> Connected to the grid, no battery backup. Best for reducing bills.<br>
-            <strong>Off-Grid Systems:</strong> Independent with battery backup. Best for power reliability.<br>
-            <strong>Hybrid Systems:</strong> Combination of both for maximum benefits.</p>
-          </li>
-          <li>
-            <strong>Decide on Technology</strong>
-            <p>For maximum efficiency and longevity, choose panels with N-Type TOPCon technology. For budget-conscious solutions, monocrystalline PERC panels offer good value. Consider bifacial panels if you have reflective surfaces.</p>
-          </li>
-          <li>
-            <strong>Calculate System Size</strong>
-            <p>Generally, 1 kW of solar panels produces 4-5 kWh per day in India. To offset 300 kWh monthly consumption, you need approximately 2-2.5 kW system. For complete independence, consider 5-10 kW depending on your needs.</p>
-          </li>
-          <li>
-            <strong>Explore Subsidies</strong>
-            <p>Under PM Surya Ghar: Muft Bijli Yojana, residential systems up to 3 kW get ₹18,000/kW subsidy. Systems 3-10 kW get ₹18,000/kW for first 3 kW and ₹9,000/kW for the rest. Ensure panels are DCR-compliant to qualify.</p>
-          </li>
-          <li>
-            <strong>Select Quality Components</strong>
-            <p>Choose BIS-certified panels from reputable manufacturers. Ensure inverters and charge controllers are compatible with your panels. For battery backup, lithium-ion offers longer life than lead-acid.</p>
-          </li>
-          <li>
-            <strong>Get Professional Installation</strong>
-            <p>While DIY kits exist, professional installation ensures safety, optimal performance, and warranty validity. Look for installers with experience in your area's conditions.</p>
-          </li>
-        </ol>
-      </article>
-      
-      <article class="guide-card" id="guide-sizing">
-        <h3>How to size a solar generator</h3>
-        <p>List your devices, sum their watts, then multiply by desired hours to estimate required watt‑hours. Add 20–30% buffer for losses.</p>
-        <h4>Quick formula</h4>
-        <ul>
-          <li><strong>Load:</strong> Total device watts running at once</li>
-          <li><strong>Runtime:</strong> Hours you need per day</li>
-          <li><strong>Battery:</strong> Load × runtime = target Wh (×1.3 buffer)</li>
-          <li><strong>Solar input:</strong> Battery Wh ÷ usable sun hours ≈ panel watts</li>
-        </ul>
-      </article>
-      
-      <article class="guide-card" id="guide-panels">
-        <h3>Monocrystalline vs polycrystalline panels</h3>
-        <p>Mono panels are typically more efficient and compact; poly can be cheaper. For portable or space‑limited builds, mono usually wins.</p>
-      </article>
-      
-      <article class="guide-card" id="guide-cables">
-        <h3>Safe cabling and connectors</h3>
-        <p>Match MC4 polarity, size wire for current, fuse near the source, and use MPPT charge controllers for best harvest.</p>
-      </article>
-    </section>
-
-    <section class="container" id="faq" aria-label="FAQ">
-      <h2>Frequently asked questions</h2>
-      
-      <div class="faq-grid">
-        <div>
-          <details>
-            <summary>What's the difference between a solar kit and a single solar panel?</summary>
-            <p>A solar panel is just one component—it converts sunlight into electricity. A solar kit includes everything you need for a functioning system: panels, inverters, charge controllers, mounting hardware, and sometimes batteries. See our Solar Kits page for full details.</p>
-          </details>
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-soft fade-in">
+          <h3 class="font-semibold mb-4">Your Solar Potential</h3>
           
-          <details>
-            <summary>Which solar kit is best for a 2BHK home in India?</summary>
-            <p>For a typical 2BHK home using 8–10 units per day, a 3–5 kW system is ideal. The Star Home 250 Watt Solar Panel & Charger Controller or similar kits offer good balance of power and value. Check our Decision Guide for detailed analysis.</p>
-          </details>
-          
-          <details>
-            <summary>Do solar panels work during monsoon or cloudy days?</summary>
-            <p>Yes, though at reduced efficiency (around 30–50% of full capacity). Modern panels like the WAAREE 560W TOPCon perform better in low light than older models. Battery backup is recommended for continuous power.</p>
-          </details>
-          
-          <details>
-            <summary>What does "bifacial" mean in solar panels?</summary>
-            <p>Bifacial panels capture sunlight from both sides, increasing total output by 5–25%. They work best when installed over reflective surfaces (white roofs, gravel, sand). See our Technology section for more on this innovation.</p>
-          </details>
-          
-          <details>
-            <summary>How long do solar batteries last?</summary>
-            <p>Lithium-ion batteries (like in the Star Home kit) last 7–10 years or 3000+ cycles. Lead-acid batteries typically last 3–5 years. Proper maintenance extends lifespan. Read real user experiences in our Testimonials.</p>
-          </details>
-          
-          <details>
-            <summary>Can I run an AC on solar power?</summary>
-            <p>Yes, but you'll need sufficient capacity. A 1.5-ton AC requires about 2 kW of solar panels plus adequate battery storage. The Star Home 250W Solar Kit or larger systems can handle AC loads.</p>
-          </details>
-        </div>
-        
-        <div>
-          <details>
-            <summary>What maintenance do solar panels require?</summary>
-            <p>Minimal maintenance: occasional cleaning (every 2–3 months) with water and soft cloth, checking for shade obstructions, and ensuring connections remain tight. Most systems include monitoring apps. Learn more in our Technology guide.</p>
-          </details>
-          
-          <details>
-            <summary>How much can I save with solar power?</summary>
-            <p>Most homes save 70–90% on electricity bills, with full payback in 4–7 years. Savings depend on your location, consumption, and local electricity rates. See real savings examples in our Testimonials section.</p>
-          </details>
-          
-          <details>
-            <summary>What is the PM Surya Ghar Muft Bijli Yojana subsidy?</summary>
-            <p>This central government scheme offers subsidies up to ₹78,000 for residential rooftop solar installations. Eligibility requires using approved components and installers. Learn more in our Technology section's subsidy breakdown.</p>
-          </details>
-          
-          <details>
-            <summary>Are these products eligible for government subsidies?</summary>
-            <p>Many are, particularly DCR-compliant panels (like certain WAAREE models). Complete kits may qualify if they use approved components. Check our Decision Guide for subsidy eligibility notes on each product.</p>
-          </details>
-          
-          <details>
-            <summary>What if a panel gets damaged? Is there a warranty?</summary>
-            <p>Most premium panels come with 25–30 year performance warranties and 10–12 year product warranties. The WAAREE 560W TOPCon, for example, offers 30 years output warranty. Always register your warranty after purchase.</p>
-          </details>
-          
-          <details>
-            <summary>How do I know if my roof is suitable for solar?</summary>
-            <p>Most roofs work if they: 1) receive 4–6 hours of direct sunlight, 2) have adequate structural strength, and 3) aren't heavily shaded. South-facing roofs are ideal in India. Our Decision Guide has detailed roof assessment tips.</p>
-          </details>
-        </div>
-        
-        <div>
-          <details>
-            <summary>Can I install solar panels myself?</summary>
-            <p>Kits like the Star Home 250 Watt are designed for DIY installation, but we recommend professional help for grid-tied systems or complex roof mounts. Proper installation ensures safety and maximizes efficiency.</p>
-          </details>
-          
-          <details>
-            <summary>What happens during a power cut with a solar system?</summary>
-            <p>Systems with battery backup automatically switch to solar power during outages. Grid-tied systems without batteries will shut down for safety unless they have special islanding capability. Our Technology section explains these configurations.</p>
-          </details>
-          
-          <details>
-            <summary>How does solar perform in India's extreme heat?</summary>
-            <p>Solar panels actually become slightly less efficient as temperatures rise, but modern panels like WAAREE's TOPCon models handle heat better than older technologies. See our Technology page for heat tolerance comparisons.</p>
-          </details>
-          
-          <details>
-            <summary>What is the lifespan of solar panels?</summary>
-            <p>Most quality panels are warrantied for 25–30 years and can continue producing electricity at reduced capacity beyond that. The WAAREE 560W panel maintains 87% output even after 30 years.</p>
-          </details>
-          
-          <details>
-            <summary>Are there any hidden costs after buying a solar kit?</summary>
-            <p>The main upfront cost is the kit and installation. Minor ongoing costs may include replacement batteries (in 7–10 years), routine cleaning, and, if grid-tied, minor connection fees. We break down all cost elements in our Detailed Pricing Guide. See user cost breakdowns and tips in Testimonials.</p>
-          </details>
-          
-          <details>
-            <summary>Is installing solar really worth it in 2025 and beyond?</summary>
-            <p>Absolutely, for most Indian homes and small businesses. Falling panel prices, rising grid rates, generous subsidies, and improved technology make solar a smart investment for 2025. The average family saves thousands on electricity over 25 years, gains energy independence, and helps the environment. For real ROI data, see backups from our Testimonials.</p>
-          </details>
-        </div>
-      </div>
-      
-      <div class="contact-note">
-        <h4>Still have questions?</h4>
-        <p>You can reach our solar experts via email at <strong>learnconow@gmail.com</strong> or request a call back on our Solar Kits page. Consultation is free with no obligation, and you'll get an instant cost estimate plus a tailored system plan.</p>
-      </div>
-    </section>
-
-    <section class="about-section container" id="about">
-      <div class="about-content">
-        <h2>About Us – Your Partner in Smarter Solar Energy Solutions</h2>
-        
-        <p>At Solar Guide, we believe the sun is more than just light — it's the most reliable, renewable source of power we have. Our mission is to help households and businesses across India find Solar Kits for Home and Business, choose the Best Solar Panels in India, and stay informed about the Latest Solar Technology shaping the future of clean energy.</p>
-        
-        <p>We know that going solar is a big decision. That's why we make it easy to compare solar products side-by-side, understand performance, and choose solutions that fit your budget, climate, and lifestyle.</p>
-        
-        <p>Our community is built on trust and real experiences. In our Customer Testimonials section, you'll hear from people who have transformed their homes and businesses with solar — cutting electricity bills, gaining energy independence, and making a positive environmental impact.</p>
-        
-        <h3>Why We're Different</h3>
-        
-        <div class="about-points">
-          <div class="about-point">
-            <h4>Local Expertise</h4>
-            <p>We focus on solar energy solutions designed for Indian climates and power needs.</p>
-          </div>
-          
-          <div class="about-point">
-            <h4>Clear, Honest Guidance</h4>
-            <p>We translate technical jargon into plain language so you can make informed choices.</p>
-          </div>
-          
-          <div class="about-point">
-            <h4>Future-Focused</h4>
-            <p>We track the latest innovations to keep you ahead of the curve.</p>
+          <div class="space-y-4" id="resultsContainer">
+            <div class="text-center py-8 text-slate-400">
+              Enter your details to see potential savings
+            </div>
           </div>
         </div>
-        
-        <p>Every sunrise is an opportunity to power your home, save money, and protect the planet. Let's harness that energy together — one smart solar choice at a time.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="social-section container">
-      <h2>Connect With Us</h2>
-      <p>Follow us on social media for the latest updates, tips, and solar energy insights</p>
+  <!-- Featured Picks -->
+  <section id="featured" class="py-16">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="flex items-end justify-between mb-6 fade-in">
+        <h2 class="text-2xl font-bold">Editor's picks</h2>
+        <div class="flex items-center gap-3">
+          <span class="text-sm text-slate-500 dark:text-slate-400">Handpicked best overall • budget</span>
+          <button id="filterButton" class="text-sm flex items-center gap-1 text-brand-600">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+            </svg>
+            Filter
+          </button>
+        </div>
+      </div>
       
-      <div class="social-grid">
-        <a href="https://www.facebook.com/share/17Ec6gNTXQ/" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">
-          <span>f</span>
-        </a>
-        
-        <a href="https://x.com/newgendeal" class="social-link" target="_blank" rel="noopener" aria-label="Twitter">
-          <span>X</span>
-        </a>
-        
-        <a href="https://www.instagram.com/newgendeal?igsh=N3Jxc3hrbnp6MWRn" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
-          <span>IG</span>
-        </a>
-        
-        <a href="https://pin.it/189inumYs" class="social-link" target="_blank" rel="noopener" aria-label="Pinterest">
-          <span>P</span>
-        </a>
+      <!-- Filter Options -->
+      <div id="filterOptions" class="mb-6 p-4 bg-slate-50 dark:bg-slate-800 rounded-xl hidden fade-in">
+        <div class="flex flex-wrap gap-4">
+          <div>
+            <label class="block text-sm font-medium mb-1">Category</label>
+            <select class="px-3 py-2 border rounded-lg dark:bg-slate-700 dark:border-slate-600">
+              <option>All Products</option>
+              <option>Solar Panels</option>
+              <option>Generators</option>
+              <option>Batteries</option>
+            </select>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium mb-1">Price Range</label>
+            <select class="px-3 py-2 border rounded-lg dark:bg-slate-700 dark:border-slate-600">
+              <option>Any Price</option>
+              <option>Under ₹15,000</option>
+              <option>₹15,000 - ₹25,000</option>
+              <option>₹25,000 - ₹50,000</option>
+              <option>Over ₹50,000</option>
+            </select>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium mb-1">Rating</label>
+            <select class="px-3 py-2 border rounded-lg dark:bg-slate-700 dark:border-slate-600">
+              <option>Any Rating</option>
+              <option>4+ Stars</option>
+              <option>4.5+ Stars</option>
+            </select>
+          </div>
+          
+          <div class="self-end">
+            <button class="px-3 py-2 bg-slate-800 text-white rounded-lg text-sm dark:bg-slate-700">Apply Filters</button>
+          </div>
+        </div>
       </div>
-    </section>
-  </main>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Card -->
+        <article class="group rounded-2xl border bg-white dark:bg-slate-900 shadow-soft overflow-hidden card-hover fade-in" data-wishlist="false" data-product-id="1">
+          <div class="relative">
+            <img src="https://m.media-amazon.com/images/I/71X9ekRmbgL._SL1500_.jpg" alt="WAAREE 590 Watt TOPCon Bifacial Solar Panel" loading="lazy" class="h-48 w-full object-cover transition group-hover:scale-[1.02]"/>
+            <span class="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold shadow">Best overall</span>
+            <button class="absolute right-3 top-3 wishlist-btn rounded-full bg-white/90 p-2 shadow hover:text-rose-500 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <span class="absolute right-3 top-12 inventory-status rounded-full bg-green-100 text-green-800 px-2 py-1 text-xs">In Stock</span>
+          </div>
+          <div class="p-5 space-y-3">
+            <h3 class="font-semibold">WAAREE 590W TOPCon Bifacial</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">22.8% efficiency • 30-year warranty • BIS Certified</p>
+            <div class="flex items-center gap-2 text-amber-500" aria-label="Rating 4.1 out of 5">
+              ★★★★☆
+              <span class="text-slate-500 text-sm">4.1</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-lg font-semibold">₹20,299</span>
+              </div>
+              <a data-aff="WAAREE 590W Panel" href="https://amzn.to/3VpkKn4" target="_blank" rel="nofollow sponsored noopener" class="inline-flex items-center rounded-lg bg-brand-600 px-4 py-2 text-white hover:bg-brand-700 btn-micro">Check price</a>
+            </div>
+          </div>
+        </article>
 
-  <dialog class="compareDialog" id="compareDialog">
-    <form method="dialog" class="compare">
-      <header>
-        <h3>Compare products</h3>
-        <button value="close" aria-label="Close">✖</button>
-      </header>
-      <div id="compareTableWrap" style="padding:.6rem .8rem;"></div>
-    </form>
-  </dialog>
+        <article class="group rounded-2xl border bg-white dark:bg-slate-900 shadow-soft overflow-hidden card-hover fade-in" data-wishlist="false" data-product-id="2">
+          <div class="relative">
+            <img src="https://m.media-amazon.com/images/I/81FIjXPuJ0L._SL1500_.jpg" alt="Loom Solar Panel Shark 575W" loading="lazy" class="h-48 w-full object-cover transition group-hover:scale-[1.02]"/>
+            <span class="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold shadow">Best budget</span>
+            <button class="absolute right-3 top-3 wishlist-btn rounded-full bg-white/90 p-2 shadow hover:text-rose-500 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <span class="absolute right-3 top-12 inventory-status rounded-full bg-green-100 text-green-800 px-2 py-1 text-xs">In Stock</span>
+          </div>
+          <div class="p-5 space-y-3">
+            <h3 class="font-semibold">Loom Solar Shark 575W</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">22.3% efficiency • 25-year warranty • BIS Certified</p>
+            <div class="flex items-center gap-2 text-amber-500">
+              ★★★★☆
+              <span class="text-slate-500 text-sm">4.6</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-semibold">₹18,354</span>
+              <a data-aff="Loom Solar Shark 575W" href="https://amzn.to/46vvS6Z" target="_blank" rel="nofollow sponsored noopener" class="inline-flex items-center rounded-lg bg-brand-600 px-4 py-2 text-white hover:bg-brand-700 btn-micro">Check price</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <p>© <span id="year"></span> Solar Guide. Independent reviews. Affiliate commissions may apply.</p>
-        
-        <div class="footer-nav">
-          <a href="#top-picks">Top Picks</a>
-          <a href="#compare">Compare</a>
-          <a href="#guides">Guides</a>
-          <a href="#faq">FAQ</a>
-          <a href="#about">About Us</a>
+  <!-- Solar Guide Section -->
+  <section id="guide" class="py-16 bg-slate-50 dark:bg-slate-900/40">
+    <div class="mx-auto max-w-6xl px-4">
+      <h2 class="text-2xl font-bold mb-6 text-center fade-in">Your Solar Decision Guide: Power Your Home with Sunshine</h2>
+      <p class="text-slate-600 dark:text-slate-300 mb-8 text-center fade-in">Thinking about harnessing the sun's power? Switching to solar energy is one of the smartest decisions for an Indian homeowner today.</p>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-soft fade-in">
+          <h3 class="font-semibold mb-4 text-brand-600">1. Understand Your Electricity Consumption</h3>
+          <p class="text-slate-600 dark:text-slate-300">Before you get quotes, look at your electricity bills from the past year. Calculate your average monthly consumption in kilowatt-hours (kWh). This number is the foundation for designing your entire solar energy system. Knowing your usage helps determine the size and solar installation cost.</p>
         </div>
         
-        <div class="social-grid">
-          <a href="https://www.facebook.com/share/17Ec6gNTXQ/" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">
-            <span>f</span>
-          </a>
-          
-          <a href="https://x.com/newgendeal" class="social-link" target="_blank" rel="noopener" aria-label="Twitter">
-            <span>X</span>
-          </a>
-          
-          <a href="https://www.instagram.com/newgendeal?igsh=N3Jxc3hrbnp6MWRn" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
-            <span>IG</span>
-          </a>
-          
-          <a href="https://pin.it/189inumYs" class="social-link" target="_blank" rel="noopener" aria-label="Pinterest">
-            <span>P</span>
-          </a>
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-soft fade-in">
+          <h3 class="font-semibold mb-4 text-brand-600">2. Choose the Right Type of Solar System</h3>
+          <p class="text-slate-600 dark:text-slate-300">This is a crucial choice that depends on your location and power reliability:</p>
+          <ul class="mt-3 space-y-2 text-slate-600 dark:text-slate-300">
+            <li class="flex items-start"><span class="inline-block w-2 h-2 bg-brand-500 rounded-full mt-2 mr-2"></span><strong>On-Grid System:</strong> Connected to the main grid with net metering benefits</li>
+            <li class="flex items-start"><span class="inline-block w-2 h-2 bg-brand-500 rounded-full mt-2 mr-2"></span><strong>Off-Grid System:</strong> Completely independent with battery storage</li>
+            <li class="flex items-start"><span class="inline-block w-2 h-2 bg-brand-500 rounded-full mt-2 mr-2"></span><strong>Hybrid System:</strong> Best of both worlds with grid connection and battery backup</li>
+          </ul>
         </div>
         
-        <p><a href="#top" style="color:inherit">Back to top</a></p>
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-soft fade-in">
+          <h3 class="font-semibold mb-4 text-brand-600">3. Select Your Solar Components Wisely</h3>
+          <p class="text-slate-600 dark:text-slate-300">A solar power system is more than just panels. Each component matters:</p>
+          <ul class="mt-3 space-y-2 text-slate-600 dark:text-slate-300">
+            <li class="flex items-start"><span class="inline-block w-2 h-2 bg-brand-500 rounded-full mt-2 mr-2"></span><strong>Solar Panels:</strong> Monocrystalline (efficient) vs Polycrystalline (budget-friendly)</li>
+            <li class="flex items-start"><span class="inline-block w-2 h-2 bg-brand-500 rounded-full mt-2 mr-2"></span><strong>Solar Inverter:</strong> Converts DC to AC power for your home</li>
+            <li class="flex items-start"><span class="inline-block w-2 h-2 bg-brand-500 rounded-full mt-2 mr-2"></span><strong>Battery Storage:</strong> Essential for backup power in off-grid/hybrid systems</li>
+            <li class="flex items-start"><span class="inline-block w-2 h-2 bg-brand-500 rounded-full mt-2 mr-2"></span><strong>Balance of System:</strong> Mounting structure, wiring, and safety components</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-soft fade-in">
+          <h3 class="font-semibold mb-4 text-brand-600">4. Get Professional Quotes and Explore Subsidies</h3>
+          <p class="text-slate-600 dark:text-slate-300">A professional solar installer ensures your system is safe, efficient, and compliant with local regulations to avail of government subsidies.</p>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">The PM Surya Ghar Yojana offers significant financial incentives: ₹18,000 per kW for systems up to 3 kW and ₹9,000 per kW for additional capacity up to 10 kW.</p>
+        </div>
+        
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-soft fade-in md:col-span-2">
+          <h3 class="font-semibold mb-4 text-brand-600">5. Focus on Quality Installation and Maintenance</h3>
+          <p class="text-slate-600 dark:text-slate-300">The best components need a great installation. A professional solar installer will ensure the mounting structure is secure, the wiring is done correctly with proper junction boxes, and the entire system is optimized for maximum generation. This guarantees your investment in renewable energy pays off for decades to come.</p>
+          <p class="mt-4 text-slate-600 dark:text-slate-300">By understanding these steps, you are well on your way to enjoying the benefits of a reliable solar power system—from major savings on bills to never sitting in the dark during a power cut.</p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section id="benefits" class="py-12 bg-white dark:bg-slate-950">
+    <div class="mx-auto max-w-6xl px-4 grid md:grid-cols-3 gap-6">
+      <div class="rounded-2xl border p-6 bg-white/70 dark:bg-slate-900/60 card-hover fade-in">
+        <h3 class="font-semibold mb-2">Save money</h3>
+        <p class="text-slate-600 dark:text-slate-300">Slash bills by generating your own clean energy and maximize ROI with efficient gear.</p>
+      </div>
+      <div class="rounded-2xl border p-6 bg-white/70 dark:bg-slate-900/60 card-hover fade-in">
+        <h3 class="font-semibold mb-2">Energy independence</h3>
+        <p class="text-slate-600 dark:text-slate-300">Stay powered during outages with solar + battery storage tailored to your needs.</p>
+      </div>
+      <div class="rounded-2xl border p-6 bg-white/70 dark:bg-slate-900/60 card-hover fade-in">
+        <h3 class="font-semibold mb-2">Eco‑friendly</h3>
+        <p class="text-slate-600 dark:text-slate-300">Cut your carbon footprint with reliable, low‑maintenance renewable solutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16">
+    <div class="mx-auto max-w-6xl px-4">
+      <h2 class="text-2xl font-bold mb-6 text-center fade-in">Frequently asked questions</h2>
+      <div class="space-y-4">
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">What is the photovoltaic effect and how does it power solar panels?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">The photovoltaic effect is the fundamental process that makes solar panels work. When photons from sunlight hit the silicon cells in a solar panel, they transfer their energy to electrons, knocking them loose. The panel's internal electric field forces these freed electrons to flow in a specific direction, creating an electric current. This is how solar energy is converted directly into usable direct current (DC) electricity.</p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">What's the difference between PV and CSP solar systems?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">Photovoltaic (PV) Systems convert sunlight directly into electricity using solar panels. Concentrated Solar Power (CSP) uses mirrors to concentrate sunlight onto a receiver to generate heat, which then drives a steam turbine to produce electricity. PV is versatile and perfect for rooftops, while CSP is used in massive utility-scale plants.</p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">Can you explain what MPPT is in simple terms?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">MPPT (Maximum Power Point Tracking) is the "smart brain" inside your solar inverter or charge controller. It continuously tracks and adjusts the electrical current to find the perfect operating point where the panels are producing the absolute maximum power possible. This technology can increase your overall energy harvest by up to 30% compared to older systems.</p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">How does net metering work with my solar energy system?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">Net metering is a crucial billing arrangement for grid-tied systems. When your solar panels produce more electricity than your home needs, the excess power is sent back to the grid, making your electric meter spin backward. At night or on cloudy days, you draw power from the grid. At the end of the month, you only pay for the "net" difference between the energy you consumed and the clean energy you exported.</p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">What is the main difference between monocrystalline and polycrystalline panels?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">Monocrystalline panels are made from a single, pure crystal of silicon. They are black, have a higher efficiency rate, and perform better in low-light conditions. Polycrystalline panels are made from melted fragments of silicon crystals. They have a blue, speckled appearance, are slightly less efficient, and are generally more budget-friendly.</p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">For a solar battery, what's the difference between LFP and NMC?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">LFP (Lithium Iron Phosphate) batteries are known for exceptional safety, long lifespan, and excellent thermal stability. NMC (Lithium Nickel Manganese Cobalt) batteries offer higher energy density (more capacity in a smaller size) but generally have a shorter lifespan than LFP batteries.</p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">What are the pros and cons of different solar inverter types?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">
+            <strong>String Inverter:</strong><br>
+            Pros: Most cost-effective, simple technology.<br>
+            Cons: The entire "string" of panels performs to the level of the weakest panel; shading on one can affect all.<br><br>
+            
+            <strong>Microinverters:</strong><br>
+            Pros: Panel-level optimization (shading on one doesn't affect others), enhanced monitoring, and longer warranties.<br>
+            Cons: Higher initial cost per watt.<br><br>
+            
+            <strong>Power Optimizers (Hybrid System):</strong> Paired with a string inverter.<br>
+            Pros: Offers panel-level optimization like microinverters but at a lower overall system cost.<br>
+            Cons: More complex than a basic string system.
+          </p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">What are the latest advancements in solar technology?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">The industry is innovating rapidly! Key advancements include:<br><br>
+            <strong>N-Type TOPCon Cells:</strong> A new cell design offering higher efficiency, better performance in high heat, and less degradation over time.<br>
+            <strong>Bifacial Panels:</strong> Capture sunlight from both sides, increasing energy yield by up to 25% when installed over reflective surfaces.<br>
+            <strong>Perovskite Solar Cells:</strong> A promising new material that could lead to ultra-high efficiency, flexible, and lower-cost panels in the future.
+          </p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">What's new in solar battery technology?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">Beyond chemistry, advancements focus on integration and intelligence:<br><br>
+            <strong>Integrated Home Energy Systems:</strong> Solar inverters and battery storage are being designed as a single, seamless unit for easier installation and management.<br>
+            <strong>Software & AI:</strong> Smart energy management systems optimize when to charge from solar, discharge to the home, or export to the grid, maximizing renewable energy use and savings.<br>
+            <strong>Solid-State Batteries:</strong> A future technology that promises even greater safety, energy density, and lifespan.
+          </p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">What are the environmental impacts of solar panels?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">Solar energy is a leading clean energy source, but it's important to consider its full lifecycle.<br><br>
+            <strong>Positive Impacts:</strong> Once installed, a solar power system operates with zero emissions, drastically reducing your carbon footprint and air pollution. It doesn't consume water for electricity generation.<br>
+            <strong>Considerations:</strong> Manufacturing requires energy and raw materials. Responsible end-of-life recycling is crucial. The overwhelming consensus is that the environmental benefits over the system's 25+ year lifespan far outweigh these initial costs.
+          </p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">Can solar panels be recycled?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">Yes, solar panel recycling is a growing and vital industry. The process typically involves:<br><br>
+            1. Separating the aluminum frame and glass junction box for standard recycling.<br>
+            2. Using thermal or chemical processes to break down the rest of the panel and separate and purify the silicon cells and precious metals like silver.<br><br>
+            The goal is to recover over 90% of the materials for reuse in new products, creating a circular economy.
+          </p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">How can solar farms minimize their land use impact?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">Developers use several best practices:<br><br>
+            <strong>Agrivoltaics:</strong> Combining solar farms with agriculture, allowing sheep to graze or certain crops to grow underneath raised panels.<br>
+            <strong>Dual-Use Sites:</strong> Installing solar on already developed land like capped landfills, canals, or commercial rooftops.<br>
+            <strong>Low-Impact Siting:</strong> Carefully avoiding ecologically sensitive areas and using previously disturbed land.
+          </p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">How do I choose the right solar panel for my home?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">Focus on three things: efficiency, budget, and quality.<br><br>
+            <strong>Efficiency:</strong> High-efficiency monocrystalline panels produce more power in less roof space. If your roof is small or partially shaded, these are best.<br>
+            <strong>Budget:</strong> Polycrystalline panels offer a more budget-friendly entry point, though they require more space.<br>
+            <strong>Quality & Warranty:</strong> Choose panels from reputable manufacturers with strong product and performance warranties (often 25 years). A professional solar installer can provide the best recommendation.
+          </p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">What are the pros and cons of a hybrid solar system?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">A hybrid system combines a grid-tied system with battery storage.<br><br>
+            <strong>Pros:</strong><br>
+            - Backup Power: Provides electricity during blackouts.<br>
+            - Maximized Savings: Store excess solar energy to use at night, further reducing your bills.<br>
+            - Grid Interaction: You can still benefit from net metering.<br><br>
+            <strong>Cons:</strong><br>
+            - Higher Cost: The addition of a battery bank significantly increases the initial investment.<br>
+            - Increased Complexity: More components mean more potential points of failure and required maintenance.
+          </p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">How can I calculate my potential savings from solar?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">Your savings come from reduced electricity bills. Follow these steps:<br><br>
+            1. Estimate Production: A 1 kW system produces ~1200-1500 units (kWh) annually in India. A 3 kW system produces ~3600-4500 units.<br>
+            2. Calculate Value: Multiply the units produced by your current electricity rate per unit. (e.g., 4,000 units x ₹8/unit = ₹32,000 saved per year).<br>
+            3. Factor in Subsidies: Subtract any government subsidies from the initial cost to see your true payback period and long-term savings.
+          </p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">How does system efficiency affect the size (kW) I need?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">System efficiency determines how much sunlight your setup converts to usable electricity. Factors include panel efficiency, inverter losses, shading, and temperature. A less efficient system requires a larger solar panel array (more kW) to produce the same amount of energy as a smaller, more efficient system. This is why high-efficiency panels are recommended for roofs with limited space.</p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">Can you explain the PM-Surya Ghar subsidy in detail?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">The PM Surya Ghar Yojana is a central government subsidy to promote rooftop solar installation.<br><br>
+            <strong>Subsidy Amount:</strong> ₹18,000 per kW for systems up to 3 kW. For systems above 3 kW and up to 10 kW, the subsidy is ₹18,000 for the first 3 kW and ₹9,000 per kW for the remaining capacity.<br>
+            <strong>Cap:</strong> The total subsidy is capped at ₹78,000.<br>
+            <strong>Process:</strong> You must register on the official portal (pmsuryaghar.gov.in). The subsidy is processed through your local DISCOM and is typically directly transferred to your bank account after installation and inspection.
+          </p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">What is the typical cost of a 2.4 kW solar system in India?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">For a good quality 2.4 kW on-grid system (without battery), the total solar installation cost can range between ₹1.2 to ₹1.5 lakhs, before subsidies. After applying the PM Surya Ghar subsidy of ₹43,200 (₹18,000 x 2.4 kW), the effective cost to you could be around ₹80,000 to ₹1,06,800. Prices vary based on component brands and your location.</p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">What does a solar water heater installation cost?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">A typical 100-liters-per-day capacity solar water heater for a family of 3-4 can cost between ₹25,000 to ₹35,000, including installation. This is a separate system from a photovoltaic power system and is used exclusively for heating water.</p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">What is the typical lifespan of a solar battery in India's climate?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">In India's heat, the lifespan of a modern lithium-ion solar battery (especially LFP) is typically between 8 to 15 years. Heat is the biggest factor affecting longevity, so installing them in a cool, shaded place is crucial. The warranty (e.g., "10 years or 6000 cycles") is a good indicator of expected life.</p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">How do I find a certified solar installer in my city?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">Start with a web search for "certified solar installer in [your city]." Look for companies with positive reviews, physical offices, and certifications from major component manufacturers. They should be transparent about the process and able to guide you through government subsidies.</p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">What should I look for when choosing a solar installer?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">Don't just choose the cheapest quote. Select a professional solar installer based on:<br><br>
+            <strong>Experience & Reputation:</strong> How long have they been in business? Check their reviews and ask for references.<br>
+            <strong>Certifications:</strong> Are they certified by the manufacturers of the equipment they use?<br>
+            <strong>Warranty:</strong> Do they offer a strong workmanship warranty on top of the product warranties?<br>
+            <strong>Transparency:</strong> Their quote should clearly break down the cost of panels, inverter, mounting structure, and labor.
+          </p>
+        </details>
+        
+        <details class="group rounded-xl border p-5 card-hover fade-in">
+          <summary class="cursor-pointer font-semibold">Can you recommend a durable solar power bank for camping?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">For camping, look for a rugged, water-resistant solar power bank from reputable brands like Anker, Jackery, or BLUETTI. A model with a high-capacity battery (e.g., 20,000mAh or more), multiple output ports (USB, 12V), and a included foldable solar panel for recharging is ideal for off-grid adventures.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wishlist Modal -->
+  <div id="wishlistModal" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center hidden">
+    <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 w-full max-w-md mx-4">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="font-semibold text-lg">Your Wishlist</h3>
+        <button id="closeWishlist" class="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div id="wishlistItems" class="space-y-3">
+        <!-- Wishlist items will be added here dynamically -->
+        <p class="text-slate-500 text-center py-4">Your wishlist is empty</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disclosure bar -->
+  <div id="disclosure" class="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 hidden">
+    <div class="rounded-full bg-slate-900 text-white text-sm px-5 py-2 shadow-soft">
+      We may earn a commission from affiliate links. No extra cost to you.
+      <button id="dismissDisclosure" class="ml-3 underline">OK</button>
+    </div>
+  </div>
+
+  <!-- Sticky mobile CTA -->
+  <div class="md:hidden fixed bottom-0 inset-x-0 z-40">
+    <div class="m-3 rounded-2xl bg-brand-600 text-white shadow-soft flex items-center justify-between px-4 py-3">
+      <span class="text-sm">See today's best solar deals</span>
+      <a href="#featured" class="rounded-lg bg-white text-brand-700 px-3 py-1.5 btn-micro">Explore</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t">
+    <div class="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-slate-500">© 2025 SolarGuide India</p>
+      <nav class="flex gap-4 text-sm">
+        <a href="#featured" class="hover:text-brand-600 transition-colors">Featured</a>
+        <a href="#guide" class="hover:text-brand-600 transition-colors">Solar Guide</a>
+        <a href="#calculator" class="hover:text-brand-600 transition-colors">Calculator</a>
+        <a href="#faq" class="hover:text-brand-600 transition-colors">FAQ</a>
+      </nav>
     </div>
   </footer>
 
+  <!-- Back to top -->
+  <button id="toTop" aria-label="Back to top" class="hidden fixed bottom-6 right-6 z-40 rounded-full bg-slate-900 text-white p-3 shadow-soft hover:bg-slate-700 btn-micro">↑</button>
+
+  <!-- Scripts: theme, images, tabs, sort, slider, analytics -->
   <script>
-    // Data (replace affiliateUrl with your real links)
-    const PRODUCTS = [
-      {
-        id: "jackery-500",
-        name: "Jackery Explorer 500",
-        brand: "Jackery",
-        category: "solar-generator",
-        image: "https://images.unsplash.com/photo-1600965962102-9d260a1f2c3e?auto=format&fit=crop&w=1200&q=60",
-        price: 499,
-        rating: 4.6,
-        wh: 518,
-        w: 500,
-        weight_kg: 6.0,
-        best_for: "Camping and weekend trips",
-        pros: ["Reliable build", "Good inverter for size", "Quiet"],
-        cons: ["No LiFePO₄", "No app"],
-        affiliateUrl: "https://example.com/aff/jackery-500"
-      },
-      {
-        id: "ecoflow-river2max",
-        name: "EcoFlow RIVER 2 Max",
-        brand: "EcoFlow",
-        category: "solar-generator",
-        image: "https://images.unsplash.com/photo-1597706357202-8f78bca9e507?auto=format&fit=crop&w=1200&q=60",
-        price: 599,
-        rating: 4.5,
-        wh: 512,
-        w: 500,
-        weight_kg: 6.1,
-        best_for: "Fast charging, daily use",
-        pros: ["LiFePO₄ battery", "Ultra-fast AC charge", "Solid app"],
-        cons: ["Fan noise under load"],
-        affiliateUrl: "https://example.com/aff/ecoflow-river2-max"
-      },
-      {
-        id: "renogy-100w",
-        name: "Renogy 100W Panel",
-        brand: "Renogy",
-        category: "solar-panel",
-        image: "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1200&q=60",
-        price: 109,
-        rating: 4.7,
-        watt: 100,
-        weight_kg: 6.5,
-        best_for: "Budget rooftop or RV",
-        pros: ["Great value", "Durable frame"],
-        cons: ["Heavier than flex"],
-        affiliateUrl: "https://example.com/aff/renogy-100w"
-      },
-      {
-        id: "bluetti-ac200p",
-        name: "BLUETTI AC200P",
-        brand: "BLUETTI",
-        category: "solar-generator",
-        image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=60",
-        price: 1399,
-        rating: 4.7,
-        wh: 2000,
-        w: 2000,
-        weight_kg: 27.5,
-        best_for: "Home backup and RV",
-        pros: ["High capacity", "Multiple ports", "LiFePO₄ longevity"],
-        cons: ["Heavy"],
-        affiliateUrl: "https://example.com/aff/bluetti-ac200p"
-      }
-    ];
-
-    // Helpers
-    const $ = (s,p=document)=>p.querySelector(s);
-    const $$ = (s,p=document)=>[...p.querySelectorAll(s)];
-    const state = { filtered: PRODUCTS.slice(), compare: new Set() };
-
-    // Init
-    document.addEventListener('DOMContentLoaded', () => {
-      $('#year').textContent = new Date().getFullYear();
-      bindUI();
-      renderProducts();
-      updateItemListSchema();
-      renderComparePreview();
+    // Dark mode persistence
+    const root = document.documentElement;
+    const themeBtn = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      root.classList.add('dark');
+      themeBtn.textContent = 'Light';
+    } else {
+      themeBtn.textContent = 'Dark';
+    }
+    themeBtn.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+      themeBtn.textContent = root.classList.contains('dark') ? 'Light' : 'Dark';
     });
 
-    function bindUI(){
-      $('#themeToggle').addEventListener('click',()=>document.documentElement.classList.toggle('light'));
-      $('#searchForm').addEventListener('submit', (e)=>{
+    // Skeleton -> reveal hero image
+    const heroImg = document.getElementById('heroImage');
+    const heroWrap = document.getElementById('heroImageWrap');
+    heroImg.addEventListener('load', () => {
+      heroImg.classList.remove('opacity-0');
+      heroWrap.classList.remove('skeleton');
+    });
+
+    // Affiliate disclosure memory
+    const disclosure = document.getElementById('disclosure');
+    const dismiss = document.getElementById('dismissDisclosure');
+    if (!localStorage.getItem('aff_ok')) disclosure.classList.remove('hidden');
+    dismiss.addEventListener('click', () => { localStorage.setItem('aff_ok','1'); disclosure.classList.add('hidden'); });
+
+    // Back to top
+    const toTop = document.getElementById('toTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 600) toTop.classList.remove('hidden'); else toTop.classList.add('hidden');
+    });
+    toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Outbound affiliate click tracking
+    const track = (label, url) => {
+      if (window.gtag) gtag('event', 'affiliate_click', { event_category: 'engagement', event_label: label, destination: url, value: 1 });
+    };
+    document.querySelectorAll('a[data-aff]').forEach(a => {
+      a.addEventListener('click', () => track(a.getAttribute('data-aff'), a.href));
+    });
+
+    // Reading progress bar
+    const progressBar = document.querySelector('.progress');
+    window.addEventListener('scroll', () => {
+      const totalHeight = document.body.scrollHeight - window.innerHeight;
+      const progress = (window.scrollY / totalHeight) * 100;
+      progressBar.style.width = progress + '%';
+    });
+
+    // Fade-in animation on scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    fadeElements.forEach(el => observer.observe(el));
+
+    // Wishlist functionality
+    const wishlistToggle = document.getElementById('wishlistToggle');
+    const wishlistModal = document.getElementById('wishlistModal');
+    const closeWishlist = document.getElementById('closeWishlist');
+    const wishlistItems = document.getElementById('wishlistItems');
+    const wishlistCount = document.getElementById('wishlistCount');
+    
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    
+    wishlistToggle.addEventListener('click', () => {
+      wishlistModal.classList.remove('hidden');
+      updateWishlistDisplay();
+    });
+    
+    closeWishlist.addEventListener('click', () => {
+      wishlistModal.classList.add('hidden');
+    });
+    
+    document.querySelectorAll('.wishlist-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
         e.preventDefault();
-        applyFilters();
+        const productCard = btn.closest('[data-product-id]');
+        const productId = productCard.getAttribute('data-product-id');
+        const productName = productCard.querySelector('h3').textContent;
+        const productPrice = productCard.querySelector('.text-lg').textContent;
+        const productImage = productCard.querySelector('img').src;
+        
+        const isInWishlist = wishlist.some(item => item.id === productId);
+        
+        if (isInWishlist) {
+          wishlist = wishlist.filter(item => item.id !== productId);
+          productCard.setAttribute('data-wishlist', 'false');
+          btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>';
+        } else {
+          wishlist.push({
+            id: productId,
+            name: productName,
+            price: productPrice,
+            image: productImage
+          });
+          productCard.setAttribute('data-wishlist', 'true');
+          btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" style="color: #f43f5e;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>';
+        }
+        
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+        updateWishlistCount();
+        
+        if (wishlistModal.classList.contains('hidden') === false) {
+          updateWishlistDisplay();
+        }
       });
-      $('#categoryFilter').addEventListener('change', applyFilters);
-      $('#priceFilter').addEventListener('change', applyFilters);
-      $('#ratingFilter').addEventListener('change', applyFilters);
-      $('#compareBtn').addEventListener('click', openCompare);
-    }
-
-    function applyFilters(){
-      const q = ($('#searchInput').value||'').toLowerCase().trim();
-      const cat = $('#categoryFilter').value;
-      const price = $('#priceFilter').value;
-      const minRating = parseFloat($('#ratingFilter').value);
-      state.filtered = PRODUCTS.filter(p=>{
-        const passCat = cat==='all'||p.category===cat;
-        const passRating = (p.rating||0) >= minRating;
-        const passSearch = !q ? true : [
-          p.name, p.brand, p.category, p.best_for, String(p.price), String(p.w||p.watt||''), String(p.wh||'')
-        ].join(' ').toLowerCase().includes(q);
-        const passPrice = priceCheck(price, p.price);
-        return passCat && passRating && passSearch && passPrice;
-      });
-      renderProducts();
-      updateItemListSchema();
-      renderComparePreview();
-    }
-
-    function priceCheck(bucket, price){
-      switch(bucket){
-        case 'under-200': return price < 200;
-        case '200-600': return price >= 200 && price <= 600;
-        case '600-1200': return price > 600 && price <= 1200;
-        case '1200-plus': return price > 1200;
-        default: return true;
+    });
+    
+    function updateWishlistCount() {
+      wishlistCount.textContent = wishlist.length;
+      if (wishlist.length > 0) {
+        wishlistCount.classList.remove('hidden');
+      } else {
+        wishlistCount.classList.add('hidden');
       }
     }
-
-    function renderProducts(){
-      const grid = $('#productGrid');
-      grid.innerHTML = '';
-      const empty = $('#emptyState');
-      if(!state.filtered.length){
-        empty.hidden = false;
+    
+    function updateWishlistDisplay() {
+      if (wishlist.length === 0) {
+        wishlistItems.innerHTML = '<p class="text-slate-500 text-center py-4">Your wishlist is empty</p>';
         return;
       }
-      empty.hidden = true;
-
-      const frag = document.createDocumentFragment();
-      state.filtered.forEach(p=>{
-        const card = document.createElement('article');
-        card.className='card';
-        card.innerHTML = `
-          <div class="media">
-            ${topBadge(p)}
-            <img src="${p.image}" alt="${p.name}" width="800" height="600" loading="lazy" />
+      
+      wishlistItems.innerHTML = '';
+      wishlist.forEach(item => {
+        const wishlistItem = document.createElement('div');
+        wishlistItem.className = 'flex items-center gap-3 p-2 bg-slate-50 dark:bg-slate-800 rounded-lg';
+        wishlistItem.innerHTML = `
+          <img src="${item.image}" alt="${item.name}" class="h-12 w-12 object-cover rounded">
+          <div class="flex-1">
+            <h4 class="font-medium text-sm">${item.name}</h4>
+            <p class="text-brand-600 font-semibold text-sm">${item.price}</p>
           </div>
-          <div class="content">
-            <h3>${p.name}</h3>
-            <div class="muted">${p.brand} • ${prettyCategory(p.category)}</div>
-            <div class="features">
-              <div><span>Rating</span> ★ ${p.rating?.toFixed(1) ?? '—'}</div>
-              <div><span>Price</span> <span class="price">$${p.price}</span></div>
-              ${specRow(p)}
-            </div>
-            <div class="kicker">${p.best_for ?? ''}</div>
-            <div class="actions">
-              <a class="btn-primary" href="${p.affiliateUrl}" target="_blank" rel="sponsored noopener" data-product="${p.id}">View deal</a>
-              <button class="btn-outline" data-compare="${p.id}">${state.compare.has(p.id)?'Added':'Compare'}</button>
-            </div>
-          </div>`;
-        card.querySelector('a.btn-primary').addEventListener('click', ()=>trackClickOut(p));
-        card.querySelector('button[data-compare]').addEventListener('click', (e)=>toggleCompare(p.id, e.currentTarget));
-        frag.appendChild(card);
+          <button class="remove-wishlist text-slate-500 hover:text-rose-500" data-id="${item.id}">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        `;
+        wishlistItems.appendChild(wishlistItem);
       });
-      grid.appendChild(frag);
-      updateCompareButton();
+      
+      // Add event listeners to remove buttons
+      document.querySelectorAll('.remove-wishlist').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const productId = btn.getAttribute('data-id');
+          wishlist = wishlist.filter(item => item.id !== productId);
+          localStorage.setItem('wishlist', JSON.stringify(wishlist));
+          updateWishlistCount();
+          updateWishlistDisplay();
+          
+          // Update heart icon on product card
+          const productCard = document.querySelector(`[data-product-id="${productId}"]`);
+          if (productCard) {
+            productCard.setAttribute('data-wishlist', 'false');
+            const wishlistBtn = productCard.querySelector('.wishlist-btn');
+            wishlistBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>';
+          }
+        });
+      });
     }
+    
+    // Initialize wishlist count
+    updateWishlistCount();
+    
+    // Initialize wishlist status for products
+    document.querySelectorAll('[data-product-id]').forEach(card => {
+      const productId = card.getAttribute('data-product-id');
+      const isInWishlist = wishlist.some(item => item.id === productId);
+      if (isInWishlist) {
+        card.setAttribute('data-wishlist', 'true');
+        const wishlistBtn = card.querySelector('.wishlist-btn');
+        wishlistBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" style="color: #f43f5e;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>';
+      }
+    });
 
-    function specRow(p){
-      const bits=[];
-      if(p.wh) bits.push(`<div><span>Capacity</span> ${p.wh} Wh</div>`);
-      if(p.w) bits.push(`<div><span>AC output</span> ${p.w} W</div>`);
-      if(p.watt) bits.push(`<div><span>Power</span> ${p.watt} W</div>`);
-      if(p.weight_kg) bits.push(`<div><span>Weight</span> ${p.weight_kg} kg</div>`);
-      return bits.join('');
-    }
+    // Filter toggle
+    const filterButton = document.getElementById('filterButton');
+    const filterOptions = document.getElementById('filterOptions');
+    
+    filterButton.addEventListener('click', () => {
+      filterOptions.classList.toggle('hidden');
+    });
 
-    function topBadge(p){
-      if((p.rating||0) >= 4.7) return `<div class="badges"><span class="badge">Top pick</span></div>`;
-      if(p.category==='solar-panel' && p.price <= 120) return `<div class="badges"><span class="badge">Best value</span></div>`;
-      return '';
-    }
-
-    function prettyCategory(c){
-      return ({'solar-generator':'Solar generator','solar-panel':'Solar panel','solar-kit':'Solar kit','accessory':'Accessory'}[c]||c);
-    }
-
-    // Compare feature
-    function toggleCompare(id, btn){
-      if(state.compare.has(id)){ state.compare.delete(id); btn.textContent='Compare'; }
-      else { state.compare.add(id); btn.textContent='Added'; }
-      updateCompareButton();
-      renderComparePreview();
-    }
-    function updateCompareButton(){
-      const btn = $('#compareBtn');
-      const n = state.compare.size;
-      btn.textContent = `Compare (${n})`;
-      btn.disabled = n < 2;
-    }
-    function openCompare(){
-      const ids=[...state.compare];
-      const items = PRODUCTS.filter(p=>ids.includes(p.id));
-      if(!items.length) return;
-      const wrap = $('#compareTableWrap');
-      const table = `
-        <div style="overflow-x:auto">
-          <table>
-            <thead>
-              <tr><th>Spec</th>${items.map(p=>`<th>${p.name}</th>`).join('')}</tr>
-            </thead>
-            <tbody>
-              ${row('Price', items.map(p=>`$${p.price}`))}
-              ${row('Rating', items.map(p=>p.rating?.toFixed(1)??'—'))}
-              ${row('Capacity (Wh)', items.map(p=>p.wh??'—'))}
-              ${row('AC output (W)', items.map(p=>p.w??'—'))}
-              ${row('Panel power (W)', items.map(p=>p.watt??'—'))}
-              ${row('Weight (kg)', items.map(p=>p.weight_kg??'—'))}
-              ${row('Best for', items.map(p=>p.best_for??'—'))}
-              ${row('Pros', items.map(p=> (p.pros||[]).join(', ') || '—'))}
-              ${row('Cons', items.map(p=> (p.cons||[]).join(', ') || '—'))}
-            </tbody>
-          </table>
+    // Solar savings calculator
+    const calculateBtn = document.getElementById('calculateSavings');
+    const resultsContainer = document.getElementById('resultsContainer');
+    
+    calculateBtn.addEventListener('click', () => {
+      const monthlyBill = parseFloat(document.getElementById('monthlyBill').value) || 0;
+      const roofSpace = parseFloat(document.getElementById('roofSpace').value) || 0;
+      const sunlightHours = parseFloat(document.getElementById('sunlightHours').value) || 0;
+      
+      // Simple calculation logic (simplified for demo)
+      const panelEfficiency = 0.2; // 20% efficiency
+      const panelSize = 18; // sq ft per panel
+      const panelOutput = 300; // watts per panel
+      
+      const potentialPanels = Math.floor(roofSpace / panelSize);
+      const dailyProduction = potentialPanels * panelOutput * sunlightHours * panelEfficiency / 1000; // kWh
+      const monthlyProduction = dailyProduction * 30;
+      const valuePerMonth = monthlyProduction * 8; // Assuming ₹8 per kWh
+      const annualSavings = valuePerMonth * 12;
+      const systemCost = potentialPanels * 25000; // Rough estimate
+      const paybackYears = systemCost / annualSavings;
+      
+      resultsContainer.innerHTML = `
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-brand-50 dark:bg-brand-900/30 p-3 rounded-lg">
+            <p class="text-xs text-slate-600 dark:text-slate-300">System Size</p>
+            <p class="font-semibold">${potentialPanels} panels</p>
+          </div>
+          <div class="bg-brand-50 dark:bg-brand-900/30 p-3 rounded-lg">
+            <p class="text-xs text-slate-600 dark:text-slate-300">Monthly Savings</p>
+            <p class="font-semibold">₹${valuePerMonth.toFixed(0)}</p>
+          </div>
+          <div class="bg-brand-50 dark:bg-brand-900/30 p-3 rounded-lg">
+            <p class="text-xs text-slate-600 dark:text-slate-300">Annual Savings</p>
+            <p class="font-semibold">₹${annualSavings.toFixed(0)}</p>
+          </div>
+          <div class="bg-brand-50 dark:bg-brand-900/30 p-3 rounded-lg">
+            <p class="text-xs text-slate-600 dark:text-slate-300">Payback Period</p>
+            <p class="font-semibold">${paybackYears.toFixed(1)} years</p>
+          </div>
         </div>
-        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.7rem;">
-          ${items.map(p=>`<a class="btn-primary" href="${p.affiliateUrl}" target="_blank" rel="sponsored noopener">Get ${p.brand}</a>`).join('')}
-        </div>`;
-      wrap.innerHTML = table;
-      $('#compareDialog').showModal();
-    }
-    function row(label, values){
-      return `<tr><td><strong>${label}</strong></td>${values.map(v=>`<td>${v}</td>`).join('')}</tr>`;
-    }
-    function renderComparePreview(){
-      const ids=[...state.compare];
-      const items = PRODUCTS.filter(p=>ids.includes(p.id));
-      const el = $('#comparePreview');
-      if(items.length < 2){ el.innerHTML = '<p class="muted">Select at least two products to compare.</p>'; return; }
-      el.innerHTML = `
-        <div style="overflow-x:auto">
-          <table>
-            <thead><tr><th>Spec</th>${items.map(p=>`<th>${p.name}</th>`).join('')}</tr></thead>
-            <tbody>
-              ${row('Price', items.map(p=>`$${p.price}`))}
-              ${row('Rating', items.map(p=>p.rating?.toFixed(1)??'—'))}
-              ${row('Capacity (Wh)', items.map(p=>p.wh??'—'))}
-              ${row('AC output (W)', items.map(p=>p.w??'—'))}
-            </tbody>
-          </table>
-        </div>`;
-    }
-
-    // Tracking stub
-    function trackClickOut(p){
-      try {
-        console.log('affiliate_click', {id:p.id, name:p.name, ts:Date.now()});
-        // Hook analytics (e.g., gtag/plausible/fetch) here
-      } catch(e){}
-    }
-
-    // Schema.org ItemList update
-    function updateItemListSchema(){
-      const list = state.filtered.slice(0, 12).map((p,i)=>({
-        "@type":"ListItem","position":i+1,"url": location.origin + location.pathname + '#'+p.id, "name": p.name
-      }));
-      const el = document.getElementById('itemlist');
-      el.textContent = JSON.stringify({"@context":"https://schema.org","@type":"ItemList","itemListElement":list});
-    }
+        <div class="mt-4 p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+          <p class="text-sm">Based on your inputs, you could save approximately <span class="font-semibold">₹${annualSavings.toFixed(0)}</span> per year with solar power.</p>
+        </div>
+        <button class="w-full mt-4 bg-brand-600 text-white py-2.5 rounded-lg hover:bg-brand-700 transition-colors btn-micro">
+          Get Personalized Quotes
+        </button>
+      `;
+    });
   </script>
 </body>
 </html>
